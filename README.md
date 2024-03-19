@@ -1,8 +1,8 @@
-# 제작한 결과물
-
 # 오늘의 수업
-자기소개 완성, 영타 500(망했음)   
-따야하는 자격증 : 정보처리/웹디자인기능사   
+[메인 페이지] (https://sunhew.github.io/class2024/)
+
+[자바스크립트] (https://sunhew.github.io/class2024/javascript/index.html)
+
 
 # vscode 확장 프로그램
 Live Server : 웹 페이지 미리보기   
