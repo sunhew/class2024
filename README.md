@@ -2,7 +2,7 @@
 [메인 페이지](https://sunhew.github.io/class2024/)   
 
 [자바스크립트](https://sunhew.github.io/class2024/javascript/index.html)   
-
+저장 되나?
 
 # vscode 확장 프로그램
 Live Server : 웹 페이지 미리보기   
