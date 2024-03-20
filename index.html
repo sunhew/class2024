@@ -11,7 +11,7 @@
 
 <body>
     <div class="main__icons">
-        <div class="draggableIcon icon">
+        <div id="myComputerIcon" class="draggableIcon icon">
             <img src="assets/img/face.png" alt="내 컴퓨터">
             <span>내 컴퓨터</span>
         </div>
@@ -24,7 +24,7 @@
     </div>
     <!-- //main__icons -->
 
-    <div class="layer__wrap" style="display: none;">
+    <div class="layer__wrap" id="infoLayer" style="display: block;">
         <div class="layer__inner">
             <div class="layer">
                 <div class="layer__conts">
@@ -53,12 +53,72 @@
                             있습니다.
                         </p>
                     </div>
+                    <div class="skill">
+                        <h3>skill</h3>
+                        <dl>
+                            <dt>html (HyperText Markup Language)</dt>
+                            <dd> 웹 페이지의 구조와 콘텐츠를 효과적으로 구현할 수 있는 능력을 보유하고 있습니다. 다양한 HTML5 태그와 속성을 활용하여 의미론적이고
+                                접근성이 높은 웹사이트를 개발하는 데 익숙합니다</dd>
+                            <dt>css (Cascading Style Sheets)</dt>
+                            <dd>웹 페이지의 시각적 디자인과 레이아웃을 세련되게 조정할 수 있습니다. Flex와 Grid 시스템을 이용한 반응형 웹 디자인을 구현한
+                                경험이 있으며, CSS 애니메이션과 전환을 활용하여 사용자 경험을 향상시키는 데 능숙합니다.</dd>
+                            <dt>javascript</dt>
+                            <dd>동적 웹 페이지 및 어플리케이션 개발에 있어 깊은 이해도를 보유하고 있습니다. 비동기 프로그래밍, ES6+ 문법, DOM 조작
+                                등을 포함한 고급 개념에 능숙합니다. 대규모 프로젝트에서의 성능 최적화와 디버깅에 경험이 풍부합니다.</dd>
+                        </dl>
+                        <dl>
+                            <dt>react.js</dt>
+                            <dd>컴포넌트 기반 아키텍처를 이해하고 있으며, 대규모 어플리케이션 개발에 React를 활용한 경험이 풍부합니다.
+                                React Hooks, 상태 관리 라이브러리(Redux) 및 최적화 기술에 능숙합니다.</dd>
+                            <dt>node.js</dt>
+                            <dd>선언적 렌더링과 컴포넌트 시스템을 이용한 인터랙티브한 UI 개발에 경험이 있습니다.
+                                Vuex를 활용한 상태 관리와 Vue Router를 사용한 라우팅에 익숙합니다.</dd>
+                            <dt>next.js</dt>
+                            <dd>서버 사이드 렌더링(SSR)과 정적 사이트 생성(SSG)에 대한 이해를 바탕으로 Next.js 프레임워크를 활용한 웹 어플리케이션 개발에 경험이 있습니다.
+                                SEO 최적화 및 퍼포먼스 향상을 위한 기술적 전략 구현에 능숙합니다.</dd>
+                        </dl>
+                    </div>
+                    <div class="picture">
+                        <h3>intro</h3>
+                        <ul>
+                            <li><img src="assets/intro/intro1.jpg" alt="시골길 탐험 여행"></li>
+                            <li><img src="assets/intro/intro2.jpg" alt="딸기 디저트 먹으러 다니기"></li>
+                            <li><img src="assets/intro/intro3.jpg" alt="달 구경 다니기"></li>
+                            <li><img src="assets/intro/intro4.jpg" alt="동물 사진 찍기"></li>
+                            <li><img src="assets/intro/intro5.jpg" alt="다양한 화과자 먹어보기"></li>
+                            <li><img src="assets/intro/intro6.jpg" alt="전국의 바다 구경가기"></li>
+                            <li><img src="assets/intro/intro7.jpg" alt="빵 굽기"></li>
+                            <li><img src="assets/intro/intro8.jpg" alt="막내랑 낮잠 자기"></li>
+                            <li><img src="assets/intro/intro9.jpg" alt="네일 디자인 하기"></li>
+                            <li><img src="assets/intro/intro10.jpg" alt="요리하기"></li>
+                            <li><img src="assets/intro/intro11.jpg" alt="글 쓰기(주로 단편)"></li>
+                            <li><img src="assets/intro/intro12.jpg" alt="노래방 가기(부르기)"></li>
+                            <li><img src="assets/intro/intro13.jpg" alt="맛집 탐방"></li>
+                            <li><img src="assets/intro/intro14.jpg" alt="보석 십자수 하기"></li>
+                            <li><img src="assets/intro/intro15.jpg" alt="가을마다 뜨게질 하기"></li>
+                            <li><img src="assets/intro/intro16.jpg" alt="밤 드라이브 다니기"></li>
+                            <li><img src="assets/intro/intro17.jpg" alt="친구와 새벽의 야경되기"></li>
+                            <li><img src="assets/intro/intro18.jpg" alt="뮤지컬 넘버 듣기"></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="layer__footer"></div>
             </div>
         </div>
     </div>
     <!-- //layer__wrap -->
+
+    <script>
+        document.getElementById('myComputerIcon').addEventListener('click', function () {
+            let layer = document.getElementById('infoLayer');
+
+            if (layer.style.display === "none") {
+                layer.style.display = "block";
+            } else {
+                layer.style.display = "none";
+            }
+        });
+    </script>
 </body>
 
 </html>
