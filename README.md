@@ -22,7 +22,7 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 한번에 커서 추가하기 : art + shift + 클릭   
 같은 단어를 한번에 수정하는 방법(똑같은 키워드 찾기) : ctrl + d   
 이모티콘✨ : 윈도우 + ;   
-
+   
 # 색상,배경 관련된 사이트
 [브렌드 색상 제네레이션](https://huemint.com/brand-intersection/)
 [컬러 팔렛트](https://colorhunt.co/)
