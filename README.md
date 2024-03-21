@@ -24,7 +24,7 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 이모티콘✨ : 윈도우 + ;   
    
 # 색상,배경 관련된 사이트
-[브렌드 색상 제네레이션](https://huemint.com/brand-intersection/)
+[브렌드 색상 제네레이션](https://huemint.com/brand-intersection/)   
 [컬러 팔렛트](https://colorhunt.co/)
 [배경 애니메이션 소스](https://wsss.tistory.com/category/Animation/CSS3#none)
 [코드 펜](https://codepen.io/)
