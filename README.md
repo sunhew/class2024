@@ -29,6 +29,7 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 [배경 애니메이션 소스](https://wsss.tistory.com/category/Animation/CSS3#none)
 [코드 펜](https://codepen.io/)
 [코드 변경기](https://www.sassmeister.com/)
+[컬러 코드뽑기](https://htmlcolorcodes.com/)
 
 # 수업 규칙
 1. 지각, 결석, 조퇴 ---> 발표 1회   
