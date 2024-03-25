@@ -12,25 +12,72 @@
         //01 함수 : 선언적 함수
         {
             function func() {
-                console.log("선언적 함수")
+                console.log("01 함수 : 선언적 함수")
             }
             func();
         }
         //02 함수 : 익명 함수
         {
-
+            const func = function () {
+                console.log("02 함수 : 익명 함수")
+            }
+            func();
         }
         //03 함수 : 매개변수 함수
         {
-
+            function func(str) {
+                console.log(str)
+            }
+            func("03 함수 : 매개변수 함수");
         }
         //04 함수 : 리턴값 함수
         {
-
+            function func() {
+                return "04 함수 : 리턴값 함수"
+            }
+            console.log(func())
         }
         //05 함수 : 매개변수 : 리턴값 함수
         {
-
+            function func(str) {
+                return str;
+            }
+            console.log(func("05 함수 : 매개변수 : 리턴값 함수"))
+        }
+        //01 화살표 함수 : 선언적 함수
+        {
+            func = () => {
+                console.log("01 함수 : 선언적 함수")
+            }
+            func();
+        }
+        //02 화살표 함수 : 익명 함수
+        {
+            const func = () => {
+                console.log("02 함수 : 익명 함수")
+            }
+            func();
+        }
+        //03 화살표 함수 : 매개변수 함수
+        {
+            func = (str) => {
+                console.log(str)
+            }
+            func("03 함수 : 매개변수 함수");
+        }
+        //04 화살표 함수 : 리턴값 함수
+        {
+            func = () => {
+                return "04 함수 : 리턴값 함수"
+            }
+            console.log(func())
+        }
+        //05 화살표 함수 : 매개변수 : 리턴값 함수
+        {
+            func = (str) => {
+                return str;
+            }
+            console.log(func("05 함수 : 매개변수 : 리턴값 함수"))
         }
 
 
