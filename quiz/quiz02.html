@@ -41,8 +41,8 @@
                     <div class="input">
                         <input type="text" placeholder="정답을 입력해주세요!" />
                     </div>
-                    <div class="answer none"></div>
-                    <div class="desc none"></div>
+                    <div class="answer"></div>
+                    <div class="desc"></div>
                 </div>
                 <div class="quiz__footer">
                     <button class="confirm">정답 확인하기</button>
@@ -61,8 +61,8 @@
                     <div class="input">
                         <input type="text" placeholder="정답을 입력해주세요!" />
                     </div>
-                    <div class="answer none"></div>
-                    <div class="desc none"></div>
+                    <div class="answer"></div>
+                    <div class="desc"></div>
                 </div>
                 <div class="quiz__footer">
                     <button class="confirm">정답 확인하기</button>
@@ -81,8 +81,8 @@
                     <div class="input">
                         <input type="text" placeholder="정답을 입력해주세요!" />
                     </div>
-                    <div class="answer none"></div>
-                    <div class="desc none"></div>
+                    <div class="answer"></div>
+                    <div class="desc"></div>
                 </div>
                 <div class="quiz__footer">
                     <button class="confirm">정답 확인하기</button>
@@ -101,8 +101,8 @@
                     <div class="input">
                         <input type="text" placeholder="정답을 입력해주세요!" />
                     </div>
-                    <div class="answer none"></div>
-                    <div class="desc none"></div>
+                    <div class="answer"></div>
+                    <div class="desc"></div>
                 </div>
                 <div class="quiz__footer">
                     <button class="confirm">정답 확인하기</button>
@@ -121,8 +121,8 @@
                     <div class="input">
                         <input type="text" placeholder="정답을 입력해주세요!" />
                     </div>
-                    <div class="answer none"></div>
-                    <div class="desc none"></div>
+                    <div class="answer"></div>
+                    <div class="desc"></div>
                 </div>
                 <div class="quiz__footer">
                     <button class="confirm">정답 확인하기</button>
@@ -184,29 +184,114 @@
 
         //선택자
         const quizWrap = document.querySelector(".quiz__wrap");
-        const infoData = quizWrap.querySelectorAll(".quiz__header .date");
-        const infoType = quizWrap.querySelectorAll(".quiz__header .type");
-        const infoNum = quizWrap.querySelectorAll(".questioin .em");
-        const infoQuestion = quizWrap.querySelectorAll(".questioin .span");
-        const infoInpun = quizWrap.querySelectorAll(".input input");
-        const infoAnswer = quizWrap.querySelectorAll(".answer");
-        const infoDesc = quizWrap.querySelectorAll(".desc");
-        const infoConfirm = quizWrap.querySelectorAll(".confirm");
+        const quizData = quizWrap.querySelectorAll(".quiz__header .date");
+        const quizType = quizWrap.querySelectorAll(".quiz__header .type");
+        const quizNum = quizWrap.querySelectorAll(".questioin em");
+        const quizQuestion = quizWrap.querySelectorAll(".questioin span");
+        const quizInput = quizWrap.querySelectorAll(".input input");
+        const quizAnswer = quizWrap.querySelectorAll(".answer");
+        const quizDesc = quizWrap.querySelectorAll(".desc");
+        const quizConfirm = quizWrap.querySelectorAll(".confirm");
 
         //문제 출력
-        console.log(infoData[0])
-        infoData[0].textContent = quizInpo[0].infoData;
-        infoData[1].textContent = quizInpo[1].infoData;
-        infoData[2].textContent = quizInpo[2].infoData;
-        infoData[3].textContent = quizInpo[3].infoData;
-        infoData[4].textContent = quizInpo[4].infoData;
+        // quizData[0].textContent = quizInpo[0].infoData;
+        // quizData[1].textContent = quizInpo[1].infoData;
+        // quizData[2].textContent = quizInpo[2].infoData;
+        // quizData[3].textContent = quizInpo[3].infoData;
+        // quizData[4].textContent = quizInpo[4].infoData;
 
-        console.log(infoType[0])
-        infoType[0].textContent = quizInpo[0].infoType;
-        infoType[1].textContent = quizInpo[1].infoType;
-        infoType[2].textContent = quizInpo[2].infoType;
-        infoType[3].textContent = quizInpo[3].infoType;
-        infoType[4].textContent = quizInpo[4].infoType;
+        // quizType[0].textContent = quizInpo[0].infoType;
+        // quizType[1].textContent = quizInpo[1].infoType;
+        // quizType[2].textContent = quizInpo[2].infoType;
+        // quizType[3].textContent = quizInpo[3].infoType;
+        // quizType[4].textContent = quizInpo[4].infoType;
+
+        // quizNum[0].textContent = quizInpo[0].infoNum;
+        // quizNum[1].textContent = quizInpo[1].infoNum;
+        // quizNum[2].textContent = quizInpo[2].infoNum;
+        // quizNum[3].textContent = quizInpo[3].infoNum;
+        // quizNum[4].textContent = quizInpo[4].infoNum;
+
+        // quizQuestion[0].textContent = quizInpo[0].infoQuestion;
+        // quizQuestion[1].textContent = quizInpo[1].infoQuestion;
+        // quizQuestion[2].textContent = quizInpo[2].infoQuestion;
+        // quizQuestion[3].textContent = quizInpo[3].infoQuestion;
+        // quizQuestion[4].textContent = quizInpo[4].infoQuestion;
+
+        // quizAnswer[0].textContent = quizInpo[0].infoAnswer;
+        // quizAnswer[1].textContent = quizInpo[1].infoAnswer;
+        // quizAnswer[2].textContent = quizInpo[2].infoAnswer;
+        // quizAnswer[3].textContent = quizInpo[3].infoAnswer;
+        // quizAnswer[4].textContent = quizInpo[4].infoAnswer;
+
+        // quizDesc[0].textContent = quizInpo[0].infoDesc;
+        // quizDesc[1].textContent = quizInpo[1].infoDesc;
+        // quizDesc[2].textContent = quizInpo[2].infoDesc;
+        // quizDesc[3].textContent = quizInpo[3].infoDesc;
+        // quizDesc[4].textContent = quizInpo[4].infoDesc;
+
+        //for문을 이용해서 1부터 10까지 출력
+        //for (let i = 0; i <= 4; i++) {
+        // quizData[i].textContent = quizInpo[i].infoData;
+        // quizType[i].textContent = quizInpo[i].infoType;
+        // quizNum[i].textContent = quizInpo[i].infoNum;
+        // quizQuestion[i].textContent = quizInpo[i].infoQuestion;
+        // quizAnswer[i].textContent = quizInpo[i].infoAnswer;
+        // quizDesc[i].textContent = quizInpo[i].infoDesc;
+        //}
+
+        //forEach()
+        quizInpo.forEach((e, i) => {
+            quizData[i].innerHTML = quizInpo[i].infoData;
+            quizType[i].innerHTML = quizInpo[i].infoType;
+            quizNum[i].innerHTML = quizInpo[i].infoNum;
+            quizQuestion[i].innerHTML = quizInpo[i].infoQuestion;
+            quizAnswer[i].innerHTML = quizInpo[i].infoAnswer;
+            quizDesc[i].innerHTML = quizInpo[i].infoDesc;
+        })
+
+        //정답, 해설 숨기기
+        // quizAnswer[0].classList.add("none")
+        // quizAnswer[1].classList.add("none")
+        // quizAnswer[2].classList.add("none")
+        // quizAnswer[3].classList.add("none")
+        // quizAnswer[4].classList.add("none")
+
+        // quizDesc[0].classList.add("none")
+        // quizDesc[1].classList.add("none")
+        // quizDesc[2].classList.add("none")
+        // quizDesc[3].classList.add("none")
+        // quizDesc[4].classList.add("none")
+
+        //for문
+        // for (let i = 0; i < quizInpo.length; i++) {
+        //     quizAnswer[i].classList.add("none");
+        //     quizDesc[i].classList.add("none")
+        // }
+
+        //forEach()
+        quizInpo.forEach((e, i) => {
+            quizAnswer[i].classList.add("none");
+            quizDesc[i].classList.add("none");
+        })
+
+        //정답 확인
+        quizConfirm.forEach(function (btn, num) {
+            btn.addEventListener("click", function () {
+                const useAnswer = quizInput[num].values                      //사용자 정답
+                const correctAnswer = quizInpo[num].infoAnswer
+
+                if (useAnswer == correctAnswer) {
+                    alert("정답.");
+                } else {
+                    alert("오답.");
+                }
+
+                quizAnswer[num].classList.remove("none");
+                quizDesc[num].classList.remove("none");
+            })
+        })
+
     </script>
 </body>
 
