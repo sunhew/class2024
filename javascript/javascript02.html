@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자바스크립트 :: 데이터 불러오기</title>
+
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/default.min.css">
 </head>
 
 <body>
@@ -25,7 +27,169 @@
     <!-- //header -->
 
     <main id="main">
+        <div class="main__menu container">
+            <ul>
+                <li><a href="#">01. 변수 : 데이터 불러오기</a></li>
 
+                <li><a href="#">02. 상수 : 데이터 불러오기</a></li>
+
+                <li><a href="#">03. 배열 : 데이터 불러오기</a></li>
+                <li><a href="#">04. 배열 : 데이터 불러오기 : 갯수</a></li>
+                <li><a href="#">05. 배열 : 데이터 불러오기 : for()문</a></li>
+                <li><a href="#">06. 배열 : 데이터 불러오기 : forEach()</a></li>
+                <li><a href="#">07. 배열 : 데이터 불러오기 : for of</a></li>
+                <li><a href="#">08. 배열 : 데이터 불러오기 : for in</a></li>
+                <li><a href="#">09. 배열 : 데이터 불러오기 : map()</a></li>
+                <li><a href="#">10. 배열 : 데이터 불러오기 : filter()</a></li>
+                <li><a href="#">11. 배열 : 데이터 불러오기 : 배열 펼침연산자</a></li>
+                <li><a href="#">12. 배열 : 데이터 불러오기 : 배열 구조 분해 할당</a></li>
+
+                <li><a href="#">13. 객체 : 데이터 불러오기 : 기본</a></li>
+                <li><a href="#">14. 객체 : 데이터 불러오기 : object.keys()</a></li>
+                <li><a href="#">15. 객체 : 데이터 불러오기 : object.values()</a></li>
+                <li><a href="#">16. 객체 : 데이터 불러오기 : object.entries()</a></li>
+                <li><a href="#">17. 객체 : 데이터 불러오기 : object.assign()</a></li>
+                <li><a href="#">18. 객체 : 데이터 불러오기 : hasOwnProperty()</a></li>
+                <li><a href="#">19. 객체 : 데이터 불러오기 : for in</a></li>
+                <li><a href="#">20. 객체 : 데이터 불러오기 : 배열 펼침연산자</a></li>
+                <li><a href="#">21. 객체 : 데이터 불러오기 : 배열 구조 분해 할당</a></li>
+
+                <li><a href="#">22. 서버 : 데이터 불러오기 : XMLHttpRequest</a></li>
+                <li><a href="#">23. 서버 : 데이터 불러오기 : fetch API</a></li>
+            </ul>
+        </div>
+        <!-- //main__menu -->
+
+        <div class="main__sample container">
+            <div id="sample01" class="sample">
+                <h3>01. 변수 : 데이터 저장</h3>
+                <p>
+                    변수는 데이터를 저장하는 컨테이너로, 프로그램 내에서 데이터를 참조하고 조작할 때 사용됩니다. <br />
+                    avaScript에서는 var, let, const 키워드를 사용하여 변수를 선언할 수 있으며, 각각의 키워드는 변수의 스코프(유효 범위)와 재할당 가능 여부에 차이를 가집니다.
+                    여기서는 let 키워드를 사용하여 변수를 선언하고 있습니다.
+                </p>
+                <pre><code>{
+        let x = 100, y = 200, z = "javascript";
+
+        console.log(x, y, z);
+}</code></pre>
+                <p>
+                    *변수 선언 및 초기화* <br />
+                    1. let: let 키워드는 블록 스코프(block scope)를 가지는 지역 변수를 선언할 때 사용됩니다. let으로 선언된 변수는 선언된 블록, 문장 또는 표현식 내에서
+                    유효하며,
+                    이를 벗어나면 해당 변수는 접근할 수 없습니다. 또한, let으로 선언된 변수는 재할당이 가능하다는 특징을 가집니다. <br />
+                    2. x = 100, y = 200, z = "javascript";: 이 부분에서는 세 개의 변수 x, y, z를 선언하고 각각의 초기값으로 100, 200,
+                    "javascript"를
+                    할당하고 있습니다. 변수에 값을 할당할 때는 = 연산자를 사용합니다.
+                </p>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100 <br />
+                            200 <br />
+                            javascript <br />
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample01 -->
+            <div id="sample02" class="sample">
+                <h3>02.상수 : 데이터 불러오기</h3>
+                <p>
+                    이 예시에서는 const 키워드를 사용하여 상수를 선언하고, 이들 상수에 각각 숫자와 문자열 값을 할당한 후, 이들 값을 콘솔에 출력하는 과정을 보여주고 있습니다.
+                    상수는 프로그램 실행 중 값을 변경할 필요가 없는 데이터를 저장하는 데 유용하게 사용됩니다.
+                </p>
+                <pre><code>{
+        const x = 100, y = 200, z = "javascript";
+
+        console.log(x, y, z);
+}</code></pre>
+                <p>
+                    const 키워드는 상수를 선언할 때 사용됩니다. 상수는 선언과 동시에 초기화(값을 할당)되어야 하며, 그 이후에는 그 값이 변경될 수 없습니다.
+                    만약 상수의 값을 변경하려고 시도하면, JavaScript는 오류를 발생시킵니다. <br />
+                    상수는 한 번 할당된 값이 변경되지 않는 변수를 의미합니다.
+                </p>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100 <br />
+                            200 <br />
+                            javascript <br />
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample02 -->
+            <div id="sample03" class="sample">
+                <h3>03.배열 : 데이터 불러오기</h3>
+                <p>
+                    변수는 데이터를 저장하는 컨테이너로, 프로그램 내에서 데이터를 참조하고 조작할 때 사용됩니다. <br />
+                    avaScript에서는 var, let, const 키워드를 사용하여 변수를 선언할 수 있으며, 각각의 키워드는 변수의 스코프(유효 범위)와 재할당 가능 여부에 차이를 가집니다.
+                    여기서는 let 키워드를 사용하여 변수를 선언하고 있습니다.
+                </p>
+                <pre><code>{
+        const arr = [100, 200, "javascript"]
+
+        console.log("03.배열 : 데이터 불러오기")
+        console.log(arr[0], arr[1], arr[2])
+}</code></pre>
+                <p>
+                    *변수 선언 및 초기화* <br />
+                    1. let: let 키워드는 블록 스코프(block scope)를 가지는 지역 변수를 선언할 때 사용됩니다. let으로 선언된 변수는 선언된 블록, 문장 또는 표현식 내에서
+                    유효하며,
+                    이를 벗어나면 해당 변수는 접근할 수 없습니다. 또한, let으로 선언된 변수는 재할당이 가능하다는 특징을 가집니다. <br />
+                    2. x = 100, y = 200, z = "javascript";: 이 부분에서는 세 개의 변수 x, y, z를 선언하고 각각의 초기값으로 100, 200,
+                    "javascript"를
+                    할당하고 있습니다. 변수에 값을 할당할 때는 = 연산자를 사용합니다.
+                </p>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100 <br />
+                            200 <br />
+                            javascript <br />
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample03 -->
+            <div id="sample04" class="sample">
+                <h3>04.배열 : 데이터 불러오기: 갯수</h3>
+                <p>
+                    변수는 데이터를 저장하는 컨테이너로, 프로그램 내에서 데이터를 참조하고 조작할 때 사용됩니다. <br />
+                    avaScript에서는 var, let, const 키워드를 사용하여 변수를 선언할 수 있으며, 각각의 키워드는 변수의 스코프(유효 범위)와 재할당 가능 여부에 차이를 가집니다.
+                    여기서는 let 키워드를 사용하여 변수를 선언하고 있습니다.
+                </p>
+                <pre><code>{
+        const arr = [100, 200, "javascript"]
+
+        console.log(arr.length)    //배열 안에 객체의 갯수가 총 몇개 들어있는지 확인 하는 방법
+}</code></pre>
+                <p>
+                    *변수 선언 및 초기화* <br />
+                    1. let: let 키워드는 블록 스코프(block scope)를 가지는 지역 변수를 선언할 때 사용됩니다. let으로 선언된 변수는 선언된 블록, 문장 또는 표현식 내에서
+                    유효하며,
+                    이를 벗어나면 해당 변수는 접근할 수 없습니다. 또한, let으로 선언된 변수는 재할당이 가능하다는 특징을 가집니다. <br />
+                    2. x = 100, y = 200, z = "javascript";: 이 부분에서는 세 개의 변수 x, y, z를 선언하고 각각의 초기값으로 100, 200,
+                    "javascript"를
+                    할당하고 있습니다. 변수에 값을 할당할 때는 = 연산자를 사용합니다.
+                </p>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100 <br />
+                            200 <br />
+                            javascript <br />
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample04 -->
+        </div>
     </main>
     <!-- //main -->
 
@@ -33,6 +197,171 @@
 
     </footer>
     <!-- //footer -->
+
+    <script src="assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        //01.변수 : 데이터 불러오기
+        {
+            let x = 100, y = 200, z = "javascript";
+
+            console.log("01.변수 : 데이터 불러오기");
+            console.log(x, y, z);
+        }
+        //02.상수 : 데이터 불러오기
+        {
+            const x = 100, y = 200, z = "javascript";
+
+            console.log("02.상수 : 데이터 불러오기");
+            console.log(x, y, z);
+        }
+        //03.배열 : 데이터 불러오기
+        {
+            const arr = [100, 200, "javascript"]
+
+            console.log("03.배열 : 데이터 불러오기")
+            console.log(arr[0], arr[1], arr[2])
+        }
+        //04.배열 : 데이터 불러오기: 갯수
+        {
+            const arr = [100, 200, "javascript"]
+
+            console.log("04.배열 : 데이터 불러오기: 갯수")
+            console.log(arr.length)    //배열 안에 객체의 갯수가 총 몇개 들어있는지 확인 하는 방법
+        }
+        //05.배열 : 데이터 불러오기: for ()문    *외우기*
+        {
+            const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            console.log("05.배열 : 데이터 불러오기: for ()문")
+
+            for (let i = 0; i < arr.length; i++) {                      //초깃값; 조건식; 증감값;
+                console.log(arr[i]);
+            }
+        }
+        //06.배열 : 데이터 불러오기: forEach()  *외우기*
+        {
+            const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            console.log("06.배열 : 데이터 불러오기: forEach()")
+            //01
+            arr.forEach(function (element) {                                   //콜백 함수
+                console.log(element);
+            })
+            //02
+            arr.forEach(function (element, index) {
+                console.log(index);
+            })
+            //03
+            arr.forEach(function (element, index, array) {
+                console.log(array);
+            })
+
+            //화살표 함수
+            //01
+            arr.forEach((e) => {
+                console.log(e);
+            })
+
+            //02
+            arr.forEach(e => {
+                console.log(e);
+            })
+            //03
+            arr.forEach(e => console.log(e));
+        }
+        //07.배열 : 데이터 불러오기: for of
+        {
+            const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            console.log("07.배열 : 데이터 불러오기: for of")
+            for (let element of arr) {
+                console.log(element);
+            }
+        }
+        //08. 배열 : 데이터 불러오기: for in            //arr안에 배열 선언 없이 element만 입력시 키값만 불러옴(0 1 2 3 ...)
+        {
+            const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            console.log("08. 배열 : 데이터 불러오기: for in");
+            for (let element in arr) {
+                console.log(arr[element]);
+            }
+        }
+        //09. 배열: 데이터 불러오기: map()
+        {
+            const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+            //01
+            console.log("09. 배열: 데이터 불러오기: map()");
+            arr.map(function (element) {
+                console.log(element)
+            });    //[100~900]  배열안에 감싸져있는 상태로 나옴
+            arr.map(function (element, index) {
+                console.log(index)
+            });
+            arr.map(function (element, index, array) {
+                console.log(array)
+            });
+
+        }
+        //10. 배열: 데이터 불러오기: filter()
+        {
+
+        }
+        //11. 배열: 데이터 불러오기: 배열 펼침연산자
+        {
+
+        }
+        //12. 배열: 데이터 불러오기: 배열 구조 분해 할당
+        {
+
+        }
+        //13. 객체: 데이터 불러오기: 기본
+        {
+
+        }
+        //14. 객체: 데이터 불러오기: object.keys()
+        {
+
+        }
+        //15. 객체: 데이터 불러오기: object.values()
+        {
+
+        }
+        //16. 객체: 데이터 불러오기: object.entries()
+        {
+
+        }
+        //17. 객체: 데이터 불러오기: object.assign()
+        {
+
+        }
+        //18. 객체: 데이터 불러오기: hasOwnProperty()
+        {
+
+        }
+        //19. 객체: 데이터 불러오기: for in
+        {
+
+        }
+        //20. 객체: 데이터 불러오기: 배열 펼침연산자
+        {
+
+        }
+        //21. 객체: 데이터 불러오기: 배열 구조 분해 할당
+        {
+
+        }
+        //22. 서버: 데이터 불러오기: XMLHttpRequest
+        {
+
+        }
+        //23. 서버: 데이터 불러오기: fetch API
+        {
+
+        }
+    </script>
+    <!-- //공부 -->
 </body>
 
 </html>

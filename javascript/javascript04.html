@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자바스크립트 :: 데이터 제어하기</title>
+
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/default.min.css">
 </head>
 
 <body>
@@ -25,7 +27,43 @@
     <!-- //header -->
 
     <main id="main">
+        <div class="main__menu container">
+            <ul>
+                <li><a href="#">01. 변수 : 데이터 저장</a></li>
+            </ul>
+        </div>
+        <!-- //main__menu -->
 
+        <div class="main__sample container">
+            <div id="sample01" class="sample">
+                <h3>01. 변수 : 데이터 저장</h3>
+                <p>
+                    자바스크립트에서 변수는 값을 저장하고 창조하는데 사용합니다.
+                    변수를 사용하면 데이터를 저장하고 나중에 해당 데이터를 재사용 할 수 있습니다. <br />
+                    let 키워드를 사용하여 선언됩니다. 각 변수는 선언된 후에 특정 값을 저장할 수 있고, 이 값은 나중에 참조하거나 변경할 수 있습니다.
+                </p>
+                <pre><code>{
+        let x = 100;
+        let y = 200;
+        let z = "javascript";
+
+        console.log(x);
+        console.log(y);
+        console.log(z);
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100 <br />
+                            200 <br />
+                            javascript <br />
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample01 -->
+        </div>
     </main>
     <!-- //main -->
 
@@ -33,6 +71,13 @@
 
     </footer>
     <!-- //footer -->
+
+    <script src="assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+
+    </script>
+    <!-- //공부 -->
 </body>
 
 </html>
