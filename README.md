@@ -15,6 +15,12 @@
 - 선택자(querySelector)   
 - 메서드(innerText(), classList, addEventListener, if문)   
 
+[퀴즈02](https://sunhew.github.io/class2024//quiz/quiz02.html)   
+- 배열, 객체
+- 선택자(querySelectorAll())
+- 반복문(for문, forEach())
+- 매서드(innerHTML(), classList.add, addEvnaddEventListener)
+
 ### vscode 확장 프로그램
 Live Server : 웹 페이지 미리보기   
 Material Icon : 아이콘 설정   
