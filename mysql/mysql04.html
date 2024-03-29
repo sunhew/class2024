@@ -42,6 +42,14 @@
     youBirth int(5) NOT NULL,
     regTime int(30) NOT NULL,
     PRIMARY KEY(memberID)
+) charset=utf8;
+
+create table reviews(
+    reviewID int(10) unsigned auto_increment,
+    memberID int(10) unsigned,
+    youText tinytext NOT NULL,
+    regTime int(30) NOT NULL,
+    PRIMARY KEY(reviewID)
 ) charset=utf8;</code></pre>
             </div>
             <div id="sample02" class="sample">
@@ -81,7 +89,19 @@ INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("박소�
 INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("김혜지", "1234", "28", "951002", "0123456789");
 INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("강경민", "1234", "28", "970611", "1023952467");
 INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("안지은", "1234", "33", "840816", "1023958375");
-INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("박진아", "1232", "33", "990304", "1023958375");</code></pre>
+INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("박진아", "1232", "33", "990304", "1023958375");
+
+
+INSERT INTO reviews(memberID, youText, regTime) VALUES("3", "매우 만족스러운 경험이었습니다.", "1023958375");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("1", "멋진 내용입니다.", "1023958375");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("6", "이런 피드백을 받을 수 있어 기쁩니다.", "1023958375");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("7", "훌륭한 서비스였습니다.", "0123456789");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("13", "매우 도움이 되었습니다.", "1023958375");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("5", "좋은 경험을 공유해 주셔서 감사합니다.", "1023958375");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("6", "귀중한 의견 감사드립니다.", "1023958375");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("3", "이용해 주셔서 감사합니다.", "1023958375");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("6", "소중한 피드백 감사합니다.", "1023958375");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("1", "대단히 만족스러웠습니다.", "1023958375");</code></pre>
             </div>
             <div id="sample04" class="sample">
                 <h3>테이블 삭제</h3>
@@ -91,13 +111,35 @@ INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("박진�
                 <pre><code class="language-js">mysql> drop table members;
 Query OK, 0 rows affected (0.02 sec)</code></pre>
             </div>
-            <div id="sample04" class="sample">
+            <div id="sample05" class="sample">
                 <h3>테이블 초기화</h3>
                 <div class="info">
                     truncate table 이름;
                 </div>
                 <pre><code class="language-js">mysql> truncate table members;
 Query OK, 0 rows affected (0.05 sec)</code></pre>
+            </div>
+            <div id="sample06" class="sample">
+                <h3>테이블 합치기(JOIN)</h3>
+                <div class="info">
+                    SELECT [필드명] FROM [A테이블.앨리어스] JOIN [B테이블.앨리어스] ON [기준이 되는 조건문]
+                </div>
+                <pre><code class="language-js">mysql> SELECT m.youName, m.youAge, r.youText, r.regTime FROM members m JOIN reviews r ON(m.memberID = r.memberID);
++---------+--------+---------------------------------------+------------+
+| youName | youAge | youText                               | regTime    |
++---------+--------+---------------------------------------+------------+
+| 김진우  |     21  | 매우 만족스러운 경험이었습니다.         | 1023958375 |
+| 황상연  |     33  | 멋진 내용입니다.                       | 1023958375 |
+| 김현민  |     32  | 이런 피드백을 받을 수 있어 기쁩니다.    | 1023958375 |
+| 황인지  |     20  | 훌륭한 서비스였습니다.                 |  123456789 |
+| 강경민  |     28  | 매우 도움이 되었습니다.                | 1023958375 |
+| 서대원  |     26  | 좋은 경험을 공유해 주셔서 감사합니다.   | 1023958375 |
+| 김현민  |     32  | 귀중한 의견 감사드립니다.              | 1023958375 |
+| 김진우  |     21  | 이용해 주셔서 감사합니다.              | 1023958375 |
+| 김현민  |     32  | 소중한 피드백 감사합니다.              | 1023958375 |
+| 황상연  |     33  | 대단히 만족스러웠습니다.               | 1023958375 |
++---------+--------+---------------------------------------+------------+
+10 rows in set (0.00 sec)</code></pre>
             </div>
         </div>
         <!-- //main -->

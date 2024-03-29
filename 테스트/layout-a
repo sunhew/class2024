@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {}
+
+        #header {
+            background-color: #d5d5d5;
+        }
+
+        #header .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #a5defe;
+        }
+
+        #header .nav {
+            width: 80%;
+            height: 100px;
+            background-color: #76c1ed;
+        }
+
+        #slider .container .slider1 {
+            width: 50%;
+            height: 200px;
+            background-color: #bacdde;
+        }
+
+        #slider .container .slider2 {
+            width: 50%;
+        }
+
+        #slider .container .slider2 .slider2-1 {
+            height: 100px;
+            background-color: #d6e4fd;
+        }
+
+        #slider .container .slider2 .slider2-2 {
+            height: 100px;
+            background-color: #b2c1db;
+        }
+
+        #contents {
+            background-color: #efefef;
+        }
+
+        #contents .container .content1 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #487a91;
+        }
+
+        #contents .container .content2 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #3a6376;
+        }
+
+        #contents .container .content3 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #2c5c72;
+        }
+
+        #footer {
+            background-color: #efefef;
+        }
+
+        #footer .container .footer1 {
+            width: 20%;
+            height: 100px;
+            background-color: #bfaffe;
+        }
+
+        #footer .container .footer2 {
+            width: 60%;
+            height: 100px;
+            background-color: #a690ff;
+        }
+
+        #footer .container .footer3 {
+            width: 20%;
+            height: 100px;
+            background-color: #9178f8;
+        }
+
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <h1 class="logo"></h1>
+                <nav class="nav"></nav>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <article id="slider">
+            <div class="container">
+                <div class="slider1"></div>
+                <div class="slider2">
+                    <div class="slider2-1"></div>
+                    <div class="slider2-2"></div>
+                </div>
+            </div>
+        </article>
+        <!-- //slider -->
+
+        <main id="contents">
+            <div class="container">
+                <section class="content1"></section>
+                <section class="content2"></section>
+                <section class="content3"></section>
+            </div>
+        </main>
+        <!-- //contents -->
+
+        <footer id="footer">
+            <div class="container">
+                <div class="footer1"></div>
+                <div class="footer2"></div>
+                <div class="footer3"></div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>
