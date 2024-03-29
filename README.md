@@ -3,7 +3,9 @@
 
 [자바스크립트](https://sunhew.github.io/class2024/javascript/index.html)   
 
-[MySQL](https://sunhew.github.io/class2024/mysql/index.html)   
+[MySQL](https://sunhew.github.io/class2024/mysql/index.html)    
+
+[웹 디자인](https://sunhew.github.io/class2024/webd/cate.html)      
 
 
 
