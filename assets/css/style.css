@@ -94,7 +94,6 @@
     font-display: swap;
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -114,7 +113,6 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     overflow: hidden;
-    font-family: var(--fontN);
 }
 
 /* main__icons */
@@ -138,11 +136,10 @@ body {
         span {
             display: block;
             font-family: var(--fontN);
-            /*  font - family: "nanumSquareNeo"; */
-            margin-top: 5px;
-            color: #ffffff;
-            font-size: 13px;
+            /* font-family: "nanumSquareNeo"; */
             margin-top: 8px;
+            color: #fff;
+            font-size: 13px;
         }
     }
 }
@@ -159,8 +156,8 @@ body {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        color: #ffffff;
-        font-family: ver(--fontN);
+        color: #fff;
+        font-family: var(--fontN);
 
         .layer__conts {
             background-color: #223167a8;
@@ -178,12 +175,11 @@ body {
             }
 
             &::-webkit-scrollbar-thumb {
-                background-color: #ffffff51;
+                background-color: #040711a8;
                 border-radius: 20px;
             }
 
             .intro {
-
                 h3 {
                     font-size: 25px;
                     margin-bottom: 15px;
@@ -198,7 +194,7 @@ body {
                 .mail {
                     display: block;
                     font-size: 12px;
-                    color: #c9c9c9;
+                    color: #C9C9C9;
                     text-decoration: none;
                     margin-bottom: 30px;
                     margin-top: 30px;
@@ -235,7 +231,7 @@ body {
                 margin-top: 30px;
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-around;
+                justify-content: space-between;
 
                 h3 {
                     width: 100%;
@@ -245,7 +241,6 @@ body {
                     line-height: 2;
                     text-transform: uppercase;
                     margin-bottom: 20px;
-                    margin-top: 20px;
                 }
 
                 dl {
@@ -346,8 +341,6 @@ body {
                 }
             }
         }
-
-
     }
 }
 
@@ -366,7 +359,5 @@ body {
                 }
             }
         }
-
-
     }
 }
