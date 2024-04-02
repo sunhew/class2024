@@ -21,7 +21,19 @@
 - 배열, 객체
 - 선택자(querySelectorAll())
 - 반복문(for문, forEach())
-- 매서드(innerHTML(), classList.add, addEvnaddEventListener)
+- 매서드(innerHTML(), classList.add, addEvnaddEventListener,  if문)
+
+[퀴즈03](https://sunhew.github.io/class2024//quiz/quiz03.html)
+- 변수, 배열, 객체
+- 선택자(querySelectorAll(),querySelector())
+- 반복문(for문, forEach(), brek)
+- 매서드(join(), push(), innerHTML(), addEvnaddEventListener,  if문)
+
+[퀴즈04](https://sunhew.github.io/class2024//quiz/quiz04.html)
+- 변수, 배열, 객체, 탬플릿 리터럴
+- 선택자(querySelectorAll(),querySelector())
+- 반복문(for문, forEach(), breack)
+- 매서드(innerHTML(), classList.add, innerHTML)
 
 ### vscode 확장 프로그램
 Live Server : 웹 페이지 미리보기   
@@ -63,3 +75,4 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 
 # 오늘의 숙제   
 깃헙 메인 페이지 꾸미기
+블로그 이미지 바꿔보기
