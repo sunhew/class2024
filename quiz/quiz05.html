@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>퀴즈 05</title>
+    <link rel="stylesheet" href="asset/css/quiz.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>
+            <a href="index.html">Quiz</a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="quiz01.html">1</a></li>
+                <li><a href="quiz02.html">2</a></li>
+                <li><a href="quiz03.html">3</a></li>
+                <li><a href="quiz04.html">4</a></li>
+                <li class="active"><a href="quiz05.html">5</a></li>
+                <li><a href="quiz06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="quiz__wrap"></div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:gsim12@naver.com">gsim12@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+        //선택자 
+        const quizWrap = document.querySelector(".quiz__wrap");
+
+        //문제 정보
+        const quiziInfo = [
+            {
+                date: "2017년 상시",
+                type: "정보처리기능사",
+                question: "피변조파로부터 원래의 신호파를 만드는 것을 무엇이라 하는가?",
+                choices: ["발진", "정류", "증폭", "복조"],
+                answer: "4",
+                desc: "피변조파는 변조된 신호를 의미합니다. 변조된 신호로 만드는 것을 복조라고 합니다."
+            },
+            {
+                date: "2017년 상시",
+                type: "정보처리기능사",
+                question: "클록펄스에 의해서 기억된 내용을 한 자리씩 우측이나 좌측으로 이동시키는 레지스터는?",
+                choices: ["시프트 레지스터", "범용 레지스터", "베이스 레지스터", "인덱스 레지스터"],
+                answer: "1",
+                desc: "피변조파는 변조된 신호를 의미합니다. 변조된 신호로 만드는 것을 복조라고 합니다."
+            },
+            {
+                date: "2017년 상시",
+                type: "정보처리기능사",
+                question: "중앙처리장치(CPU)에 해당하는 부분을 하나의 대규모 집적회로의 칩에 내장시켜 기능을 수행하게 하는 것은?",
+                choices: ["컴파일러", "마이크로프로세서", "소프트웨어", "레지스터"],
+                answer: "2",
+                desc: "피변조파는 변조된 신호를 의미합니다. 변조된 신호로 만드는 것을 복조라고 합니다."
+            },
+            {
+                date: "2017년 상시",
+                type: "정보처리기능사",
+                question: "다음에 실행할 명령어의 번지를 기억하는 레지스터는?",
+                choices: ["NOR 연산", "MAND 연산", "Exclusive-OR", "OR 연산"],
+                answer: "4",
+                desc: "피변조파는 변조된 신호를 의미합니다. 변조된 신호로 만드는 것을 복조라고 합니다."
+            },
+            {
+                date: "2017년 상시",
+                type: "정보처리기능사",
+                question: "2진수 (101010101010)2을 10진수로 변환하면?",
+                choices: ["(2630)10", "(2740)10", "(2730)10", "(2640)10"],
+                answer: "3",
+                desc: "피변조파는 변조된 신호를 의미합니다. 변조된 신호로 만드는 것을 복조라고 합니다."
+            }
+        ]
+
+        //변수
+        let currentIndex = 0;      //현재 문제의 값
+        console.log(currentIndex)
+
+        //문제 출력
+        const updateQuiz = (index) => {
+            let quizWrapTag = `
+            <div class="quiz">
+                <div class="quiz__header">${quiziInfo[index].date}${quiziInfo[index].type}</div>
+                <div class="quiz__main">
+                    <div class="question">${index + 1}. ${quiziInfo[index].question}</div>
+                    <div class="choices">
+                        <label for="choice1">
+                            <input type="radio" id="choice1" name="choice" value="1">
+                            <span>${quiziInfo[index].choices[0]}</span>
+                        </label>
+                        <label for="choice2">
+                            <input type="radio" id="choice2" name="choice" value="2">
+                            <span>${quiziInfo[index].choices[1]}</span>
+                        </label>
+                        <label for="choice3">
+                            <input type="radio" id="choice3" name="choice" value="3">
+                            <span>${quiziInfo[index].choices[2]}</span>
+                        </label>
+                        <label for="choice4">
+                            <input type="radio" id="choice4" name="choice" value="4">
+                            <span>${quiziInfo[index].choices[3]}</span>
+                        </label>
+                    </div>
+                    <div class="answer none">${quiziInfo[index].answer}</div>
+                    <div class="desc none">${quiziInfo[index].desc}</div>
+                </div>
+                <div class="quiz__footer">
+                    <button class="confirm">정답 확인하기</button>
+                    <button class="next none">다음 문제</button>
+                </div>
+            </div>
+            `
+            quizWrap.innerHTML = quizWrapTag;
+
+            const quizConfirm = quizWrap.querySelector(".confirm");
+            const quizNext = quizWrap.querySelector(".next");
+
+            //정답 버튼을 클릭했을때 alert()
+            quizConfirm.addEventListener("click", () => {
+                //사용자가 클릭한 정답 확인
+                const quizChecked = quizWrap.querySelector("input[name='choice']:checked");
+
+                if (quizChecked) {         //!붙을 경우엔 반대로 출력 Not연산자 생각하면 됨.
+                    const useAnswer = quizChecked.value;        //사용자가 클릭한 정답
+                    const quizAnswer = quiziInfo[currentIndex].answer          //정답자의 정답
+                    const quizElement = quizWrap.querySelector(".quiz");
+                    const answerElement = quizWrap.querySelector(".answer");
+                    const descElement = quizWrap.querySelector(".desc");
+
+                    //사용자 정답과 정답지 정답을 비교   remove: 적용되어있던것을 지움, add: 새로 적용시킴
+
+                    if (useAnswer == quizAnswer) {
+                        quizElement.classList.add("good")       //O
+                    } else {
+                        quizElement.classList.add("bad")        //X
+                        answerElement.classList.remove("none")  //정답 보이기
+                    }
+                    descElement.classList.remove("none")    //설명 보이기
+                    quizConfirm.classList.add("none")       //정답 확인 박스 없애기
+                    quizNext.classList.remove("none")       //다음 문제 박스 보이기
+                } else {
+                    alert("답을 선택해주세요.")
+                }
+
+
+            })
+
+            //다음 문제 버튼을 클릭하면
+            quizNext.addEventListener("click", () => {
+                if (currentIndex < quiziInfo.length - 1) {
+                    currentIndex++;             //문제 번호 증가
+                    updateQuiz(currentIndex);   //퀴즈 반영
+                } else {
+                    alert("퀴즈가 끝났다 애송이")
+                }
+
+            })
+        }
+
+        //페이지가 로드된 후 실행
+        document.addEventListener("DOMContentLoaded", () => {
+            updateQuiz(currentIndex);
+        })
+
+
+    </script>
+</body>
+
+</html>

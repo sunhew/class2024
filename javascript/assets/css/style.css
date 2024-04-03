@@ -1,4 +1,6 @@
 /* 웹폰트 설정 */
+@import url("https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css");
+
 @font-face {
     font-family: "nanumSquareNeo";
     font-weight: 300;
@@ -100,6 +102,7 @@
 :root {
     --fontN: "nanumSquareNeo";
     --fontG: "GmarketSans";
+    --fontE: "NexonLv1Gothic";
 }
 
 /* 여백 초기화 */
@@ -127,44 +130,10 @@ li {
     margin: 0 auto;
 }
 
-#header {
-    text-align: center;
-    padding: 40px;
-    border-bottom: 1px dashed #dcdcdc;
-}
-
-#header h1 {
-    margin-bottom: 20px;
-}
-
-#header h1 a {
-    font-family: var(--fontG);
-    font-size: 4vw;
-    color: #161366;
-}
-
 @media (max-width: 800px) {
-    #header h1 a {
-        font-size: 30px;
+    #container {
+        width: 90%;
     }
-}
-
-#header nav ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-#header nav ul li {
-    margin: 2px;
-}
-
-#header nav ul li a {
-    font-family: var(--fontN);
-    border: 1px solid #161366;
-    padding: 10px 20px;
-    display: inline-block;
-    color: #161366;
 }
 
 /* 헤더 영역 */

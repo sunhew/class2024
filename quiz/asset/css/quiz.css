@@ -285,7 +285,7 @@ body::after {
 }
 
 .quiz__main .answer::before {
-    content: '😺정답 : '
+    content: '😿정답 : '
 }
 
 .quiz__main .desc {
@@ -319,6 +319,25 @@ body::after {
     background-color: transparent;
     border: 1px dashed #2d5557;
     color: #2d5557;
+    cursor: pointer;
+}
+
+.quiz__footer .next {
+    background-color: #b9b9b9;
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    border: 0;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s;
+}
+
+.quiz__footer .next:hover {
+    background-color: transparent;
+    border: 1px dashed #2d574a;
+    color: #2d5751;
     cursor: pointer;
 }
 
