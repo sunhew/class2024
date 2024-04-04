@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F-3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+        }
+
+        #header .container {
+            display: flex;
+        }
+
+        #header .container .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #092635;
+        }
+
+        #header .container .nav {
+            width: 80%;
+            height: 100px;
+            background-color: #0c3144;
+        }
+
+        #slider {
+            width: 100%;
+            height: 350px;
+            background-color: #1B4242;
+            position: relative;
+        }
+
+        #slider .links {
+            width: 1340px;
+            height: 100px;
+            background-color: #245656;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%);
+        }
+
+        #contents {
+            width: 100%;
+        }
+
+        #contents .container .banner {
+            height: 100px;
+            background-color: #2d6a6a;
+        }
+
+        #contents .container .notice {
+            height: 300px;
+            background-color: #5C8374;
+        }
+
+        #footer {
+            width: 100%;
+            height: 120px;
+        }
+
+        #footer .container {
+            display: flex;
+        }
+
+        .footer1 {
+            width: 20%;
+            height: 120px;
+            background-color: #9EC8B9;
+        }
+
+        .footer2 {
+            width: 80%;
+        }
+
+        .footer2-1 {
+            height: 60px;
+            background-color: #84baa7;
+        }
+
+        .footer2-2 {
+            height: 60px;
+            background-color: #7fceb2;
+        }
+
+        .container {
+            width: 1340px;
+            margin: 0 auto;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<style>
+</style>
+
+<body>
+    <wrap id="wrap">
+        <header id="header">
+            <div class="container">
+                <h1 class="logo"></h1>
+                <nav class="nav"></nav>
+            </div>
+        </header>
+        <!-- //header -->
+        <article id="slider">
+            <div class="links"></div>
+        </article>
+        <!-- //slider -->
+        <section id="contents">
+            <div class="container">
+                <article class="banner"></article>
+                <article class="notice"></article>
+            </div>
+        </section>
+        <!-- //contents -->
+        <footer id="footer">
+            <div class="container">
+                <div class="footer1"></div>
+                <div class="footer2">
+                    <div class="footer2-1"></div>
+                    <div class="footer2-2"></div>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </wrap>
+</body>
+
+</html>

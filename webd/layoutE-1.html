@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 100%;
+        }
+
+        /* main */
+        #main {
+            width: 100%;
+            height: calc(100vh - 120px);
+            background-color: #d1d0d0;
+            display: flex;
+        }
+
+        /* header */
+        #header {
+            width: 200px;
+            height: 100%;
+        }
+
+        .logo {
+            height: 10%;
+            background-color: #5e5e5e;
+        }
+
+        .nav {
+            height: 90%;
+            background-color: #a2a1a1;
+        }
+
+        /* contents */
+        #contents {
+            width: 400px;
+            height: 100%;
+            background-color: #919191;
+        }
+
+        .banner {
+            height: 15%;
+            background-color: #e0e0e0;
+        }
+
+        .notice {
+            height: 35%;
+            background-color: #878787;
+        }
+
+        .gallery {
+            height: 35%;
+            background-color: #5f5e5e;
+        }
+
+        .like {
+            height: 15%;
+            background-color: #515151;
+        }
+
+        /* slider */
+        #slider {
+            width: calc(100% - 600px);
+            height: 100%;
+            background-color: #bdbaba;
+        }
+
+        /* footer */
+        #footer {
+            width: 100%;
+            display: flex;
+        }
+
+        .footer1 {
+            width: 20%;
+            height: 120px;
+            background-color: #dbdada;
+        }
+
+        .footer2 {
+            width: 80%;
+        }
+
+        .footer2-1 {
+            height: 60px;
+            background-color: #5c5b5b;
+        }
+
+        .footer2-2 {
+            height: 60px;
+            background-color: #3b3a3a;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <main id="main">
+            <header id="header">
+                <h1 class="logo"></h1>
+                <nav class="nav"></nav>
+            </header>
+            <!-- //header -->
+            <section id="contents">
+                <article class="banner"></article>
+                <article class="notice"></article>
+                <article class="gallery"></article>
+                <article class="like"></article>
+            </section>
+            <!-- //contents -->
+            <article id="slider"></article>
+            <!-- //slider -->
+        </main>
+        <footer id="footer">
+            <div class="footer1"></div>
+            <div class="footer2">
+                <div class="footer2-1"></div>
+                <div class="footer2-2"></div>
+            </div>
+        </footer>
+        <!-- footer -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인덱스</title>
+    <link href="https://webfontworld.github.io/Cafe24SsurroundAir/Cafe24SsurroundAir.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/cookierun/CookieRun.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "CookieRun";
+            text-align: center;
+        }
+
+        /* 전체 페이지 */
+        body {
+            background-color: #f4fdff;
+        }
+
+        #wrap {
+            padding: 5%;
+        }
+
+        #wrap>span {
+            font-family: "CookieRun";
+            color: #3d3c48;
+            font-size: 30px;
+        }
+
+
+        #wrap h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-top: 5px;
+            color: #3d3c48;
+        }
+
+        /* menu */
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .menu>ul {
+            width: 360px;
+            border: 2px solid rgba(45, 62, 105, 0.933);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* 괄호의 표식은 바로 밑의 첫번째 자식에게만 먹히라는 뜻 */
+
+        .menu ul li {
+            list-style: none;
+        }
+
+        .menu ul li span {
+            font-size: 24px;
+            border-bottom: 2px solid #718eb7;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .menu ul li ul {
+            padding-left: 20px;
+        }
+
+        .menu ul li ul li {
+            padding: 5px;
+            text-align: left;
+            list-style-type: circle;
+        }
+
+        .menu ul li ul li a {
+            font-family: "Cafe24SsurroundAir";
+            color: #0e5d52;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .menu ul li ul li a:hover {
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <span>디자인 + 코딩 + 개발</span>
+        <h1>풀스택 도전. PHP 블로그 사이트 만들기</h1>
+        <nav class="menu">
+            <ul>
+                <li><span>디자인(Figma)</span>
+                    <ul>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">메인페이지</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <ul>
+                <li><span>코딩(HTML/CSS/JAVASCRIPT)</span>
+                    <ul>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">메인페이지</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li><span>개발(PHP/MYSQL)</span>
+                    <ul>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">메인페이지</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>

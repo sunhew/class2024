@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 100%;
+        }
+
+        #main {
+            width: 100%;
+            height: calc(100vh - 120px);
+            display: flex;
+        }
+
+        /* header */
+        #header {
+            width: 200px;
+            background-color: #ababab;
+        }
+
+        .logo {
+            height: 10%;
+            background-color: #ffd9d9;
+        }
+
+        .nav {
+            height: 90%;
+            background-color: #ffc6c6;
+        }
+
+        /* contents */
+        #contents {
+            width: 400px;
+            background-color: #777777;
+        }
+
+        .notice {
+            height: 40%;
+            background-color: #f7b7b7;
+        }
+
+        .gallery {
+            height: 40%;
+            background-color: #fdabab;
+        }
+
+        .like {
+            height: 20%;
+            background-color: #f4a4a4;
+        }
+
+        /* slider */
+        #slider {
+            width: calc(100% - 600);
+            background-color: #504f4f;
+        }
+
+        /* footer */
+        #footer {
+            width: 100%;
+            display: flex;
+        }
+
+        .footer1 {
+            width: 20%;
+            height: 120px;
+            background-color: #e7abab;
+        }
+
+        .footer2 {
+            width: 60%;
+            height: 120px;
+            background-color: #f6e3e3;
+        }
+
+        .footer3 {
+            width: 20%;
+            height: 120px;
+            background-color: #f7c4c4;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <main id="main">
+            <header id="header">
+                <h1 class="logo"></h1>
+                <nav class="nav"></nav>
+            </header>
+            <!-- //header -->
+            <section id="contents">
+                <div class="notice"></div>
+                <div class="gallery"></div>
+                <div class="like"></div>
+            </section>
+            <!-- //contents -->
+            <article id="slider"></article>
+        </main>
+        <footer id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </footer>
+    </div>
+</body>
+
+</html>
