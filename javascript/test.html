@@ -103,37 +103,32 @@
             <!-- //sample01 -->
             <div id="sample02" class="sample">
                 <h3>02. 1부터 100까지 짝수만 출력하기(for문, if문)</h3>
-                <p>1부터 100까지 나오게 됩니다.</p>
+                <p>1부터 100까지 짝수만 나오게 됩니다.</p>
                 <pre data-line="9-10, 14" class="line-numbers"><code class="language-js">{
-        {
-            for (let i = 0; i &gt;= 100; i++) {
-                console.log(i + ". " + "for을 이용해 실행되었습니다")
-            }
+    for (let i = 1; i &lt;= 100; i++) {
+        if (i % 2 === 0) {
+            console.log(i);
         }
-
-        {    //초깃값, 조건식, 실행문, 증감값
-            let num = 1
-            while (num &gt;= 100) {
-                console.log(num + ". " + "while을 이용해 실행")
-                num++;
-            }
-        }
-        {  //초깃값, 실행문, 증감값, 조건문
-            let num = 1
-            do {
-                console.log(num + ". " + "do while을 이용해 실행")
-                num++;
-            } while (num &gt;= 100);
         }
 }</code></pre>
                 <p></p>
                 <div class="result">
                     <details>
-                        <summary>결과 확인하기</summary>
+                        <summary>계산 표기</summary>
                         <div>
-                            100 <br />
-                            200 <br />
-                            javascript <br />
+                            (a + b); // 15 (더하기) <br />
+                            (a - b); // 5 (빼기) <br />
+                            (a * b); // 50 (곱하기) <br />
+                            (a / b); // 2 (나누기) <br />
+                            (a % b); // 0 (나머지) <br />
+                            (c == d); // true (동등 비교, 값만 비교) <br />
+                            (c === d); // false (일치 비교, 값과 타입 모두 비교) <br />
+                            (c != d); // false (부등 비교) <br />
+                            (c !== d); // true (불일치 비교) <br />
+                            (c > d); // false (크다) <br />
+                            (c &gt; d); // false (작다) <br />
+                            (c >= d); // true (크거나 같다) <br />
+                            (c &lt;= d); // true (작거나 같다) <br />
                         </div>
                     </details>
                 </div>
@@ -141,66 +136,36 @@
             <!-- //sample02 -->
             <div id="sample03" class="sample">
                 <h3>03. 1부터 100까지 짝수는 파란색, 홀수는 빨간색 출력하기</h3>
-                <p>1부터 100까지 나오게 됩니다.</p>
+                <p>페이지 아래에 1부터 100까지 짝수는 파란색, 홀수는 빨간색 출력됩니다</p>
                 <pre data-line="9-10, 14" class="line-numbers"><code class="language-js">{
-        {
-            for (let i = 0; i &gt;= 100; i++) {
-                console.log(i + ". " + "for을 이용해 실행되었습니다")
+        for (let i = 1; i &lt;= 100; i++) {
+            if (i % 2 == 0) {
+                document.write("<span style='color:blue'>" + i + "</span>");
+            } else {
+                document.write("<span style='color:red'>" + i + "</span>");
             }
-        }
-
-        {    //초깃값, 조건식, 실행문, 증감값
-            let num = 1
-            while (num &gt;= 100) {
-                console.log(num + ". " + "while을 이용해 실행")
-                num++;
-            }
-        }
-        {  //초깃값, 실행문, 증감값, 조건문
-            let num = 1
-            do {
-                console.log(num + ". " + "do while을 이용해 실행")
-                num++;
-            } while (num &gt;= 100);
         }
 }</code></pre>
                 <p></p>
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <div>
-                            100 <br />
-                            200 <br />
-                            javascript <br />
-                        </div>
+                        <div></div>
                     </details>
                 </div>
             </div>
             <!-- //sample03 -->
             <div id="sample04" class="sample">
                 <h3>04. 중첩 for문을 이용해서 구구단 출력하기</h3>
-                <p>1부터 100까지 나오게 됩니다.</p>
+                <p>중첩 for문을 이용해서 구구단 출력하기</p>
                 <pre data-line="9-10, 14" class="line-numbers"><code class="language-js">{
-        {
-            for (let i = 0; i &gt;= 100; i++) {
-                console.log(i + ". " + "for을 이용해 실행되었습니다")
-            }
-        }
-
-        {    //초깃값, 조건식, 실행문, 증감값
-            let num = 1
-            while (num &gt;= 100) {
-                console.log(num + ". " + "while을 이용해 실행")
-                num++;
-            }
-        }
-        {  //초깃값, 실행문, 증감값, 조건문
-            let num = 1
-            do {
-                console.log(num + ". " + "do while을 이용해 실행")
-                num++;
-            } while (num &gt;= 100);
-        }
+                    {
+                        for (let i = 8; i &lt;= 8; i++) {
+                            for (let j = 1; j &lt;= 9; j++) {
+                                console.log(i + " * " + j + " = " + i * j)
+                            }
+                        }
+                    }
 }</code></pre>
                 <p></p>
                 <div class="result">
@@ -252,32 +217,32 @@
         // for(let i=7; i=100; i++)
 
         //03. 1부터 100까지 짝수는 파란색, 홀수는 빨간색 출력하기
-        // {
-        //     for (let i = 1; i <= 100; i++) {
-        //         if (i % 2 == 0) {
-        //             document.write("<span style='color:blue'>" + i + "</span>");
-        //         } else {
-        //             document.write("<span style='color:red'>" + i + "</span>");
-        //         }
-        //     }
-        // }
+        {
+            for (let i = 1; i <= 100; i++) {
+                if (i % 2 == 0) {
+                    document.write("<span style='color:blue'>" + i + "</span>");
+                } else {
+                    document.write("<span style='color:red'>" + i + "</span>");
+                }
+            }
+        }
 
         //04. 중첩 for문을 이용해서 구구단 출력하기
-        // {
-        //     for (let i = 8; i <= 8; i++) {
-        //         for (let j = 1; j <= 9; j++) {
-        //             console.log(i + " * " + j + " = " + i * j)
-        //         }
-        //     }
-        // }
-
         {
-            const x = [100, 200, { a: 400, b: 600, c: 700 }, { y: 500, g: 900 }]
-
-            console.log(x[0])
-            console.log(x[2].b)
-            console.log(x[3].g)
+            for (let i = 8; i <= 8; i++) {
+                for (let j = 1; j <= 9; j++) {
+                    console.log(i + " * " + j + " = " + i * j)
+                }
+            }
         }
+
+        // {
+        //     const x = [100, 200, { a: 400, b: 600, c: 700 }, { y: 500, g: 900 }]
+
+        //     console.log(x[0])
+        //     console.log(x[2].b)
+        //     console.log(x[3].g)
+        // }
 
 
 
