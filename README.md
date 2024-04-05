@@ -6,7 +6,8 @@
 [MySQL](https://sunhew.github.io/class2024/mysql/index.html)    
 
 [웹 디자인](https://sunhew.github.io/class2024/webd/index.html)   
-[블로그](https://sunhew.github.io/)
+
+[블로그](https://sunhew.github.io/)   
 
 
 
