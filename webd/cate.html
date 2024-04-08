@@ -79,17 +79,6 @@
             height: 100%;
             border: 0;
         }
-
-        #listContainer {
-            max-height: 200px;
-            /* 원하는 최대 높이 설정 */
-            overflow: hidden;
-        }
-
-        li {
-            display: none;
-            /* 초기에는 모든 항목을 숨깁니다. */
-        }
     </style>
 </head>
 
@@ -97,8 +86,8 @@
     <div id="wrap">
         <aside id="side">
             <h2>Web Design</h2>
-            <nav id="listContainer">
-                <ul id="list">
+            <nav>
+                <ul>
                     <li class="active"><a href="layoutA-1.html">A-1</a></li>
                     <li><a href="layoutA-2.html">A-2</a></li>
                     <li><a href="layoutA-3.html">A-3</a></li>
@@ -214,45 +203,6 @@
                 li.classList.add("active");
             })
         })
-
-        // 페이지네이션 로직
-        const uls = document.querySelectorAll('#side nav ul');
-        const itemsPerPage = 24; // 한 페이지에 보여줄 ul의 개수
-        let currentPage = 1;
-
-        function showPage(page) {
-            // 모든 ul 숨기기
-            uls.forEach(ul => {
-                ul.style.display = 'none';
-            });
-
-            const startIndex = (page - 1) * itemsPerPage;
-            const endIndex = startIndex + itemsPerPage;
-
-            // 현재 페이지에 해당하는 ul만 보여주기
-            for (let i = startIndex; i < endIndex; i++) {
-                if (uls[i]) { // ul이 존재하는 경우에만
-                    uls[i].style.display = '';
-                }
-            }
-        }
-
-        document.getElementById('prevBtn').addEventListener('click', function () {
-            if (currentPage > 1) {
-                currentPage--;
-                showPage(currentPage);
-            }
-        });
-
-        document.getElementById('nextBtn').addEventListener('click', function () {
-            if (currentPage < Math.ceil(uls.length / itemsPerPage)) {
-                currentPage++;
-                showPage(currentPage);
-            }
-        });
-
-        // 초기 페이지 로딩
-        showPage(currentPage);
     </script>
 </body>
 
