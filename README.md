@@ -60,16 +60,18 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 윈도우+쉬프트+s : 스크린샷 단축키
    
 ### 색상,배경 관련된 사이트
-[브렌드 색상 제네레이션](https://huemint.com/brand-intersection/)   
-[컬러 팔렛트](https://colorhunt.co/)
-[배경 애니메이션 소스](https://wsss.tistory.com/category/Animation/CSS3#none)
-[코드 펜](https://codepen.io/)
-[코드롭스](https://tympanus.net/codrops/)
-[서핏](https://www.surfit.io/)
-[코드 변경기](https://www.sassmeister.com/)
-[컬러 코드뽑기](https://htmlcolorcodes.com/)
-[폰트 모음](https://wess.tistory.com/)   
-[api 소스 가져오기](https://www.data.go.kr/)   
+[브렌드 색상 제네레이션](https://huemint.com/brand-intersection/)      
+[컬러 팔렛트](https://colorhunt.co/)   
+[배경 애니메이션 소스](https://wsss.tistory.com/category/Animation/CSS3#none)   
+[코드 펜](https://codepen.io/)   
+[코드롭스](https://tympanus.net/codrops/)   
+[서핏](https://www.surfit.io/)   
+[코드 변경기](https://www.sassmeister.com/)   
+[컬러 코드뽑기](https://htmlcolorcodes.com/)   
+[폰트 모음](https://wess.tistory.com/)      
+[api 소스 가져오기](https://www.data.go.kr/)      
+[단축키](https://docs.emmet.io/cheat-sheet/)   
+[background-image](https://webzz.tistory.com/380)   
 
 # 수업 규칙
 1. 지각, 결석, 조퇴 ---> 발표 1회   
@@ -82,4 +84,5 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 
 # 오늘의 숙제   
 퀴즈 c 금요일까지 만들기   
-제기함수, 비동기 함수 시험 20번에 나옴 외워라 발표하기 싫으면...
+제기함수, 비동기 함수 시험 20번에 나옴 외워라 발표하기 싫으면...   
+css 변형시켜오기
