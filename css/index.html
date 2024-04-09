@@ -263,9 +263,9 @@
             width: 70px;
             height: 75px;
             background: linear-gradient(to bottom, #ca86a2 0%, #f68383 2%, #a6f7e0 100%);
-            position: sticky;
+            position: absolute;
             left: 30%;
-            top: -10px;
+            top: -80px;
             z-index: -2;
             border-radius: 85px;
             animation: hair-movement 10s infinite linear;
@@ -275,15 +275,11 @@
             content: "";
             position: absolute;
             top: 50%;
-            /* 가로줄의 수직 위치를 중앙으로 조정합니다. */
             left: 0;
             right: 0;
             height: 2px;
-            /* 가로줄의 높이(두께)를 설정합니다. */
-            background-color: #f79999;
-            /* 가로줄의 색상을 설정합니다. */
+            background-color: #f79999b1;
             transform: translateY(-50%);
-            /* 가로줄을 수직 중앙으로 정렬합니다. */
         }
 
         @keyframes hair-movement {
@@ -443,23 +439,41 @@
         }
 
         .jelly-mouth {
-            position: absolute;
-            width: 200px;
-            height: 80px;
-            background-color: #dafeec;
-            border-radius: 30px;
-            transform: translateX(-50%);
+            position: relative;
+            width: 25px;
+            /* 사탕의 원형 부분 크기 */
+            height: 25px;
+            /* 사탕의 원형 부분 크기 */
+            background: linear-gradient(to right, #ff7585e2 30%, #f87c7c 60%, #ffb6b6);
+            /* 그라데이션 방향 수정 */
+            border-radius: 50%;
+            /* 원형 */
+            transform: translateX(-50%) rotate(90deg);
+            /* 회전 추가 */
+            top: 80px;
+            /* 위치 조정, 필요에 따라 조정 */
+            left: 50%;
+            /* 가운데 정렬 */
+            z-index: 2;
+            /* 막대보다 앞에 위치하도록 z-index 설정 */
         }
 
-        .jelly-mouth::before {
+        .jelly-mouth::after {
             content: '';
+            /* 가상 요소에는 내용이 필요 */
             position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 60%;
-            height: 1px;
-            background-color: #4aac9f;
-            transform: translateX(-50%);
+            width: 5px;
+            /* 막대의 너비 */
+            height: 30px;
+            /* 막대의 높이 */
+            background: #dcdcdc;
+            /* 막대의 색상, 회색으로 설정 */
+            left: 10px;
+            /* 원형 부분 가운데에 위치하도록 조정 */
+            top: -29.5px;
+            /* 원형 부분 바로 옆에서 시작 */
+            z-index: 1;
+            /* 원형 부분보다 뒤에 위치하도록 z-index 설정 */
         }
 
         .jelly-hand {
@@ -495,7 +509,7 @@
             position: absolute;
             left: 0;
             box-shadow: 0 2px #17abb5;
-            animation: tentacle 1s infinite ease-in-out;
+            animation: tentacle 1s infinite ease-in;
         }
 
         .jelly-tentacle2 {
@@ -506,7 +520,7 @@
             position: absolute;
             left: 20%;
             box-shadow: 0 2px #17abb5;
-            animation: tentacle 1s infinite ease-in-out -0.2s;
+            animation: tentacle 1s infinite ease-in -0.1s;
         }
 
         .jelly-tentacle3 {
@@ -517,7 +531,7 @@
             position: absolute;
             left: 40%;
             box-shadow: 0 2px #17abb5;
-            animation: tentacle 1s infinite ease-in-out -0.4s;
+            animation: tentacle 1s infinite ease-in -0.9s;
         }
 
         .jelly-tentacle4 {
@@ -528,29 +542,31 @@
             position: absolute;
             left: 60%;
             box-shadow: 0 2px #17abb5;
-            animation: tentacle 1s infinite ease-in-out -0.6s;
+            animation: tentacle 1s infinite ease-in -0.5s;
         }
 
         .jelly-tentacle5 {
             width: 50px;
-            height: 70px;
+            height: 50px;
             background-color: #e6fff3;
             border-radius: 0 0 50% 50%;
             position: absolute;
             left: 80%;
             box-shadow: 0 2px #17abb5;
-            animation: tentacle 1s infinite ease-in-out -0.8s;
+            animation: tentacle 1s infinite ease-in -0.1s;
         }
 
         @keyframes tentacle {
-
-            0%,
-            100% {
+            0% {
                 bottom: 15px;
             }
 
             50% {
                 bottom: 35px;
+            }
+
+            100% {
+                bottom: 15px;
             }
         }
     </style>
