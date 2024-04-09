@@ -55,13 +55,17 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 같은 단어를 한번에 수정하는 방법(똑같은 키워드 찾기) : ctrl + d   
 이모티콘✨ : 윈도우 + ;   
 &gt ; : 뾰족 괄호 닫는 코드(웹 페이지에서 "&gt;" 표시를 보여줌)
-&lt ; : 뾰족 괄호 여는 코드(웹 페이지에서 "&lt;" 표시를 보여줌)
+&lt ; : 뾰족 괄호 여는 코드(웹 페이지에서 "&lt;" 표시를 보여줌)   
+
+윈도우+쉬프트+s : 스크린샷 단축키
    
 ### 색상,배경 관련된 사이트
 [브렌드 색상 제네레이션](https://huemint.com/brand-intersection/)   
 [컬러 팔렛트](https://colorhunt.co/)
 [배경 애니메이션 소스](https://wsss.tistory.com/category/Animation/CSS3#none)
 [코드 펜](https://codepen.io/)
+[코드롭스](https://tympanus.net/codrops/)
+[서핏](https://www.surfit.io/)
 [코드 변경기](https://www.sassmeister.com/)
 [컬러 코드뽑기](https://htmlcolorcodes.com/)
 [폰트 모음](https://wess.tistory.com/)   
@@ -77,4 +81,5 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 자기소개(5분) ---> 자기소개(10분) ---> 노래 ---> 춤 ---> 수업발표
 
 # 오늘의 숙제   
-퀴즈 c 금요일까지 만들기
+퀴즈 c 금요일까지 만들기   
+제기함수, 비동기 함수 시험 20번에 나옴 외워라 발표하기 싫으면...
