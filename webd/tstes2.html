@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sliderS-2</title>
+    <title>test2</title>
     <style>
         * {
             margin: 0;
@@ -15,15 +15,6 @@
             width: 1200px;
             height: 700px;
             margin: 0 auto;
-        }
-
-        a {
-            text-decoration: none;
-            color: #000;
-        }
-
-        li {
-            list-style: none;
         }
 
         /* header */
@@ -104,47 +95,39 @@
         .nav>ul {
             display: flex;
             justify-content: right;
-            margin-top: 30px;
+            margin-top: 60px;
             margin-left: auto;
             width: fit-content;
         }
 
         .nav>ul>li>a {
             padding: 10px 50px;
-            background-color: #d7fced;
+            background-color: #acacacb5;
             display: inline-block;
         }
 
         .nav>ul>li>a:hover {
-            background-color: #a9e6ce;
+            background-color: #545454;
         }
 
         .nav>ul>li>ul {
             text-align: center;
-            display: none;
+            /* display: none; */
+            position: relative;
+            z-index: 10;
         }
 
         .nav>ul>li>ul>li>a {
-            background-color: #ebffefb4;
             padding: 10px;
             width: 100%;
             display: inline-block;
             box-sizing: border-box;
+            background-color: #f4cccc;
         }
 
         .nav>ul>li>ul>li>a:hover {
-            background-color: #3f403f;
-            color: #ffff;
-        }
-
-        /* 자바스크립트 CSS */
-        .nav>ul>li>ul {
-            display: block;
-            height: 0px;
-            /* height: 158px */
-            overflow: hidden;
-            transition: all 600ms;
-
+            background-color: #b8b8b8;
+            color: #000;
         }
     </style>
 </head>
@@ -157,35 +140,34 @@
                 <ul>
                     <li><a href="#">메뉴1</a>
                         <ul class="submenu">
-                            <li><a href="#">서브 메뉴1-1</a></li>
-                            <li><a href="#">서브 메뉴1-2</a></li>
-                            <li><a href="#">서브 메뉴1-3</a></li>
-                            <li><a href="#">서브 메뉴1-4</a></li>
+                            <li><a href="#">서브메뉴1-1</a></li>
+                            <li><a href="#">서브메뉴1-2</a></li>
+                            <li><a href="#">서브메뉴1-3</a></li>
+                            <li><a href="#">서브메뉴1-4</a></li>
                         </ul>
-
                     </li>
                     <li><a href="#">메뉴2</a>
-                        <ul class="submenu">
-                            <li><a href="#">서브 메뉴2-1</a></li>
-                            <li><a href="#">서브 메뉴2-2</a></li>
-                            <li><a href="#">서브 메뉴2-3</a></li>
-                            <li><a href="#">서브 메뉴2-4</a></li>
+                        <ul lass="submenu">
+                            <li><a href="#">서브메뉴2-1</a></li>
+                            <li><a href="#">서브메뉴2-2</a></li>
+                            <li><a href="#">서브메뉴2-3</a></li>
+                            <li><a href="#">서브메뉴2-4</a></li>
                         </ul>
                     </li>
                     <li><a href="#">메뉴3</a>
                         <ul class="submenu">
-                            <li><a href="#">서브 메뉴3-1</a></li>
-                            <li><a href="#">서브 메뉴3-2</a></li>
-                            <li><a href="#">서브 메뉴3-3</a></li>
-                            <li><a href="#">서브 메뉴3-4</a></li>
+                            <li><a href="#">서브메뉴3-1</a></li>
+                            <li><a href="#">서브메뉴3-2</a></li>
+                            <li><a href="#">서브메뉴3-3</a></li>
+                            <li><a href="#">서브메뉴3-4</a></li>
                         </ul>
                     </li>
                     <li><a href="#">메뉴4</a>
                         <ul class="submenu">
-                            <li><a href="#">서브 메뉴4-1</a></li>
-                            <li><a href="#">서브 메뉴4-2</a></li>
-                            <li><a href="#">서브 메뉴4-3</a></li>
-                            <li><a href="#">서브 메뉴4-4</a></li>
+                            <li><a href="#">서브메뉴4-1</a></li>
+                            <li><a href="#">서브메뉴4-2</a></li>
+                            <li><a href="#">서브메뉴4-3</a></li>
+                            <li><a href="#">서브메뉴4-4</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -207,35 +189,6 @@
         </div>
         <!-- //footer -->
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- <script>
-        $(function () {
-            $(".nav > ul > li").mouseover(function () {
-                $(".nav > ul > li > ul").stop().slideDown();
-            });
-            $(".nav > ul > li").mouseout(function () {
-                $(".nav > ul > li > ul").stop().slideUp();
-            });
-        })
-    </script> -->
-
-    <script>
-        window.onload = function () {
-            const navList = document.querySelector(".nav > ul");
-
-            navList.addEventListener("mouseover", function () {
-                navList.querySelectorAll(".submenu").forEach(sub => {
-                    sub.style.height = "158px";
-                })
-            })
-            navList.addEventListener("mouseout", function () {
-                navList.querySelectorAll(".submenu").forEach(sub => {
-                    sub.style.height = "0px";
-                })
-            })
-        }
-    </script>
 </body>
 
 </html>

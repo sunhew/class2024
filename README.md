@@ -59,7 +59,7 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 
 윈도우+쉬프트+s : 스크린샷 단축키
    
-### 색상,배경 관련된 사이트
+### 코딩, 색상 사이트
 [브렌드 색상 제네레이션](https://huemint.com/brand-intersection/)      
 [컬러 팔렛트](https://colorhunt.co/)   
 [배경 애니메이션 소스](https://wsss.tistory.com/category/Animation/CSS3#none)   
@@ -72,7 +72,7 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 [api 소스 가져오기](https://www.data.go.kr/)      
 [단축키](https://docs.emmet.io/cheat-sheet/)   
 [background-image](https://webzz.tistory.com/380)   
-
+[jquery](https://developers.google.com/speed/libraries?hl=ko#jquery)   
 # 수업 규칙
 1. 지각, 결석, 조퇴 ---> 발표 1회   
 2. 수업시간에 카톡, 쇼핑, 웹툰, 게임 등을 하다 걸렸을때 ---> 발표 1회   

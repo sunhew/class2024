@@ -6,45 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=2.0">
     <title>퀴즈 06s</title>
     <link rel="stylesheet" href="asset/css/quiz.css">
-    <style>
-        .quiz__footer .confirm {
-            background-color: #666;
-            color: #fff;
-            width: 100%;
-            padding: 20px;
-            border: 0;
-            font-size: 16px;
-            border-radius: 15px;
-            border: 1px solid transparent;
-            transition: background-color 0.3s;
-        }
-
-        .quiz__footer .confirm:hover {
-            background-color: transparent;
-            border: 1px dashed #2d5557;
-            color: #2d5557;
-            cursor: pointer;
-        }
-
-        .quiz__footer .next {
-            background-color: #b9b9b9;
-            color: #fff;
-            width: 100%;
-            padding: 20px;
-            border: 0;
-            font-size: 16px;
-            border-radius: 15px;
-            border: 1px solid transparent;
-            transition: background-color 0.3s;
-        }
-
-        .quiz__footer .next:hover {
-            background-color: transparent;
-            border: 1px dashed #2d574a;
-            color: #2d5751;
-            cursor: pointer;
-        }
-    </style>
 </head>
 
 <body>
@@ -68,7 +29,6 @@
 
     <main id="main">
         <div class="quiz__wrap"></div>
-        <div class="quiz__check">정답 확인</div>
     </main>
     <!-- //main -->
 
@@ -80,86 +40,18 @@
     <script>
         //선택자
         const quizWrap = document.querySelector(".quiz__wrap");
-        const nextQuizBtn = document.createElement("button"); // 다음 문제 버튼 생성
-        nextQuizBtn.textContent = "다음 문제"; // 버튼 텍스트 설정
-        nextQuizBtn.classList.add("next"); // 'next' 클래스 추가
 
-        // 문제 정보
-        let quizInfo = [];
-        let currentQuizIndex = 0; // 현재 퀴즈 인덱스
-        let correctCount = 0; // 정답 수
-        let incorrectCount = 0; // 오답 수
+        //문제 정보
+        let quizinfo = [];
 
         //문제 가져오기
         const fetchQuiz = () => {
             fetch("https://sunhew.github.io/class2024/json/gineungsajC-quiz.json")
                 .then(res => res.json())
                 .then(items => {
-                    quizInfo = items.map(item => {
-                        const formattedQuiz = {
-                            date: "2005년 5회",
-                            type: item.subject,
-                            question: item.question,
-                            desc: item.desc,
-                            answer: item.correct_answer,
-                        }
-                        return formattedQuiz;
-                    });
-
-                    // 첫 번째 문제 출력
-                    updateQuiz();
+                    console.log(items);
                 })
         }
-
-        //문제 출력
-        const updateQuiz = () => {
-            if (currentQuizIndex < quizInfo.length) {
-                const quiz = quizInfo[currentQuizIndex];
-                const quizContent = `
-                    <div class="quiz">
-                        <div class="quiz__header">${quiz.date}${quiz.type}</div>
-                        <div class="quiz__main">
-                            <div class="question">${currentQuizIndex + 1}. ${quiz.question}</div>
-                            <div class="choices">
-                                <input type="text" id="choice${currentQuizIndex}" name="choice-${currentQuizIndex}" placeholder="정답을 입력하세요">
-                            </div>
-                        </div>
-                    </div>
-                    `
-                quizWrap.innerHTML = quizContent;
-                quizWrap.appendChild(nextQuizBtn); // 다음 문제 버튼 추가
-            } else {
-                // 모든 문제를 완료했을 때 최종 점수 표시
-                alert(`모든 문제를 완료했습니다. 정답 수: ${correctCount}, 오답 수: ${incorrectCount}`);
-            }
-        }
-
-        // 다음 문제 버튼 이벤트 리스너
-        nextQuizBtn.addEventListener("click", () => {
-            const userAnswerElement = document.querySelector(`input[name="choice-${currentQuizIndex}"]`);
-            const userAnswer = userAnswerElement.value.trim(); // 사용자의 답
-            const correctAnswer = quizInfo[currentQuizIndex].answer.trim(); // 정답
-
-            // 정답 확인
-            if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
-                correctCount++;
-            } else {
-                incorrectCount++;
-            }
-
-            if (currentQuizIndex < 100 - 1) {
-                currentQuizIndex++; // 다음 문제 인덱스로 이동
-                updateQuiz();
-            } else {
-                // 마지막 문제를 확인한 후 최종 점수 표시
-                alert(`모든 문제를 완료했습니다. 정답 수: ${correctCount}, 오답 수: ${incorrectCount}`);
-            }
-        });
-
-        //페이지가 로드된 후 실행
-        document.addEventListener("DOMContentLoaded", () => {
-            fetchQuiz();
-        })
     </script>
 </body>
 
