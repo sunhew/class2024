@@ -92,6 +92,15 @@
         }
 
         /* nav */
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        li {
+            list-style: none;
+        }
+
         .nav>ul {
             display: flex;
             justify-content: right;
@@ -102,32 +111,31 @@
 
         .nav>ul>li>a {
             padding: 10px 50px;
-            background-color: #acacacb5;
+            background-color: #ccc9c9;
             display: inline-block;
         }
 
         .nav>ul>li>a:hover {
-            background-color: #545454;
+            background-color: #ffd4d4;
         }
 
         .nav>ul>li>ul {
             text-align: center;
-            /* display: none; */
             position: relative;
+            display: none;
             z-index: 10;
         }
 
         .nav>ul>li>ul>li>a {
+            background-color: #d9d9d9;
             padding: 10px;
             width: 100%;
             display: inline-block;
             box-sizing: border-box;
-            background-color: #f4cccc;
         }
 
         .nav>ul>li>ul>li>a:hover {
-            background-color: #b8b8b8;
-            color: #000;
+            background-color: #e5b8b8a2;
         }
     </style>
 </head>
@@ -140,34 +148,35 @@
                 <ul>
                     <li><a href="#">메뉴1</a>
                         <ul class="submenu">
-                            <li><a href="#">서브메뉴1-1</a></li>
-                            <li><a href="#">서브메뉴1-2</a></li>
-                            <li><a href="#">서브메뉴1-3</a></li>
-                            <li><a href="#">서브메뉴1-4</a></li>
+                            <li><a href="#">서브 메뉴1-1</a></li>
+                            <li><a href="#">서브 메뉴1-2</a></li>
+                            <li><a href="#">서브 메뉴1-3</a></li>
+                            <li><a href="#">서브 메뉴1-4</a></li>
                         </ul>
+
                     </li>
                     <li><a href="#">메뉴2</a>
-                        <ul lass="submenu">
-                            <li><a href="#">서브메뉴2-1</a></li>
-                            <li><a href="#">서브메뉴2-2</a></li>
-                            <li><a href="#">서브메뉴2-3</a></li>
-                            <li><a href="#">서브메뉴2-4</a></li>
+                        <ul class="submenu">
+                            <li><a href="#">서브 메뉴2-1</a></li>
+                            <li><a href="#">서브 메뉴2-2</a></li>
+                            <li><a href="#">서브 메뉴2-3</a></li>
+                            <li><a href="#">서브 메뉴2-4</a></li>
                         </ul>
                     </li>
                     <li><a href="#">메뉴3</a>
                         <ul class="submenu">
-                            <li><a href="#">서브메뉴3-1</a></li>
-                            <li><a href="#">서브메뉴3-2</a></li>
-                            <li><a href="#">서브메뉴3-3</a></li>
-                            <li><a href="#">서브메뉴3-4</a></li>
+                            <li><a href="#">서브 메뉴3-1</a></li>
+                            <li><a href="#">서브 메뉴3-2</a></li>
+                            <li><a href="#">서브 메뉴3-3</a></li>
+                            <li><a href="#">서브 메뉴3-4</a></li>
                         </ul>
                     </li>
                     <li><a href="#">메뉴4</a>
                         <ul class="submenu">
-                            <li><a href="#">서브메뉴4-1</a></li>
-                            <li><a href="#">서브메뉴4-2</a></li>
-                            <li><a href="#">서브메뉴4-3</a></li>
-                            <li><a href="#">서브메뉴4-4</a></li>
+                            <li><a href="#">서브 메뉴4-1</a></li>
+                            <li><a href="#">서브 메뉴4-2</a></li>
+                            <li><a href="#">서브 메뉴4-3</a></li>
+                            <li><a href="#">서브 메뉴4-4</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -189,6 +198,13 @@
         </div>
         <!-- //footer -->
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".nav > ul > li").mouseover(function)
+        })
+    </script>
 </body>
 
 </html>
