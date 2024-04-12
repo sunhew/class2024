@@ -4,134 +4,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>F-3</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
 
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
         #wrap {
             width: 100%;
+            height: 100%;
         }
 
-        /* header */
         #header {
             width: 100%;
-            height: 200px;
-            background-color: #e7e7e7;
-        }
-
-        .header-container {
-            width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            width: 100%;
             height: 100px;
-            background-color: #7e7e80;
+            position: relative;
+            z-index: 10;
         }
 
-        .nav {
+        #header::after {
+            content: '';
             width: 100%;
-            height: 100px;
-            background-color: #b1b1b4;
+            height: 0px;
+            position: absolute;
+            left: 0;
+            top: 100px;
+            background-color: #bebebe;
+            transition: all 200ms;
         }
 
-        /* main */
-        #main {
-            width: 100%;
-            height: 460px;
-            background-color: #e7e7e7;
+        #header.on::after {
+            height: 158px;
         }
 
-        .main-container {
-            width: 1200px;
-            height: 460px;
-            margin: 0 auto;
+        #header .container {
             display: flex;
         }
 
-        .aside {
-            width: 30%;
-            background-color: #C7C8CC;
+        #header h1 {
+            width: 20%;
+            height: 100px;
+            background-color: #d4d4d4;
         }
 
-        .content {
-            width: calc(1200px - 30%);
-            background-color: #753d3d;
+        #header nav {
+            width: 80%;
+            height: 100px;
+            background-color: #b7b7b7;
+            position: relative;
+            z-index: 100;
         }
 
-        .content1 {
-            height: 33.3333%;
+        #header nav>ul {
             display: flex;
+            justify-content: right;
+            margin-top: 60px;
         }
 
-        .content1-1 {
-            width: 50%;
-            background-color: #473434;
+        #header nav>ul>li>a {
+            padding: 10px 60px;
+            background-color: #c4c4c4;
+            display: inline-block;
         }
 
-        .content1-2 {
-            width: 50%;
-            background-color: #8c8080;
+        #header nav>ul>li>a:hover {
+            background-color: #fff;
         }
 
-        .content2 {
-            height: 33.3333%;
-            background-color: #E3E1D9;
+        #header nav>ul>li>ul {
+            display: none;
+            background-color: #6a3131;
         }
 
-        .content3 {
-            height: 33.3333%;
-            background-color: #F2EFE5;
+        #header nav>ul>li>ul>li {
+            text-align: center;
         }
 
-        /* footer */
+        #header nav>ul>li>ul>li>a {
+            padding: 10px;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #header nav>ul>li>ul>li>a:hover {
+            background-color: #bdbdbd;
+        }
+
+        #slider {
+            width: 100%;
+            height: 350px;
+            background-color: #cfc8c8;
+            position: relative;
+        }
+
+        #slider .link {
+            width: 1340px;
+            height: 100px;
+            background-color: #a8a8a8;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+        }
+
+        #contents {
+            width: 100%;
+            height: 400px;
+
+        }
+
+        #contents .container .banner {
+            width: 100%;
+            height: 150px;
+            background-color: #9b8f8f;
+        }
+
+        #contents .container .gongisahan {
+            width: 100%;
+            height: 250px;
+            background-color: #8f8f8f;
+        }
+
         #footer {
             width: 100%;
-            height: 100px;
-            background-color: #e7e7e7;
+            height: 120px;
+
         }
 
-        .footer-container {
-            width: 1200px;
-            height: 100px;
-            background-color: #F2EFE5;
+        #footer .container {
+            display: flex;
+        }
+
+        #footer .container .footer1 {
+            width: 20%;
+            height: 120px;
+            background-color: #8c8b8b;
+        }
+
+        #footer .container .footer2 {
+            width: 80%;
+            height: 120px;
+            background-color: #828282;
+        }
+
+        #footer .container .footer2 .footer2-1 {
+            width: 100%;
+            height: 60px;
+            background-color: #525252;
+        }
+
+        #footer .container .footer2 .footer2-2 {
+            width: 100%;
+            height: 60px;
+            background-color: #ac6a6a;
+        }
+
+        .container {
+            width: 1340px;
+            height: inherit;
             margin: 0 auto;
+            background-color: #d9d9d9;
         }
     </style>
 </head>
 
 <body>
-    <div id="wrap">
+    <div id="warp">
         <header id="header">
-            <div class="header-container">
-                <h1 class="logo"></h1>
-                <nav class="nav"></nav>
+            <div class="container">
+                <h1></h1>
+                <nav>
+                    <ul>
+                        <li><a href="">조회</a>
+                            <ul>
+                                <li><a href="">계좌조회</a></li>
+                                <li><a href="">거래내역 조회</a></li>
+                                <li><a href="">휴먼계좌 조회</a></li>
+                                <li><a href="">슈표/어음 조회</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">이체</a>
+                            <ul>
+                                <li><a href="">계좌이체</a></li>
+                                <li><a href="">다계좌 조회</a></li>
+                                <li><a href="">자동이체</a></li>
+                                <li><a href="">예약이체</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">공과금</a>
+                            <ul>
+                                <li><a href="">지로/생활요금</a></li>
+                                <li><a href="">지방세</a></li>
+                                <li><a href="">국세/관세</a></li>
+                                <li><a href="">벌칙금/벌과금</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">외환</a>
+                            <ul>
+                                <li><a href="">금리</a></li>
+                                <li><a href="">환율/외화예금</a></li>
+                                <li><a href="">글로벌뱅킹</a></li>
+                                <li><a href="">외화송금</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </header>
-        <!-- header -->
-        <main id="main">
-            <div class="main-container">
-                <article class="aside"></article>
-                <article class="content">
-                    <div class="content1">
-                        <div class="content1-1"></div>
-                        <div class="content1-2"></div>
-                    </div>
-                    <div class="content2"></div>
-                    <div class="content3"></div>
-                </article>
+        <article id="slider">
+            <div class="link"></div>
+        </article>
+        <main id="contents">
+            <div class="container">
+                <section class="banner"></section>
+                <section class="gongisahan"></section>
             </div>
+
         </main>
-        <!-- main -->
         <footer id="footer">
-            <div class="footer-container"></div>
+            <div class="container">
+                <div class="footer1"></div>
+                <div class="footer2">
+                    <div class="footer2-1"></div>
+                    <div class="footer2-2"></div>
+                </div>
+            </div>
         </footer>
-        <!-- footer -->
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("nav > ul > li").mouseover(function () {
+                $("nav > ul > li > ul").stop().slideDown("on");
+            });
+
+
+            $("nav > ul > li").mouseout(function () {
+                $("nav > ul > li > ul").stop().slideUp("on");
+            });
+        })
+    </script>
+
 </body>
 
 </html>

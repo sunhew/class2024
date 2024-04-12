@@ -77,15 +77,15 @@
     <script>
         //선택자
         const quizWrap = document.querySelector(".quiz__wrap");
-        const nextQuizBtn = document.createElement("button"); // 다음 문제 버튼 생성
-        nextQuizBtn.textContent = "다음 문제"; // 버튼 텍스트 설정
-        nextQuizBtn.classList.add("next"); // 'next' 클래스 추가
+        const nextQuizBtn = document.createElement("button");
+        nextQuizBtn.textContent = "다음 문제";
+        nextQuizBtn.classList.add(".next");
 
         // 문제 정보
         let quizInfo = [];
-        let currentQuizIndex = 0; // 현재 퀴즈 인덱스
-        let correctCount = 0; // 정답 수
-        let incorrectCount = 0; // 오답 수
+        let currentQuizIndex = 0;
+        let correctCount = 0;
+        let incorrectCount = 0;
         //문제 정보
         let quizinfo = [];
 
@@ -127,7 +127,7 @@
                     </div>
                     `
                 quizWrap.innerHTML = quizContent;
-                quizWrap.appendChild(nextQuizBtn); // 다음 문제 버튼 추가
+                quizWrap.appendChild(nextQuizBtn);
             } else {
                 // 모든 문제를 완료했을 때 최종 점수 표시
                 alert(`모든 문제를 완료했습니다. 정답 수: ${correctCount}, 오답 수: ${incorrectCount}`);
