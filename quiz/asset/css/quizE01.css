@@ -220,14 +220,14 @@ a {
     border: 10px solid #fff;
 }
 
-.quiz__play .questioin {
+.quiz__play .question {
     font-family: "GmarketSans";
     color: #fff;
     line-height: 1.3;
     font-size: 24px;
 }
 
-.quiz__play .questioin::before {
+.quiz__play .question::before {
     content: 'Q.';
     font-size: 40px;
     color: #ff763c;
@@ -280,6 +280,7 @@ a {
     text-align: center;
     margin-top: 20px;
     display: flex;
+    justify-content: space-around;
 }
 
 .quiz__play .confirm button {
@@ -290,6 +291,7 @@ a {
     border: 0;
     background-color: #a489ba;
     border-radius: 30px;
+    border: 4px solid #fff;
 }
 
 /* 미디어 쿼리 */
@@ -298,5 +300,32 @@ a {
     .quiz__start {
         width: 100%;
         height: 100vh;
+    }
+
+    .quiz__play {
+        width: 70%;
+        height: 70vh;
+        position: relative;
+        justify-content: space-around;
+    }
+
+    .quiz__play .confirm .button1 {
+        justify-content: space-around;
+        left: 30px;
+        bottom: 10px;
+        position: absolute;
+    }
+
+    .quiz__play .confirm .button2 {
+        justify-content: space-around;
+        bottom: 10px;
+        position: absolute;
+    }
+
+    .quiz__play .confirm .button3 {
+        justify-content: space-around;
+        right: 30px;
+        bottom: 10px;
+        position: absolute;
     }
 }
