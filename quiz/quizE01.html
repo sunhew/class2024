@@ -475,34 +475,97 @@
         }
 
         // 현재 요일
-        document.addEventListener('DOMContentLoaded', function () {
-            var today = new Date();
-            var dd = String(today.getDate()).padStart(2, '0');
-            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-            var yyyy = today.getFullYear();
+        {
+            document.addEventListener('DOMContentLoaded', function () {
+                var today = new Date();
+                var dd = String(today.getDate()).padStart(2, '0');
+                var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+                var yyyy = today.getFullYear();
 
-            var days = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
-            var dayName = days[today.getDay()];
+                var days = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+                var dayName = days[today.getDay()];
 
-            today = yyyy + '.' + mm + '.' + dd + '.' + dayName;
-            document.querySelector('.title span').textContent = today;
-        });
+                today = yyyy + '.' + mm + '.' + dd + '.' + dayName;
+                document.querySelector('.title span').textContent = today;
+            });
+        }
 
         //퀴즈 넣기
-
         //선택자
-        const quizWrap = document.querySelector(".quiz__wrap")
-        const quizChecked = document.querySelector(".quiz__play .confirm .button2")
-        const quizBack = document.querySelector(".quiz__play .confirm .button1")
-        const quizNext = document.querySelector(".quiz__play .confirm .button3")
+        const quizWrap = document.querySelector(".quiz__wrap");
+        // quizWrap 내부에 새로운 요소들을 추가하기 위한 컨테이너 생성
+        const quizContainer = document.createElement("div");
+        quizContainer.classList.add("quiz__play");
+        quizWrap.appendChild(quizContainer);
 
-        //문제 정보
+        // 문제 번호 표시
+        const spanNumber = document.createElement("span");
+        spanNumber.classList.add("number");
+        quizContainer.appendChild(spanNumber);
+
+        // 문제 표시
+        const divQuestion = document.createElement("div");
+        divQuestion.classList.add("question");
+        quizContainer.appendChild(divQuestion);
+
+        // 답변 입력란
+        const divAnswer = document.createElement("div");
+        divAnswer.classList.add("answer");
+        const inputAnswer = document.createElement("input");
+        inputAnswer.setAttribute("type", "text");
+        inputAnswer.setAttribute("placeholder", "정답을 입력하세요!");
+        divAnswer.appendChild(inputAnswer);
+        quizContainer.appendChild(divAnswer);
+
+        // 버튼 영역
+        const divConfirm = document.createElement("div");
+        divConfirm.classList.add("confirm");
+        quizContainer.appendChild(divConfirm);
+
+        // 버튼 추가
+        const btnPrev = document.createElement("button");
+        btnPrev.classList.add("button1");
+        btnPrev.textContent = "이전문제";
+        divConfirm.appendChild(btnPrev);
+
+        const btnCheck = document.createElement("button");
+        btnCheck.classList.add("button2");
+        btnCheck.textContent = "확인하기";
+        divConfirm.appendChild(btnCheck);
+
+        const nextQuizBtn = document.createElement("button");
+        nextQuizBtn.classList.add("button3");
+        nextQuizBtn.textContent = "다음 문제";
+        divConfirm.appendChild(nextQuizBtn);
+
+        // 문제 정보
         let quizInfo = [];
+        let currentQuizIndex = 0;
+        let correctCount = 0;
+        let incorrectCount = 0;
 
         //문제 가져오기
         const fetchQuiz = () => {
-            fetch("https://sunhew.github.io/class2024/quiz/json/gineungsa.json")
-        }
+            fetch("https://sunhew.github.io/class2024/json/gineungsajC-quiz.json")
+                .then(res => res.json())
+                .then(items => {
+                    quizInfo = items.map(item => {
+                        const formattedQuiz = {
+                            date: "2005년 5회",
+                            type: item.subject,
+                            question: item.question,
+                            desc: item.desc,
+                            answer: item.correct_answer,
+                        }
+                        return formattedQuiz;
+                    });
+
+                    // 첫 번째 문제 출력
+                    updateQuiz();
+                    console.log(items);
+                })
+        };
+
 
         //페이지가 모두 완료 된 후 실행
         // document.addEventListener("DOMContentLoaded", () => {
