@@ -1,31 +1,27 @@
 [
     {
-        "time": "기능사(2020년03회)",
-        "question": "빈칸에 알맞은 명령문을 완성하시오.",
-        "question_desc": "ALTER TABLE customer ( ① ) phone varchar(255)",
+        "time": "1",
+        "question": "[ALTER TABLE customer ( ) phone varchar(255)]빈칸에 알맞은 명령문은?",
+        "question_desc": " ADD 명령어는 주로 ALTER TABLE 구문과 함께 사용되어 테이블에 새로운 열(column)이나 제약 조건(constraint)을 추가할 때 사용됩니다.",
         "correct_answer": "ADD"
     },
     {
-        "time": "기능사(2020년03회)",
-        "question": "rsh, rlogin, Telnet의 보안이 취약한 단점을 보완하기 위해 사용되고 있는 프로토콜이다 높은 안정성을 보장하며, 포트 번호 22번을 사용하는 원격 접속 프로토콜은 무엇인지 작성하시오.",
-        "correct_answer": "SSH"
+        "time": "2",
+        "question": "[산술연산자, 논리연산자, ] 연산자의 우선수위중 비어있는 연산자는?",
+        "question_desc": "프로그래밍에서 산술연산자, 논리연산자, 관계연산자는 데이터를 처리하고 조건을 평가하는 데 사용되는 기본적인 연산자들입니다.",
+        "correct_answer": "관계연산자"
     },
     {
-        "time": "기능사(2020년03회)",
-        "question": "다음 연산자의 우선수위에 맞게 나열하시오.",
-        "question_desc": "산술연산자, 논리연산자, 관계연산자",
-        "correct_answer": "산술연산자, 관계연산자, 논리연산자"
-    },
-    {
-        "time": "기능사(2020년03회)",
+        "time": "3",
         "question": "알파 테스트와 베타 테스트를 포함하여, 주로 개발의 완료 단계에서 수행되는 검사는 무엇인지 작성하시오.",
+        "question_desc": "인수 테스트(Acceptance Testing)는 소프트웨어 개발 과정의 마지막 단계 중 하나로, 최종 사용자나 고객이 실제 소프트웨어를 사용해보고 그것이 사전에 정의된 요구 사항을 만족하는지를 평가하는 과정입니다.",
         "correct_answer": "인수 테스트"
     },
     {
-        "time": "기능사(2020년03회)",
-        "question": "다음의 명령 중 DML 명령어를 모두 고르시오.",
-        "question_desc": "INSERT, CREATE, SAVEPOINT, ALTER, GRANT, COMMIT, SELECT",
-        "correct_answer": "INSERT, SELECT"
+        "time": "4",
+        "question": "[INSERT, CREATE, SAVEPOINT, ALTER, GRANT, COMMIT, SELECT] 명령어 중 새로운것을 만드느는 명령어는 무엇인가?",
+        "question_desc": "SQL에서 CREATE 문은 주로 데이터베이스, 테이블, 인덱스 등을 새로 생성할 때 사용되는 DDL(Data Definition Language, 데이터 정의 언어) 명령어입니다. 이 명령어는 데이터 구조를 정의하거나 변경하는 데 사용됩니다.",
+        "correct_answer": "CREATE"
     },
     {
         "time": "기능사(2020년03회)",

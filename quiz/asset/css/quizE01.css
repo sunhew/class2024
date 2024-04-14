@@ -498,3 +498,72 @@ a {
         cursor: pointer;
     }
 }
+
+/* good, bad */
+.quiz__wrap .quiz.good {
+    position: relative;
+}
+
+.quiz__wrap .quiz.good::before {
+    content: '';
+    width: 130px;
+    height: 130px;
+    border: 10px solid red;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 100;
+}
+
+.quiz__wrap .quiz.bad {
+    position: relative;
+}
+
+.quiz__wrap .quiz.bad::before {
+    content: '';
+    width: 150px;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    border-radius: 30px;
+    transform: rotate(45deg);
+    z-index: 100;
+}
+
+.quiz__wrap .quiz.bad::after {
+    content: '';
+    width: 150px;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    border-radius: 30px;
+    transform: rotate(-45deg);
+    z-index: 100;
+}
+
+.quiz__check {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 100px;
+    height: 100px;
+    line-height: 94px;
+    text-align: center;
+    background-color: #2d5557;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 5px solid #548082;
+    transition: all 0.3s;
+}
+
+.quiz__check:hover {
+    border: 5px solid transparent;
+    background-color: #a0c3c4;
+    color: #ffffff;
+}

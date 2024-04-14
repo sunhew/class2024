@@ -530,14 +530,14 @@
 
         // 문제 가져오기
         const fetchQuiz = () => {
-            fetch("https://gnlgk.github.io/class2024/json/sanupgisa.json")
+            fetch("https://sunhew.github.io/class2024/quiz/json/gineungsa.json")
                 .then(res => res.json())
                 .then(items => {
                     quizInfo = items.map(item => {
                         return {
                             question: item.question,
                             answer: item.correct_answer,
-                            desc: item.desc,
+                            desc: item.question_desc,
                         };
                     });
                     updateQuiz(currentIndex);
