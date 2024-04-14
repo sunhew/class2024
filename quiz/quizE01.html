@@ -18,7 +18,7 @@
                 <span><i> 100문제 </i><strong>주관식 </strong>실기 기출문제</span>
                 <h1>정보처리기능사<br />실기 주관식</h1>
                 <ul>
-                    <li>정보처리 기능사 실기 단답형 100문제입니다.</li>
+                    <li></li>
                     <li>통과 점수는 90점이며, 시간 제한은 30분입니다.</li>
                 </ul>
             </div>
@@ -28,10 +28,9 @@
         </div>
         <!-- //quiz__start -->
         <div class="quiz__play none">
-            <span class="number">1/100</span>
+            <span class="number"></span>
             <div class="question">
-                웹과 비동기적 데이터 교환 및 조작을 위해 사용되며,
-                XMLHttpRequest 객체를 이용하여 웹 페이지의 일부만을 수정할 수 있는 것은 무엇인가?
+
             </div>
             <div class="answer">
                 <input type="text" placeholder="정답을 입력하세요!">
@@ -39,10 +38,22 @@
             <div class="confirm">
                 <button class="button1">이전문제</button>
                 <button class="button2">확인하기</button>
-                <button class="button3">다음문제</button>
+                <button class="next">다음문제</button>
             </div>
         </div>
-        <div class="quiz__finish"></div>
+        <div class="quiz__finish none">
+            <div class="notice">
+                <h2>시험 종료!</h2>
+                <ul>
+                    <li class="fscore">100점</li>
+                    <li class="count">정답 : 40개</li>
+                </ul>
+            </div>
+            <div class="finish_btn">
+                <button class="restart">다시풀기</button>
+                <button class="end">시험종료</button>
+            </div>
+        </div>
         <div class="quiz__bg">
             <svg id="canvas"></svg>
         </div>
@@ -52,14 +63,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script type="module">
-        // 화면 넘어가기
-        $(function () {
-            $(".quiz__start .btn button").click(function () {
-                $(".quiz__start").addClass("none");
-                $(".quiz__play").removeClass("none");
-            });
-        });
-
         // 뒤에 애니메이션
         import { SVG } from "https://cdn.skypack.dev/@svgdotjs/svg.js@3.1.1";
         import SimplexNoise from "https://cdn.skypack.dev/simplex-noise@3.0.1";
@@ -490,87 +493,137 @@
             });
         }
 
-        //퀴즈 넣기
-        //선택자
-        const quizWrap = document.querySelector(".quiz__wrap");
-        // quizWrap 내부에 새로운 요소들을 추가하기 위한 컨테이너 생성
-        const quizContainer = document.createElement("div");
-        quizContainer.classList.add("quiz__play");
-        quizWrap.appendChild(quizContainer);
+    </script>
 
-        // 문제 번호 표시
-        const spanNumber = document.createElement("span");
-        spanNumber.classList.add("number");
-        quizContainer.appendChild(spanNumber);
+    <script>
+        $(function () {
+            // 화면 전환
+            $(".quiz__start .btn button").click(function () {
+                $(".quiz__start").addClass("none");
+                $(".quiz__play").removeClass("none");
+                fetchQuiz(); // 퀴즈 데이터 가져오기 및 첫 문제 표시
+            });
 
-        // 문제 표시
-        const divQuestion = document.createElement("div");
-        divQuestion.classList.add("question");
-        quizContainer.appendChild(divQuestion);
+            // 퀴즈 종료 화면에서 다시 풀기 버튼 클릭 이벤트
+            $(".quiz__finish .finish_btn .restart").click(function () {
+                $(".quiz__finish").addClass("none");
+                $(".quiz__play").removeClass("none");
+                $(".quiz__play .number").text("1/100"); // 문제 번호 초기화
+                $(".quiz__play .input input").val(""); // 입력 필드 초기화
+                currentIndex = 0; // 현재 문제 인덱스 초기화
+                correctCount = 0; // 정답 카운트 초기화
+                wrongCount = 0; // 오답 카운트 초기화
+                updateQuiz(currentIndex); // 첫 번째 문제로 초기화
+            });
 
-        // 답변 입력란
-        const divAnswer = document.createElement("div");
-        divAnswer.classList.add("answer");
-        const inputAnswer = document.createElement("input");
-        inputAnswer.setAttribute("type", "text");
-        inputAnswer.setAttribute("placeholder", "정답을 입력하세요!");
-        divAnswer.appendChild(inputAnswer);
-        quizContainer.appendChild(divAnswer);
+            // 퀴즈 종료 화면에서 시험종료 버튼 클릭 이벤트
+            $(".quiz__finish .finish_btn .end").click(function () {
+                $(".quiz__finish").addClass("none");
+                $(".quiz__start").removeClass("none");
+            });
+        });
 
-        // 버튼 영역
-        const divConfirm = document.createElement("div");
-        divConfirm.classList.add("confirm");
-        quizContainer.appendChild(divConfirm);
+        let quizInfo = []; // 퀴즈 정보
+        let correctCount = 0; // 정답 수
+        let wrongCount = 0; // 오답 수
+        let currentIndex = 0; // 현재 문제 인덱스
 
-        // 버튼 추가
-        const btnPrev = document.createElement("button");
-        btnPrev.classList.add("button1");
-        btnPrev.textContent = "이전문제";
-        divConfirm.appendChild(btnPrev);
-
-        const btnCheck = document.createElement("button");
-        btnCheck.classList.add("button2");
-        btnCheck.textContent = "확인하기";
-        divConfirm.appendChild(btnCheck);
-
-        const nextQuizBtn = document.createElement("button");
-        nextQuizBtn.classList.add("button3");
-        nextQuizBtn.textContent = "다음 문제";
-        divConfirm.appendChild(nextQuizBtn);
-
-        // 문제 정보
-        let quizInfo = [];
-        let currentQuizIndex = 0;
-        let correctCount = 0;
-        let incorrectCount = 0;
-
-        //문제 가져오기
+        // 문제 가져오기
         const fetchQuiz = () => {
-            fetch("https://sunhew.github.io/class2024/json/gineungsajC-quiz.json")
+            fetch("https://gnlgk.github.io/class2024/json/sanupgisa.json")
                 .then(res => res.json())
                 .then(items => {
                     quizInfo = items.map(item => {
-                        const formattedQuiz = {
-                            date: "2005년 5회",
-                            type: item.subject,
+                        return {
                             question: item.question,
-                            desc: item.desc,
                             answer: item.correct_answer,
-                        }
-                        return formattedQuiz;
+                            desc: item.desc,
+                        };
                     });
-
-                    // 첫 번째 문제 출력
-                    updateQuiz();
-                    console.log(items);
-                })
+                    updateQuiz(currentIndex);
+                });
         };
 
+        // 문제 출력
+        const updateQuiz = (index) => {
+            const quiz = quizInfo[index];
+            const quizPlay = document.querySelector(".quiz__play"); // 퀴즈 플레이 영역 선택
 
-        //페이지가 모두 완료 된 후 실행
-        // document.addEventListener("DOMContentLoaded", () => {
-        //     fetchQuiz();
-        // })
+            let quizWrapTag = `
+                <div class="quiz">
+                    <span class="number">${index + 1} / ${quizInfo.length}</span>
+                    <div class="question">${quiz.question}</div>
+                    <div class="input">
+                        <input type="text" placeholder="정답을 입력하세요!">
+                    </div>
+                    <div class="answer none">정답 : ${quiz.answer}</div>
+                    <div class="desc none">설명 : ${quiz.desc}</div>
+                    <div class="play_btn">
+                        <button class="confirm">확인</button>
+                        <button class="next none">다음문제</button>
+                    </div>
+                </div>
+            `
+
+            quizPlay.innerHTML = quizWrapTag;
+
+            // 이벤트 리스너 설정
+            const quizConfirm = document.querySelector(".quiz .play_btn .confirm");
+            const quizNext = document.querySelector(".quiz .play_btn .next");
+
+            // 정답 확인
+            quizConfirm.addEventListener("click", () => {
+                const userAnswer = document.querySelector(".quiz .input input").value.toLowerCase();
+                const correctAnswer = quiz.answer.toLowerCase();
+                const quizAnswer = document.querySelector(".quiz .answer");
+                const quizDesc = document.querySelector(".quiz .desc");
+
+                if (userAnswer === correctAnswer) {
+                    alert("정답");
+                    correctCount++;
+                } else {
+                    alert("오답");
+                    wrongCount++;
+                    quizAnswer.classList.remove("none");
+                }
+
+                quizDesc.classList.remove("none");
+                quizConfirm.classList.add("none");
+                quizNext.classList.remove("none");
+            });
+
+            //다음문제
+            quizNext.addEventListener("click", () => {
+                currentIndex++;
+                if (currentIndex < quizInfo.length) {
+                    updateQuiz(currentIndex);
+                } else {
+                    quizPlay.classList.add("none");
+                    quizFinish.classList.remove("none");
+
+                    const score = (correctCount / quizInfo.length) * 100;
+
+                    const finishScore = document.querySelector(".fscore");
+                    const finishCount = document.querySelector(".count");
+
+                    finishScore.textContent = `${score.toFixed(0) + " 점"}`;
+                    finishCount.textContent = `정답 : ${correctCount} 개`;
+                }
+            });
+        }
+
+
+        //퀴즈 종료하기
+        quizEbtn.addEventListener("click", () => {
+            alert("수고...했다...");
+        });
+
+
+        // 페이지가 로드된 후 실행
+        document.addEventListener("DOMContentLoaded", () => {
+            fetchQuiz();
+        });
+
     </script>
 </body>
 

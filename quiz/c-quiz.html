@@ -91,7 +91,7 @@
 
         //문제 가져오기
         const fetchQuiz = () => {
-            fetch("https://sunhew.github.io/class2024/json/gineungsajC-quiz.json")
+            fetch("https://sunhew.github.io/class2024/quiz/json/gineungsa.json")
                 .then(res => res.json())
                 .then(items => {
                     quizInfo = items.map(item => {
