@@ -136,13 +136,13 @@
         }
 
         /* 자바스크립트 CSS */
-        .nav>ul>li>ul {
+        /* .nav>ul>li>ul {
             display: block;
-            height: 0px;
-            /* height: 158px */
-            overflow: hidden;
+            height: 0px; */
+        /* height: 158px */
+        /* overflow: hidden;
             transition: all 600ms;
-        }
+        } */
     </style>
 </head>
 
@@ -207,18 +207,18 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        // $(function () {
-        //     //선택자
-        //     $(".nav > ul > li").mouseover(function () {
-        //         $(this).find(".submenu").stop().slideDown();
-        //     });
-        //     $(".nav > ul > li").mouseout(function () {
-        //         $(this).find(".submenu").stop().slideUp();
-        //     });
-        // })
+        $(function () {
+            //선택자
+            $(".nav > ul > li").mouseover(function () {
+                $(this).find(".submenu").stop().slideDown();
+            });
+            $(".nav > ul > li").mouseout(function () {
+                $(this).find(".submenu").stop().slideUp();
+            });
+        })
     </script>
 
-    <script>
+    <!-- <script>
         window.onload = function () {
             const navList = document.querySelectorAll(".nav > ul > li");
 
@@ -232,7 +232,7 @@
                 })
             })
         }
-    </script>
+    </script> -->
 </body>
 
 </html>

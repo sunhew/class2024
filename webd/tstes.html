@@ -1,36 +1,49 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>slider</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
 
-        body {
-            margin: 0 auto;
-        }
-
-        #warp {
+        #wrap {
             width: 100%;
         }
 
         /* header */
         #header {
-            width: 1340px;
+            width: 100%;
+            height: 100px;
+            background-color: #eaeaea;
+            position: relative;
+            z-index: 1000;
+        }
+
+        #header .container {
+            height: 100px;
             display: flex;
-            margin: 0 auto;
+        }
+
+        #header .container .logo {
+            width: 20%;
+            background-color: #d3ece9;
+        }
+
+        #header .container .nav {
+            width: 80%;
+            background-color: #c5dbd9;
         }
 
         #header::after {
             content: '';
             width: 100%;
             height: 0px;
-            background-color: #eed4d4d4;
+            background-color: #a2a2a2d4;
             position: absolute;
             left: 0;
             top: 100px;
@@ -41,84 +54,113 @@
             height: 170px;
         }
 
-        .logo {
-            width: 20%;
-            height: 100px;
-            background-color: #810e0e;
-        }
-
-        .nav {
-            width: 80%;
-            height: 100px;
-            background-color: #ab9a9a;
-        }
-
         /* slider */
         #slider {
             width: 100%;
-            height: 350px;
-            background-color: #808080;
-            position: relative;
+            height: 300px;
+
         }
 
-        .link {
-            position: absolute;
-            width: 1340px;
-            height: 100px;
-            background-color: #3c0b0b;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
+        .sliderWrap .slider {}
+
+        #slider .container .sliderWrap .slider:nth-child(1) {
+            display: block;
         }
 
         /* contents */
         #contents {
-            width: 1340px;
-            margin: 0 auto;
+            width: 100%;
+            height: 200px;
         }
 
-        .content1 {
-            width: 100%;
-            height: 150px;
-            background-color: #6c6c6c;
+        #contents .container {
+            height: 200px;
+            display: flex;
         }
 
-        .content2 {
-            width: 100%;
-            height: 250px;
-            background-color: #795a5a;
+        #contents .container .content1 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #e9f7e2;
+        }
+
+        #contents .container .content2 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #d4f0c5;
+        }
+
+        #contents .container .content3 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #bde5a8;
         }
 
         /* footer */
         #footer {
-            width: 1340px;
+            width: 100%;
+            height: 100px;
+            background-color: #eaeaea;
+        }
+
+        #footer .container {
             display: flex;
-            margin: 0 auto;
         }
 
-        .footer1 {
+        #footer .container .footer1 {
             width: 80%;
-            height: 120px;
-            background-color: #bfbfbf;
+            height: 100px;
         }
 
-        .footer2 {
+        #footer .container .footer1 .footer1-1 {
+            width: 100%;
+            height: 50px;
+            background-color: #c5ffdc;
+        }
+
+        #footer .container .footer1 .footer1-2 {
+            width: 100%;
+            height: 50px;
+            background-color: #abe1c1;
+        }
+
+
+
+        #footer .container .footer2 {
             width: 20%;
+            height: 100px;
+            background-color: #85df95;
         }
 
-        .footer2-1 {
-            width: 100%;
-            height: 60px;
-            background-color: #c9c9c9;
+
+        /* container */
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            background-color: #edebeb;
         }
 
-        .footer2-2 {
-            width: 100%;
-            height: 60px;
-            background-color: #e4d3d3;
+        /* sliderWrap */
+        .sliderWrap {
+            position: relative;
         }
 
-        /* nav */
+        .sliderWrap .slider {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .sliderWrap .slider span {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 10px 20px;
+            color: #fff;
+        }
 
         .nav {
             position: relative;
@@ -170,99 +212,87 @@
             background-color: #8e8c8c;
             color: #fff;
         }
-
-        /* sliderWrap */
-        .sliderWrap {
-            position: relative;
-        }
-
-        .sliderWrap .slider {
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        .sliderWrap .slider span {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.4);
-            padding: 10px 20px;
-            color: #fff;
-        }
     </style>
 </head>
 
-
 <body>
-    <div id="warp">
+    <div id="wrap">
         <header id="header">
-            <h1 class="logo"></h1>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#">메뉴1</a>
-                        <ul>
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴2</a></li>
-                            <li><a href="#">서브메뉴3</a></li>
-                            <li><a href="#">서브메뉴4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">메뉴2</a>
-                        <ul>
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴2</a></li>
-                            <li><a href="#">서브메뉴3</a></li>
-                            <li><a href="#">서브메뉴4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">메뉴3</a>
-                        <ul>
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴2</a></li>
-                            <li><a href="#">서브메뉴3</a></li>
-                            <li><a href="#">서브메뉴4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">메뉴4</a>
-                        <ul>
-                            <li><a href="#">서브메뉴1</a></li>
-                            <li><a href="#">서브메뉴2</a></li>
-                            <li><a href="#">서브메뉴3</a></li>
-                            <li><a href="#">서브메뉴4</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+            <div class="container">
+                <h1 class="logo"></h1>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">메뉴1</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴2</a></li>
+                                <li><a href="#">서브메뉴3</a></li>
+                                <li><a href="#">서브메뉴4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">메뉴2</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴2</a></li>
+                                <li><a href="#">서브메뉴3</a></li>
+                                <li><a href="#">서브메뉴4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">메뉴3</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴2</a></li>
+                                <li><a href="#">서브메뉴3</a></li>
+                                <li><a href="#">서브메뉴4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">메뉴4</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브메뉴1</a></li>
+                                <li><a href="#">서브메뉴2</a></li>
+                                <li><a href="#">서브메뉴3</a></li>
+                                <li><a href="#">서브메뉴4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <!-- header -->
         <article id="slider">
-            <div class="sliderWrap">
-                <div class="slider s1">
-                    <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider01.jpg" alt="01">
-                </div>
-                <div class="slider s2">
-                    <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider02.jpg" alt="02">
-                </div>
-                <div class="slider s3">
-                    <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider03.jpg" alt="03">
+            <div class="container">
+                <div class="sliderWrap">
+                    <div class="slider s1">
+                        <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider01.jpg" alt="이미지1">
+                        <span>이미지 1</span>
+                    </div>
+                    <div class="slider s2">
+                        <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider02.jpg" alt="이미지2">
+                        <span>이미지 2</span>
+                    </div>
+                    <div class="slider s3">
+                        <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider03.jpg" alt="이미지3">
+                        <span>이미지 3</span>
+                    </div>
                 </div>
             </div>
-
-            <div class="link"></div>
         </article>
         <!-- slider -->
         <section id="contents">
-            <article class="content1"></article>
-            <article class="content2"></article>
+            <div class="container">
+                <article class="content1"></article>
+                <article class="content2"></article>
+                <article class="content3"></article>
+            </div>
         </section>
         <!-- contents -->
         <footer id="footer">
-            <div class="footer1"></div>
-            <div class="footer2">
-                <div class="footer2-1"></div>
-                <div class="footer2-2"></div>
+            <div class="container">
+                <div class="footer1">
+                    <div class="footer1-1"></div>
+                    <div class="footer1-2"></div>
+                </div>
+                <div class="footer2"></div>
             </div>
         </footer>
         <!-- footer -->
@@ -271,7 +301,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         $(function () {
-            let currentIndex = 0
+            let currentIndex = 0;
 
             setInterval(() => {
                 let nextIndex = (currentIndex + 1) % 3
@@ -280,16 +310,16 @@
                 $(".slider").eq(nextIndex).fadeIn(1000)
 
                 currentIndex = nextIndex
-            }, 2000)
+            }, 1000)
         })
 
         $(function () {
             $(".nav > ul > li").mouseover(function () {
-                $(".nav > ul > li > ul").stop().fadeIn(900)
+                $(".nav > ul > li > ul").stop().fadeIn()
                 $("#header").addClass("on")
             })
             $(".nav > ul > li").mouseout(function () {
-                $(".nav > ul > li > ul").stop().fadeOut(100)
+                $(".nav > ul > li > ul").stop().fadeOut()
                 $("#header").removeClass("on")
             })
         })
