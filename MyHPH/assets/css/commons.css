@@ -1,0 +1,24 @@
+/* body */
+body {
+    background-color: var(--mainColor);
+}
+
+/* skip */
+#skip {
+    position: relative;
+    z-index: 100000;
+}
+
+#skip a {
+    background-color: var(--black);
+    color: var(--white);
+    position: absolute;
+    left: -400px;
+    top: 0;
+    padding: 10px 20px;
+}
+
+#skip a:active,
+#skip a:focus {
+    left: 0;
+}
