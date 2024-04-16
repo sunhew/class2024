@@ -164,20 +164,20 @@
         });
 
         //이미지 슬라이드
-        let currentIndex = 0;   //현재 이미지
-        $(".slider_wrap").append($(".slider").first().clone(true));    //첫번째 이미지를 복사해서 마지막에 추가
+        let currentIndex = 0;
+        $(".slider_wrap").append($(".slider").first().clone(true));
 
         setInterval(() => {
-            currentIndex++;         //현재 이미지 1씩 증가
+            currentIndex++
             $(".slider_wrap").animate({ marginLeft: -currentIndex * 100 + "%" }, 600);
 
-            if (currentIndex == 3) {    //마지막 이미지일떄
+            if (currentIndex == 3) {
                 setTimeout(() => {
-                    $(".slider_wrap").animate({ marginLeft: 0 }, 0);
-                    currentIndex = 0;     //현재 이미지를 초기화
-                }, 700)
+                    $(".slider_wrap").animate({ marginleft: 0 }, 0);
+                    currentIndex = 0;
+                }, 300)
             }
-        }, 3000);
+        }, 1000);
     </script>
 </body>
 
