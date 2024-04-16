@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유진건설</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo">
+                <a href="#">유진건설</a>
+            </h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">회사소개</a>
+                        <ul>
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">조직 구성도</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">사업영역</a>
+                        <ul>
+                            <li><a href="#">전원주택</a></li>
+                            <li><a href="#">도시재생</a></li>
+                            <li><a href="#">인테리어</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">입주정보</a>
+                        <ul>
+                            <li><a href="#">입주단지</a></li>
+                            <li><a href="#">입주 캘린더</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">고객센터</a>
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">건축상담</a></li>
+                            <li><a href="#">홍보 자료실</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <article id="article">
+            <div class="slider_wrap">
+                <div class="slider s1">
+                    <img src="../imges/slider1.jpg" alt="오랜 세월동안 쌓아온 기술">
+                    <div class="text">
+                        <h2>오랜 세월동안 쌓아온 기술</h2>
+                        <p>안전과 기술을 보장합니다.</p>
+                    </div>
+                </div>
+                <div class="slider s2">
+                    <img src="../imges/slider2.png" alt="최고의 기술과 자원으로">
+                    <div class="text">
+                        <h2>최고의 기술과 자원으로</h2>
+                        <p>최고의 건축을.</p>
+                    </div>
+                </div>
+                <div class="slider s3">
+                    <img src="../imges/slider3.jpg" alt="완벽은 기본, 예술을 더하다.">
+                    <div class="text">
+                        <h2>완벽은 기본, 예술을 더하다.</h2>
+                        <p>당신의 감성을 위해.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- article -->
+        <main id="main">
+            <section class="notice">
+                <h3>공지사항</h3>
+                <div>
+                    <ul>
+                        <li><a href="#">미래를 건설하는 혁신적인</a><span>2024.04.16</span></li>
+                        <li><a href="#">유진 건설 주주 총회</a><span>2024.04.12</span></li>
+                        <li><a href="#">유진 건설 세미나실 이용안내</a><span>2024.04.11</span></li>
+                        <li><a href="#">건설학자 세미나 신청 방법</a><span>2024.04.10</span></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- notice -->
+            <section class="gallery">
+                <h3>갤러리</h3>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="../imges/gallery01.jpg" alt="건축 이미지1">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../imges/gallery02.jpg" alt="건축 이미지2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../imges/gallery03.jpg" alt="건축 이미지3">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- gallery -->
+            <section class="link">
+                <h3>이벤트 바로가기</h3>
+                <a href="#">바로가기</a>
+            </section>
+            <!-- link -->
+        </main>
+        <!-- main -->
+        <footer id="footer">
+            <div class="left">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">저작권 보호정책</a></li>
+                        <li><a href="#">이메일 무단수집 거부</a></li>
+                        <li><a href="#">CCTV설치 및 운영</a></li>
+                    </ul>
+                </div>
+                <div class="copy">
+                    COPYRIGHT 2024, ALL Rights Reserve
+                </div>
+            </div>
+            <div class="right">
+                <select>
+                    <option value="1">가나 건설회사</option>
+                    <option value="2">다라 건설회사</option>
+                    <option value="3">마바 건설회사</option>
+                </select>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        //두번째 ul을 클릭했을때만 경고창 띄우기
+        // $(function () {
+        //     $(".nav > ul > li:eq(1)").click(function () {
+        //         alert("ss")
+        //     });
+        // });
+
+        //1차 메뉴에 오버했을때 1차 메뉴 배경색을 붉은색으로 변경
+        // $(function () {
+        //     $(".nav > ul > li").mouseover(function () {
+        //         $(".nav > ul > li > a").css("background-color", "red")
+        //     });
+        // })
+        $(function () {
+            $(".nav > ul > li").mouseover(function () {
+                $(".nav > ul > li > ul").stop().fadeIn(900)
+            });
+
+            $(".nav > ul > li").mouseout(function () {
+                $(".nav > ul > li > ul").stop().fadeOut(100)
+            });
+        });
+
+        //이미지 슬라이드
+        let currentIndex = 0;   //현재 이미지
+        $(".slider_wrap").append($(".slider").first().clone(true));    //첫번째 이미지를 복사해서 마지막에 추가
+
+        setInterval(() => {
+            currentIndex++;         //현재 이미지 1씩 증가
+            $(".slider_wrap").animate({ marginLeft: -currentIndex * 100 + "%" }, 600);
+
+            if (currentIndex == 3) {    //마지막 이미지일떄
+                setTimeout(() => {
+                    $(".slider_wrap").animate({ marginLeft: 0 }, 0);
+                    currentIndex = 0;     //현재 이미지를 초기화
+                }, 700)
+            }
+        }, 3000);
+    </script>
+</body>
+
+</html>

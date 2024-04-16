@@ -22,3 +22,17 @@ body {
 #skip a:focus {
     left: 0;
 }
+
+/* container */
+.container {
+    max-width: 1260px;
+    width: 96%;
+    margin: 0 auto;
+}
+
+@media (max-width:800px) {
+    .container {
+        width: 100%;
+        margin: 0 16px;
+    }
+}

@@ -1,0 +1,265 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+
+}
+
+li {
+    list-style: none;
+}
+
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#header {
+    width: 100%;
+    display: flex;
+    background-color: #c7dfd3;
+    position: relative;
+    z-index: 1000;
+}
+
+#header .logo {
+    width: 20%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header .logo a {
+    color: #333333;
+
+}
+
+#header .nav {
+    width: 80%;
+    height: 100px;
+    display: flex;
+    justify-content: right;
+}
+
+#header .nav>ul {
+    display: flex;
+    margin-top: 62px;
+}
+
+#header .nav>ul>li {
+    width: 136px;
+}
+
+#header .nav>ul>li>a {
+    padding: 10px 40px;
+    display: inline-block;
+    background-color: #95b3a4;
+    font-size: 14px;
+}
+
+#header .nav>ul>li>a:hover {
+    background-color: #749182;
+}
+
+#header .nav>ul>li>ul {
+    text-align: center;
+    display: none;
+}
+
+
+#header .nav>ul>li>ul>li>a {
+    width: 100%;
+    padding: 10px 40px;
+    display: inline-block;
+    background-color: #95b3a4;
+    font-size: 14px;
+}
+
+#header .nav>ul>li>ul>li>a:hover {
+    background-color: #749182;
+}
+
+#article {
+    width: 100%;
+    height: 300px;
+    background-color: #a8a8a8;
+}
+
+.slider_wrap {
+    display: flex;
+}
+
+.slider_wrap .slider {
+    position: relative;
+}
+
+.slider_wrap .slider img {
+    vertical-align: top;
+}
+
+.slider_wrap .slider .text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #00000064;
+    color: #fff;
+    font-size: 19px;
+    padding: 10px 20px;
+}
+
+#main {
+    width: 100%;
+    display: flex;
+}
+
+.notice {
+    width: 33.3333%;
+    height: 200px;
+    padding: 20px;
+    background-color: #DEAC80;
+}
+
+.notice h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    margin: 3px;
+}
+
+.notice li {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.8;
+}
+
+.notice li a {
+    width: 70%;
+}
+
+.notice li a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.notice li span {
+    width: 30%;
+    text-align: right;
+}
+
+.gallery {
+    width: 33.3333%;
+    height: 200px;
+    padding: 20px;
+}
+
+.gallery h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    margin: 3px;
+}
+
+.gallery ul {
+    display: flex;
+}
+
+.gallery li {
+    margin-right: 18px;
+    transition: all 0.3s;
+}
+
+.gallery li:hover {
+    opacity: 0.4;
+}
+
+.gallery li img {
+    vertical-align: top;
+}
+
+.link {
+    width: 33.3333%;
+    height: 200px;
+    background-image: url("../imges/evnt.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    position: relative;
+}
+
+.link h3 {
+    color: #fff;
+}
+
+.link a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.link a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+#footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: #d2d2d2;
+}
+
+.left {
+    width: 80%;
+}
+
+.left .menu {
+    padding: 20px;
+}
+
+.left .menu ul {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.left .menu li {
+    padding: 3px 10px;
+}
+
+.left .menu li a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.left .copy {
+    text-align: center;
+}
+
+.right {
+    width: 20%;
+}
+
+.right select {
+    border: 1px solid #000;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 30px;
+}
