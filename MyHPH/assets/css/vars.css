@@ -13,12 +13,13 @@
     --white600: #fff;
 
     --black: #000;
-    --black100: #000;
-    --black200: #000;
-    --black300: #000;
-    --black400: #000;
-    --black500: #000;
-    --black600: #000;
+    --black100: #111;
+    --black200: #222;
+    --black300: #333;
+    --black400: #444;
+    --black500: #555;
+    --black600: #666;
+    --black700: #777;
 
     /* 기본 폰트 설정 */
     font-family: var(--fontN);
@@ -28,7 +29,15 @@
 
     /* 아이폰 가로 모드에서 글씨 확대 금지 */
     -webkit-text-size-adjust: 100%;
+
+    /* 모든 이미지 */
+    --snsInstar: url(../img/sns_instar.svg);
+    --snsGithub: url(../img/sns_Github.svg);
+    --snsYoutube: url(../img/sns_Youtube.svg);
+    --snsPigma: url(../img/sns_Pigma.svg);
 }
+
+
 
 @media (max-width: 800px) {
     :root {
