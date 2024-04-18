@@ -1,0 +1,26 @@
+/* member__inner */
+.member__tittle {
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.member__tittle h2 {
+    font-size: 34px;
+    font-family: var(--fontG);
+    margin-bottom: 2.5rem;
+}
+
+.member__tittle p {
+    font-size: 1.25rem;
+    color: var(--black600);
+}
+
+
+.member__from {
+    max-width: 500px;
+    margin: 0 auto;
+    min-height: 300px;
+    margin-bottom: 100px;
+}
+
+/* 로그인 */

@@ -73,6 +73,16 @@ body {
     bottom: 5px;
 }
 
+@media (max-width : 800px) {
+    .line-top {
+        border-top-width: 2px;
+    }
+
+    .line-bot {
+        border-top-width: 2px;
+    }
+}
+
 /* hover-line */
 .line-hover:hover {
     text-decoration: underline;

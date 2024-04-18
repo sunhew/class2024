@@ -42,7 +42,7 @@
 }
 
 .header__inner .logo {
-    padding: 16px;
+    padding: 0.8rem;
 }
 
 .header__inner .logo a {
@@ -93,4 +93,23 @@
 .nav__inner ul li a:hover {
     background-color: var(--black);
     color: var(--white);
+}
+
+@media (max-width:800px) {
+    .nav__inner {
+        display: none;
+    }
+
+    .header__inner {
+        justify-content: center;
+        border-bottom-width: 2px;
+    }
+
+    .header__inner .member {
+        display: none;
+    }
+
+    .header__inner .star {
+        display: none;
+    }
 }

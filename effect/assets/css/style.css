@@ -46,21 +46,21 @@ body {
 .header__inner h1 {
     font-family: "Montserrat";
     color: #d2d2d2;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 18px;
-    padding: 8px 0;
+    padding: 10px 0;
     line-height: 1;
 }
 
 .header__inner h1 em {
-    font-weight: 700;
+    font-weight: 800;
     font-style: normal;
 }
 
 /* main */
 #main {}
 
-.main__inner {}
+
 
 /* footer */
 #footer {
@@ -75,7 +75,9 @@ body {
     display: flex;
 }
 
-.footer__inner ul li {}
+.footer__inner ul .footer__inner ul li {
+    margin-right: 5px;
+}
 
 .footer__inner ul li a {
     border: 1px solid #a89be37d;
@@ -87,4 +89,9 @@ body {
     line-height: 1;
     border-radius: 20px;
     margin: 5px;
+}
+
+.footer__inner ul li.active a {
+    background-color: #dedede;
+    color: #272727;
 }
