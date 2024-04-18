@@ -1,7 +1,7 @@
 /* member__inner */
 .member__tittle {
     text-align: center;
-    padding: 6rem 0;
+    padding: 6rem 0 3.125rem;
 }
 
 .member__tittle h2 {
@@ -16,11 +16,55 @@
 }
 
 
-.member__from {
+/* 로그인 & 회원가입 영역 */
+.member__form {
     max-width: 500px;
     margin: 0 auto;
-    min-height: 300px;
-    margin-bottom: 100px;
+    padding: 3.75rem 0;
 }
 
-/* 로그인 */
+.member__form input {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    border: 0;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.member__form button {
+    padding: 1.2rem 1.4rem;
+    background-color: var(--black);
+    width: 100%;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+/* 아이디 & 비밀번호 찾는 영역 */
+
+.member__add {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 1.625rem;
+    color: var(--black600);
+}
+
+.member__add ul {
+    padding-left: 12px;
+}
+
+.member__add ul li {
+    font-size: 12px;
+    list-style: disc;
+}
+
+/* media */
+@media (max-width:600px) {
+
+    .member__add,
+    .member__form {
+        width: 100%;
+    }
+}

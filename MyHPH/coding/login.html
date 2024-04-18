@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="디자인, 코딩, 개발을 이용하여 나의 블로그 사이트를 만듭니다">
-    <meta name="keyword" content="디자인, 코딩, 개발">
+    <meta name="keywords" content="디자인, 코딩, 개발">
 
     <title>로그인</title>
 
@@ -68,11 +68,36 @@
                         회원가입을 하셔야 로그인이 가능합니다.
                     </p>
                 </div>
-                <div class="member__from line-top line-bot">
-                    dfds
+                <div class="member__form line-top line-bot">
+                    <form action="#" name="#" method="post">
+                        <fieldset>
+                            <legend class="blind">로그인 영역</legend>
+                            <div>
+                                <label for="youEmali" class="blind">이메일</label>
+                                <input type="email" name="youEmali" id="youEmali" placeholder="이메일" required
+                                    autocomplete="off">
+                            </div>
+                            <div>
+                                <label for="youPass" class="blind">패스워드</label>
+                                <input type="password" name="youPass" id="youPass" placeholder="패스워드" required
+                                    autocomplete="off">
+                            </div>
+                            <div>
+                                <button type="submit">로그인</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="member__add">
+                    <ul>
+                        <li>회원가입을 하지 않았다면 회원가입을 먼저 해주세요. <a href="#" class="line-under">회원가입</a></li>
+                        <li>아이디가 기억나지 않으시나요? <a href="#" class="line-under">아이디 찾기</a></li>
+                        <li>비밀번호가 기억나지 않으시나요? <a href="#" class="line-under">비밀번호 찾기</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
+
     </main>
     <!-- main -->
     <footer id="footer" role="contentinfo">

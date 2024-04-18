@@ -28,6 +28,11 @@ body {
     min-height: 50vh;
 }
 
+/* footer */
+#footer {
+    margin-top: 6rem;
+}
+
 /* container */
 .container {
     max-width: 1260px;
@@ -88,4 +93,9 @@ body {
     text-decoration: underline;
     text-underline-position: under;
     color: var(--black500);
+}
+
+.line-under {
+    text-decoration: underline;
+    text-underline-position: under;
 }
