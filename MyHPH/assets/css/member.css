@@ -13,6 +13,7 @@
 .member__tittle p {
     font-size: 1.25rem;
     color: var(--black600);
+    word-break: keep-all;
 }
 
 
@@ -49,6 +50,7 @@
     margin: 0 auto;
     padding-top: 1.625rem;
     color: var(--black600);
+    word-break: keep-all;
 }
 
 .member__add ul {
