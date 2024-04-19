@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>남도맛기행 축제</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1 class="logo">
+                <p>남도 맛 기행 축제</p>
+            </h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">협회소개</a>
+                        <ul>
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">명인</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">행사안내</a>
+                        <ul>
+                            <li><a href="#">요리경연대회</a></li>
+                            <li><a href="#">전시참가</a></li>
+                            <li><a href="#">참가신청</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">홍보마당</a>
+                        <ul>
+                            <li><a href="#">축제소식</a></li>
+                            <li><a href="#">보도자료</a></li>
+                            <li><a href="#">레시피</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">회원마당</a>
+                        <ul>
+                            <li><a href="#">Q&A</a></li>
+                            <li><a href="#">사진갤러리</a></li>
+                            <li><a href="#">공지사항</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- aside -->
+        <main id="main">
+            <article id="slider">
+                <div class="fode">
+                    <img src="../images/foode1.jpg" alt="음식">
+                    <img src="../images/foode2.jpg" alt="음식">
+                    <img src="../images/foode3.jpg" alt="음식">
+                </div>
+
+            </article>
+            <!-- slider -->
+            <section id="contents">
+                <article class="content1"></article>
+                <article class="content2"></article>
+                <article class="content3"></article>
+            </section>
+            <!-- contents -->
+            <footer id="footer">
+                <div class="footer1"></div>
+                <div class="footer2">
+                    <div class="footer2-1"></div>
+                    <div class="footer2-2"></div>
+                </div>
+            </footer>
+            <!-- footer -->
+        </main>
+        <!-- main -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        {
+            let currentIndet = 0;
+            $("#slider").append($(".fode").first().clone(true));
+
+            setInterval(() => {
+                currentIndet++
+
+                $("#slider").animate({ maginLeft: -currentIndet * 100 + "%" }, 600)
+
+                if (currentIndet == 3) {
+                    setTimeout(() => {
+                        $("#slider").animate({ maginLeft: 0 }, 0);
+                        currentIndet = 0;
+                    }, 300)
+                }
+            }, 1000)
+        }
+    </script>
+</body>
+
+</html>

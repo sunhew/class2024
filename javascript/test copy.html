@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        //1 ~ 10 출력
+        // for (let i = 0; i <= arr.length; i++) {
+        //     console.log(arr[i])
+        // }
+
+        //구구단 5단 못 만듦 망함!
+        // {
+        //     for (let i = 5; i <= 5; i++) {
+        //         for (let j = 1; j <= 9; j++) {
+        //             console.log(i + "*" + j + "=" + i * j)
+        //         }
+        //     }
+        // }
+
+        // }
+
+        //함수   ( l 값이 없어서 false가 나옴)
+        function func() {
+            let i = 5, j = 4, k = 1, l, m;
+            l = i > 4;
+            m = j <= 4 && k < 1;     //j는 true지만 k는 false. 하지만 and라서 false가 나온다.
+            // m = j <= 4 ㅣㅣ k < 1;   //or이라 true 나옴
+            console.log(l)
+            console.log(m)
+        }
+        func();
+
+
+        //값 넣기
+        // const ar1 = [100, 200, 300]
+
+        // arr.push(600);
+
+
+        //true 부분에 0이 들어간경우 false(값이 안나옴)  clg가 안에 있으면 1234 밖에 있으면 마지막 값만.
+        // let num = 0;
+        // while (true) {
+        //     num++;
+
+        //     if (num == 5) {
+        //         break
+        //     }
+        //     console.log(num);
+        // }
+
+
+        // let num1 = 4;
+        // while (true) {
+        //     num1++;
+
+        //     if (num1 == 5) {
+        //         continue;
+        //     }
+
+        //     if (num1 < 10) {
+        //         break;
+        //     }
+        // }
+        // console.log(num1);
+
+        //연산자 (논리 연산자(true, false), 산술연산자(+, -, +, /, %), 비교연산자(=, ==, ===, <=),
+        //비트연산자)
+
+        //
+        // let a = 1;
+        // ++a;
+        // console.log(a)
+
+        //최고 점수 구하기 / 최저 점수 구하기 / 평균 구하기
+        // let data = [70, 80, 90, 20, 30, 40];
+        // let best = 0;
+        // let score = 0;
+
+        // for (let i = 0; i < data.length; i++) {
+        //     // console.log(data[i])
+
+        //     if (data[i] >= 80) {
+        //         best++;
+        //     }
+        //     if (score < data[i]) {
+        //         score = data[i]
+        //     }
+
+        //     console.log(best)
+        //     console.log(score)
+        // }
+
+
+        //매개변수 ,콜백함수, 재귀함수
+        // function func(num1, num2, num3) {
+        //     if (num1 < num3) return num1
+        //     else return num2
+        // }
+        // func(10, 20, 30) + func2(300, 400, 400)
+
+        // function func() {
+        //     let i = 100, j = 200, k = 300;
+        //     i /= j;
+        //     j -= i;    //위의 식에서 i는 0.5로 값이 변했다. 따라서 결과는 199.5
+        //     // i = i/j;
+
+        //     console.log(i)
+        // }
+        // func();
+
+
+        {
+            const obj = {
+                a: 100,
+                b: 200
+            };
+
+            for (let key in obj) {
+                console.log(obj);
+            }
+        }
+    </script>
+</body>
+
+</html>
