@@ -239,37 +239,37 @@
 
         });
 
-        // document.querySelector(".main__inner p span:nth-child(1)").addEventListener("mouseover", function () {
-        //     cursor.classList.add(`span${i}`);
-        // });
-        // document.querySelector(".main__inner p span:nth-child(1)").addEventListener("mouseout", function () {
-        //     cursor.classList.remove(`span${i}`);
-        // });
-        // document.querySelector(".main__inner p span:nth-child(2)").addEventListener("mouseover", function () {
-        //     cursor.classList.add(`span${i}`);
-        // });
-        // document.querySelector(".main__inner p span:nth-child(2)").addEventListener("mouseout", function () {
-        //     cursor.classList.remove(`span${i}`);
-        // });
-        // document.querySelector(".main__inner p span:nth-child(3)").addEventListener("mouseover", function () {
-        //     cursor.classList.add(`span${i}`);
-        // });
-        // document.querySelector(".main__inner p span:nth-child(3)").addEventListener("mouseout", function () {
-        //     cursor.classList.remove(`span${i}`);
-        // });
-        // document.querySelector(".main__inner p span:nth-child(4)").addEventListener("mouseover", function () {
-        //     cursor.classList.add(`span${i}`);
-        // });
-        // document.querySelector(".main__inner p span:nth-child(4)").addEventListener("mouseout", function () {
-        //     cursor.classList.remove(`span${i}`);
-        // });
+        document.querySelector(".main__inner p span:nth-child(1)").addEventListener("mouseover", function () {
+            cursor.classList.add(`span${i}`);
+        });
+        document.querySelector(".main__inner p span:nth-child(1)").addEventListener("mouseout", function () {
+            cursor.classList.remove(`span${i}`);
+        });
+        document.querySelector(".main__inner p span:nth-child(2)").addEventListener("mouseover", function () {
+            cursor.classList.add(`span${i}`);
+        });
+        document.querySelector(".main__inner p span:nth-child(2)").addEventListener("mouseout", function () {
+            cursor.classList.remove(`span${i}`);
+        });
+        document.querySelector(".main__inner p span:nth-child(3)").addEventListener("mouseover", function () {
+            cursor.classList.add(`span${i}`);
+        });
+        document.querySelector(".main__inner p span:nth-child(3)").addEventListener("mouseout", function () {
+            cursor.classList.remove(`span${i}`);
+        });
+        document.querySelector(".main__inner p span:nth-child(4)").addEventListener("mouseover", function () {
+            cursor.classList.add(`span${i}`);
+        });
+        document.querySelector(".main__inner p span:nth-child(4)").addEventListener("mouseout", function () {
+            cursor.classList.remove(`span${i}`);
+        });
 
         for (let i = 1; i <= 4; i++) {
-            document.querySelector(".main__inner p span:nth-child(${i})").addEventListener("mouseover", function () {
-                cursor.classList.add("span${i}");
+            document.querySelector(`.main__inner p span:nth-child(${i})`).addEventListener("mouseover", function () {
+                cursor.classList.add(`span${i}`);
             });
-            document.querySelector(".main__inner p span:nth-child(${i})").addEventListener("mouseout", function () {
-                cursor.classList.remove("span${i}");
+            document.querySelector(`.main__inner p span:nth-child(${i})`).addEventListener("mouseout", function () {
+                cursor.classList.remove(`span${i}`);
             });
         }
 
