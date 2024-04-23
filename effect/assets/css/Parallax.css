@@ -19,6 +19,10 @@ body {
     background-color: #fef8e9;
 }
 
+body.bg2 {
+    background-color: #e6dfcf;
+}
+
 /* header */
 #header {
     position: fixed;
@@ -64,4 +68,29 @@ body {
     background-repeat: no-repeat;
     background-position: right center;
     font-size: 29px;
+}
+
+/* footer__inner */
+.footer__inner nav {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    font-family: "Gowun Dodum";
+}
+
+.footer__inner nav ul {
+    display: flex;
+}
+
+.footer__inner nav li a {
+    border: 1px solid #000;
+    margin-right: 5px;
+    padding: 2px 10px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.footer__inner nav li.active a {
+    text-emphasis: circle;
 }
