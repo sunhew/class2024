@@ -29,7 +29,7 @@
 - 변수, 배열, 객체
 - 선택자(querySelectorAll(),querySelector())
 - 반복문(for문, forEach(), brek)
-- 매서드(join(), push(), innerHTML(), addEvnaddEventListener,  if문)
+- 매서드(join(), push(), innerHTML(), addEvnaddEventListener,  if문)   
 
 [퀴즈04](https://sunhew.github.io/class2024//quiz/quiz04.html)
 - 변수, 배열, 객체, 탬플릿 리터럴
@@ -73,6 +73,7 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 [단축키](https://docs.emmet.io/cheat-sheet/)   
 [background-image](https://webzz.tistory.com/380)   
 [jquery](https://developers.google.com/speed/libraries?hl=ko#jquery)   
+
 # 수업 규칙
 1. 지각, 결석, 조퇴 ---> 발표 1회   
 2. 수업시간에 카톡, 쇼핑, 웹툰, 게임 등을 하다 걸렸을때 ---> 발표 1회   
@@ -82,10 +83,5 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 # 벌칙
 자기소개(5분) ---> 자기소개(10분) ---> 노래 ---> 춤 ---> 수업발표
 
-# 오늘의 숙제   
-퀴즈 json 파일 100문제 수정하기   
-퀴즈 다음문제, 이전문제, 정답 확인하기 만들기   
-퀴즈게임 디자인 변경    
-오늘 블로그는 오늘 배운 슬라이드 애니메이션 정리   
-모바일 화면 전환시 폰트를 바꿀경우 rem  
-자바스크립트 2,3번 밑줄 
+# 오늘의 숙제    
+gsap의 토굴 액션 블로그에 정리하기   

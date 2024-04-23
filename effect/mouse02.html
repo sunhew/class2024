@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mouse Effect</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/mouse.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Acme&family=Caveat:wght@700&family=Inconsolata:wght@200..900&family=Montserrat:ital@0;1&family=Orbitron:wght@700&family=Protest+Guerrilla&family=Quicksand&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
@@ -28,6 +28,11 @@
             text-align: center;
             text-align: left;
             margin-left: -8vw;
+            display: flex;
+        }
+
+        .main__inner p span:hover {
+            color: #d2e2ef;
         }
 
         .main__info {
@@ -61,8 +66,8 @@
             border: 1px solid #ffffff20;
             backdrop-filter: blur(2px);
             position: absolute;
-            left: 10px;
-            top: 10px;
+            left: -100px;
+            top: -100px;
             border-radius: 50%;
             z-index: 10000;
             user-select: none;
@@ -98,7 +103,7 @@
     <div id="Wrap">
         <header id="header">
             <div class="header__inner">
-                <h1>Mouse Effect <em>01</em></h1>
+                <h1><a href="index.html">Mouse Effect</a><em>01</em></h1>
             </div>
         </header>
         <!-- //header -->
@@ -106,7 +111,16 @@
             <div class="cursor"></div>
             <div class="main__inner">
                 <p>
-                    JavaScript
+                    <span data-original="J" data-transform="S">J</span>
+                    <span data-original="a" data-transform="y">a</span>
+                    <span data-original="v" data-transform="e">v</span>
+                    <span data-original="a" data-transform="o">a</span>
+                    <span data-original="S" data-transform="h">S</span>
+                    <span data-original="c" data-transform="a">c</span>
+                    <span data-original="r" data-transform="G">r</span>
+                    <span data-original="i" data-transform="I">i</span>
+                    <span data-original="p" data-transform="T">p</span>
+                    <span data-original="t" data-transform="!">t</span>
                 </p>
             </div>
             <div class="main__info">
@@ -129,8 +143,12 @@
                         <li><a href="mouse04.html">04</a></li>
                     </ul>
                 </nav>
+                <div class="link">
+                    <ul>
+                        <li><a href="parallax01.html">parallax</a></li>
+                    </ul>
+                </div>
             </div>
-
         </footer>
         <!-- //footer -->
     </div>
@@ -152,6 +170,26 @@
             gsap.to((".cursor"), { duration: 0.6, left: e.clientX - 50, top: e.clientY - 50 })
         });
 
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const letters = document.querySelectorAll('.main__inner span');
+
+            letters.forEach(letter => {
+                const originalLetter = letter.dataset.original; // 원래 글자
+                const transformedLetter = letter.dataset.transform; // 변환할 글자
+
+                letter.addEventListener('mouseenter', function () {
+                    letter.textContent = transformedLetter; // 마우스가 올라갔을 때 글자 변환
+                });
+
+                letter.addEventListener('mouseleave', function () {
+                    // 마우스가 벗어났을 때 2초 후에 원래 글자로 돌아감
+                    setTimeout(function () {
+                        letter.textContent = originalLetter;
+                    }, 4000);
+                });
+            });
+        });
     </script>
 </body>
 
