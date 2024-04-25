@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 D-2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo">
+                <a href="#">서울 구석구석</a>
+            </h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">지금의 서울</a>
+                        <ul>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">축제&행사</a></li>
+                            <li><a href="#">전시</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">추천</a>
+                        <ul>
+                            <li><a href="#">에디터 추천</a></li>
+                            <li><a href="#">테마코스</a></li>
+                            <li><a href="#">도보해설관광</a></li>
+                            <li><a href="#">한류관광</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">여행지</a>
+                        <ul>
+                            <li><a href="#">명소</a></li>
+                            <li><a href="#">엔터테인먼트</a></li>
+                            <li><a href="#">음식</a></li>
+                            <li><a href="#">게스트하우스</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">여행정보</a>
+                        <ul>
+                            <li><a href="#">가이브죽&지도</a></li>
+                            <li><a href="#">시티투어버스</a></li>
+                            <li><a href="#">날씨</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header -->
+        <main id="main">
+            <section class="cont1">
+                <div class="sliders">
+                    <div class="slider_wrap">
+                        <div class="slider s1">
+                            <h2>서울 봄꽃 축제 안내</h2>
+                            <p>2024년 봄꽃 축제를 개최합니다.</p>
+                        </div>
+                        <div class="slider s2">
+                            <h2>서울 봄꽃 축제 안내</h2>
+                            <p>2024년 봄꽃 축제를 개최합니다.</p>
+                        </div>
+                        <div class="slider s3">
+                            <h2>서울 봄꽃 축제 안내</h2>
+                            <p>2024년 봄꽃 축제를 개최합니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner">
+                    <div>
+                        <h3>서울 풍경</h3>
+                        <p>매력적인 풍경에 빠져보세요.</p>
+                        <a href="#">클릭하기</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cont2">
+                <div class="notice">
+                    <h3>공지사항</h3>
+                    <ul>
+                        <li><a href="#">낮과 밤이 아름다운 서울 축제</a><span>2024.04.01</span></li>
+                        <li><a href="#">서울 길거리 축제</a><span>2024.04.03</span></li>
+                        <li><a href="#">서울 지하철 2호선 운행 시간 변경 안내</a><span>2024.04.06</span></li>
+                        <li><a href="#">서울 박물관 특별 전시회 개최</a><span>2024.04.12</span></li>
+                        <li><a href="#">서울 지하철 노선 추가 확정</a><span>2024.04.20</span></li>
+                    </ul>
+                </div>
+                <div class="gallery">
+                    <h3>서울 구석 갤러리</h3>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="images/galley01.jpg" alt="한옥">
+                                <span>서울 한옥</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/galley02.jpg" alt="한옥 정원">
+                                <span>한옥 정원</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/galley03.jpg" alt="한옥">
+                                <span>서울 풍경</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <!-- main -->
+        <footer id="footer">
+            <div class="title">
+                <h1 class="logo">
+                    <a href="#">서울 구석구석</a>
+                </h1>
+            </div>
+            <div class="copy">
+                <p>COPYRIGHT 2024, ALL Rights Reserve</p>
+            </div>
+            <div class="family">
+                <select>
+                    <option value="1">서울 생태공원</option>
+                    <option value="2">서울 타워</option>
+                    <option value="3">서울 테마파크</option>
+                </select>
+            </div>
+        </footer>
+        <!-- footer -->
+
+        <div class="modal">
+            <h4>서울 둘레길 공사중</h4>
+            <p>안녕하세요. 서울 생태 공원입니다.
+                이번에 사고 예방을 위해 다시 정비를 하게 되어 아래 안내 기간동안의
+                통행이 불가 하게 되었습니다.
+                이용에 불편을 드려 죄송합니다.
+            </p>
+            <a href="#" class="popup_clpse">닫기</a>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        // 모달
+        $(".notice ul li:nth-child(1)").click(function () {
+            $(".modal").show();
+
+        })
+        $(".modal a").click(function () {
+            $(".modal").hide();
+        })
+
+        $(".nav > ul > li").mouseover(function () {
+            $(this).find(">ul").stop().slideDown();
+        });
+        $(".nav > ul > li").mouseout(function () {
+            $(this).find(">ul").stop().slideUp();
+        });
+
+        // $(function () {
+        //     let currentIndex = 0;
+        //     $(".slider_wrap").append($(".slider").first().clone(true));
+
+        //     setInterval(() => {
+        //         currentIndex++;
+
+        //         $(".slider_wrap").animate({ marginLeft: -100 * currentIndex + "%" }, 600);
+
+        //         if (currentIndex == 3) {
+        //             setTimeout(() => {
+        //                 $(".slider_wrap").animate({ marginLeft: 0 }, 0);
+        //                 currentIndex = 0;
+        //             }, 700);
+        //         }
+        //     }, 3000)
+        // })
+
+        $(function () {
+            let currentIndex = 0;
+            $(".slider_wrap").append($(".slider").first().clone(true));
+
+            setInterval(() => {
+                currentIndex++;
+
+                $(".slider_wrap").animate({ marginTop: -400 * currentIndex + "px" }, 600);
+
+                if (currentIndex == 3) {
+                    setTimeout(() => {
+                        $(".slider_wrap").animate({ marginTop: 0 }, 0);
+                        currentIndex = 0;
+                    }, 700);
+                }
+            }, 3000)
+        })
+    </script>
+</body>
+
+</html>

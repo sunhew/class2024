@@ -1,0 +1,345 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+#wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* header */
+#header {
+    width: 200px;
+    background-color: #AA9FA6;
+}
+
+.logo {
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: #e0dbde;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 24px;
+}
+
+.nav {
+    height: 550px;
+    padding: 10px;
+}
+
+/* 메인 메뉴 */
+.nav>ul>li>a {
+    width: 100%;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #9ea1c7;
+    background-color: #ededed;
+}
+
+.nav>ul>li>a:hover {
+    background-color: #d9d9d9;
+}
+
+/* 서브 메뉴 */
+.nav>ul>li>ul {
+    margin-bottom: 10px;
+    display: none;
+}
+
+.nav>ul>li>ul>li {
+    margin-bottom: 2px;
+}
+
+.nav>ul>li>ul>li>a {
+    width: 100%;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    color: #6e719c;
+    background-color: #dbdbdb;
+}
+
+.nav>ul>li>ul>li>a:hover {
+    background-color: #bfbebe;
+}
+
+/* main */
+#main {
+    width: calc(100% - 200px);
+    height: 650px;
+    background-color: #626262;
+}
+
+/* main cont1 */
+.cont1 {
+    width: 100%;
+    display: flex;
+}
+
+.cont1 .sliders {
+    width: calc(100% - 230px);
+    overflow: hidden;
+}
+
+.slider_wrap {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.slider_wrap .slider {
+    width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.slider_wrap .slider h2 {
+    background-color: #0f0f0f23;
+    padding: 20px;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+.slider_wrap .slider p {
+    background-color: #0f0f0f39;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.slider_wrap .slider.s1 {
+    background-image: url(../images/silder01.jpg);
+}
+
+.slider_wrap .slider.s2 {
+    background-image: url(../images/silder02.jpg);
+}
+
+.slider_wrap .slider.s3 {
+    background-image: url(../images/silder03.jpg);
+}
+
+.cont1 .banner {
+    width: 230px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/banner.jpg) center / cover;
+}
+
+.banner>div {
+    text-align: center;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #4f4f4f5f;
+}
+
+.banner>div h3 {
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.banner>div p {
+    color: #ffffff;
+    padding: 10px;
+}
+
+.banner>div a {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+/* main cont2 */
+.cont2 {
+    display: flex;
+}
+
+.cont2 .notice {
+    width: 50%;
+    height: 250px;
+    padding: 40px;
+    background-color: #e9e9e9;
+}
+
+.cont2 .notice h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.cont2 .notice ul li {
+    line-height: 1.7;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont2 .notice ul li::before {
+    content: '*';
+}
+
+.cont2 .notice ul li a {
+    width: 70%;
+    overflow: hidden;
+    /* 범위 밖으로 나갔을때 안보임 */
+    text-overflow: ellipsis;
+    /* 화면 넘어가면 ...으로 표시됨 */
+    white-space: nowrap;
+    /* 한줄로 나오게 함 위에 두개랑 한 세트 */
+}
+
+.cont2 .notice ul li a:hover {
+    text-decoration: underline;
+    text-decoration-skip: under;
+}
+
+.cont2 .notice ul li span {
+    width: 30%;
+    text-align: right;
+}
+
+.cont2 .gallery {
+    width: 50%;
+    height: 250px;
+    padding: 30px;
+    background-color: #e4e4e4;
+}
+
+.cont2 .gallery h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.cont2 .gallery ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont2 .gallery ul li {
+    text-align: center;
+    width: 32%;
+}
+
+.cont2 .gallery ul li a img {
+    width: 100%;
+    max-width: 180px;
+    display: block;
+    margin: 0 auto;
+}
+
+.cont2 .gallery ul li a span {
+    margin-top: 5px;
+    display: block;
+}
+
+.cont2 .gallery ul li a:hover {
+    opacity: 0.5;
+}
+
+/* footer */
+#footer {
+    width: 100%;
+    display: flex;
+}
+
+.title {
+    width: 200px;
+    height: 100px;
+    background-color: #d8bbbb;
+}
+
+.copy {
+    width: 80%;
+    height: 100px;
+    background-color: #eed7ec;
+    text-align: center;
+    line-height: 4;
+}
+
+.copy p {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.family {
+    width: 20%;
+    height: 100px;
+    text-align: center;
+    background-color: #dfc1d4;
+}
+
+.family select {
+    appearance: none;
+    width: 50%;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 20px 0;
+    background-color: #d5e6d7;
+    border: 2px solid #000000;
+}
+
+/* modal */
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background-color: #ffffff;
+    border: 4px solid #9c9398;
+    padding: 20px;
+    z-index: 20000;
+    display: none;
+}
+
+.modal h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.modal a {
+    display: inline-block;
+    padding: 2px 20px;
+    background-color: #d9cfcf;
+    color: #ffffff;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+}
