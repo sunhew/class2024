@@ -12,30 +12,18 @@ import json
 
 # 현재 날짜 가져오기
 current_date = datetime.now().strftime("%Y-%m-%d")
-filename = f"menu-tomntom_{current_date}.json"
+filename = f"menu-gurunaru_{current_date}.json"
 
 # 웹드라이브 설치
 options = ChromeOptions()
 service = ChromeService(executable_path=ChromeDriverManager().install())
 browser = webdriver.Chrome(service=service, options=options)
-browser.get("https://www.tomntoms.com/menu/drink")
+browser.get("https://www.coffine.co.kr/front/menu/coffee_list.php#contents")
 
 # 페이지가 완전히 로드될 때까지 대기
 WebDriverWait(browser, 10).until(
-    EC.presence_of_element_located((By.CLASS_NAME, "pb-20"))
+    EC.presence_of_element_located((By.CLASS_NAME, "pro_list"))
 )
-
-# "더보기" 버튼을 찾아 클릭
-try:
-    more_button = WebDriverWait(browser, 10).until(
-        EC.visibility_of_element_located((By.CSS_SELECTOR, ".custom-button.main-tab"))
-    )
-    if more_button:
-        browser.execute_script("arguments[0].click();", more_button)
-        print("Clicked '더보기' button.")
-        time.sleep(3)
-except Exception as e:
-    print("Error clicking '더보기':", e)
 
 # 업데이트된 페이지 소스를 변수에 저장
 html_source_updated = browser.page_source
@@ -43,11 +31,11 @@ soup = BeautifulSoup(html_source_updated, 'html.parser')
 
 # 데이터 추출
 coffee_data = []
-tracks = soup.select("#root > section.max-w-7xl.p-4.mx-auto.pb-20.w-full > div.grid.gap-6.mt-8.grid-cols-1 .relative.w-full")
+tracks = soup.select("#contents > div > div > .pro_list > li")
 
 for track in tracks:
-    title = track.select_one(".relative.w-full button > div > div > p > span.tracking-wider").text.strip()    
-    image_url = track.select_one(".relative.w-full button > div > img").get('src')
+    title = track.select_one("li > a > strong").text.strip()    
+    image_url = track.select_one("li > a > img.img").get('src').replace('/uploads', 'https://www.coffine.co.kr/uploads')
     coffee_data.append({
         "title": title,
         "imageURL": image_url,
