@@ -4,141 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>역사박물관</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div id="wrap">
-        <aside id="aside">
-            <h1 class="logo"><a href="#">역사 박물관</a></h1>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#">박물관 소개</a>
-                        <ul>
-                            <li><a href="#">인사말</a></li>
-                            <li><a href="#">박물관연혁</a></li>
-                            <li><a href="#">유물현황</a></li>
-                            <li><a href="#">관람안내</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">전시</a>
-                        <ul>
-                            <li><a href="#">선사시대</a></li>
-                            <li><a href="#">삼국시대</a></li>
-                            <li><a href="#">조선시대</a></li>
-                            <li><a href="#">근대시대</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">연구</a>
-                        <ul>
-                            <li><a href="#">생활유적</a></li>
-                            <li><a href="#">분묘유적</a></li>
-                            <li><a href="#">생산유적</a></li>
-                            <li><a href="#">통신유적</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">교육</a>
-                        <ul>
-                            <li><a href="#">문화행사</a></li>
-                            <li><a href="#">진로체험</a></li>
-                            <li><a href="#">외부교육</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
-        <!-- aside -->
-        <main id="main">
-            <section class="mainsub">
-                <div class="notic">
-                    <h2><a href="#">공지사항</a></h2>
-                    <div>
-                        <a href="#">새로운 문화를 알아가세요.<span>2024.03.21</span></a></li>
-                        <a href="#">큐래이터 안내 무료화<span>2024.03.30</span></a></li>
-                        <a href="#">박물관 로고 변경<span>2024.04.03</span></a></li>
-                        <a href="#">박물관 폐관 안내<span>2024.04.21</span></a></li>
-                    </div>
-
-                </div>
-                <div class="galley">
-                    <h3><a href="#">갤러리</a></h3>
-                    <div>
-                        <img src="images/galley01.jpg" alt="갤러리">
-                        <p>디자인</p>
-                    </div>
-                    <div>
-                        <img src="images/galley02.jpg" alt="갤러리">
-                        <p>유적</p>
-                    </div>
-                </div>
-                <div class="link">
-                    <img src="images/lnke01.jpg" alt="링크1">
-                    <img src="images/lnke02.jpg" alt="링크2">
-                    <img src="images/lnke03.jpg" alt="링크3">
-                    <img src="images/lnke04.jpg" alt="링크4">
-                </div>
-            </section>
-            <section class="slider">
-                <div class="slider_wrap">
-                    <div class="slid s1">
-                        <img src="images/slider01.jpg" alt="1">
-                        <p>지금 즉시 생성</p>
-                    </div>
-                    <div class="slid s2">
-                        <img src="images/slider02.jpg" alt="2">
-                        <p>즐겁다!</p>
-                    </div>
-                    <div class="slid s3">
-                        <img src="images/slider03.jpg" alt="4">
-                        <p>쉬고싶다!</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <!-- main -->
-        <footer id="footer">
-            <div class="btnlogo"><a href="#">역사 박물관</a></div>
-            <div class="copy">
-                <div>copyriter 2024.04.26</div>
-            </div>
-            <div class="familysite">
-                <select name="mage" id="mage">
-                    <option value="1">박물관 일정</option>
-                    <option value="2">박물관 소개</option>
-                    <option value="3">박물관 안내</option>
-                </select>
-            </div>
-        </footer>
-        <!-- footer -->
+        <aside id="aside"></aside>
+        <main id="main"></main>
+        <footer id="footer"></footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        $(".nav > ul > li").mouseover(function () {
-            $(this).find(">ul").stop().slideDown()
-        })
-        $(".nav > ul > li").mouseout(function () {
-            $(this).find(">ul").stop().slideUp()
-        })
-
-        $(function () {
-            let currentIndex = 0;
-            $(".slider_wrap").append($(".slider").first().clone(true));
-
-            setInterval(() => {
-                currentIndex++;
-
-                $(".slider_wrap").animate({ marginTop: -750 * currentIndex + "px" }, 600);
-
-                if (currentIndex == 3) {
-                    setTimeout(() => {
-                        $(".slider_wrap").animate({ marginTop: 0 }, 0);
-                        currentIndex = 0;
-                    }, 700);
-                }
-            }, 3000)
-        })
-    </script>
 </body>
 
 </html>

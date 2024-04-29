@@ -1,0 +1,726 @@
+[
+    {
+        "span": "(R)허쉬 스트로베리 초콜릿",
+        "img": "https://www.ediya.com/files/menu/IMG_1710147122188.png"
+    },
+    {
+        "span": "(L) HOT 허쉬 크리미 카페모카",
+        "img": "https://www.ediya.com/files/menu/IMG_1710147136675.png"
+    },
+    {
+        "span": "(L) ICED 허쉬 크리미 카페모카",
+        "img": "https://www.ediya.com/files/menu/IMG_1710147145577.png"
+    },
+    {
+        "span": "(R) HOT 허쉬 크리미 초콜릿",
+        "img": "https://www.ediya.com/files/menu/IMG_1710147160321.png"
+    },
+    {
+        "span": "(R) ICED 허쉬 크리미 초콜릿",
+        "img": "https://www.ediya.com/files/menu/IMG_1710147177670.png"
+    },
+    {
+        "span": "배 플랫치노",
+        "img": "https://www.ediya.com/files/menu/IMG_1711686518556.png"
+    },
+    {
+        "span": "피스타치오 매직팝 플랫치노",
+        "img": "https://www.ediya.com/files/menu/IMG_1711686642101.png"
+    },
+    {
+        "span": "자두 플랫치노",
+        "img": "https://www.ediya.com/files/menu/IMG_1711686789477.png"
+    },
+    {
+        "span": "(L)달달커피",
+        "img": "https://www.ediya.com/files/menu/IMG_1713744638856.png"
+    },
+    {
+        "span": "(EX)달달커피",
+        "img": "https://www.ediya.com/files/menu/IMG_1713744897555.png"
+    },
+    {
+        "span": "(R) HOT 토피넛 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1694414812893.png"
+    },
+    {
+        "span": "(EX) HOT 토피넛 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1694414794668.png"
+    },
+    {
+        "span": "(R) ICED 토피넛 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1694414746800.png"
+    },
+    {
+        "span": "(EX) ICED 토피넛 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1694415549864.png"
+    },
+    {
+        "span": "(R)딸기 듬뿍 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1703040183528.png"
+    },
+    {
+        "span": "(EX)딸기 듬뿍 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1703040302345.png"
+    },
+    {
+        "span": "그래놀라 드링킹 요거트",
+        "img": "https://www.ediya.com/files/menu/IMG_1706680680282.png"
+    },
+    {
+        "span": "망고 드링킹 요거트",
+        "img": "https://www.ediya.com/files/menu/IMG_1706680834659.png"
+    },
+    {
+        "span": "딸기 드링킹 요거트",
+        "img": "https://www.ediya.com/files/menu/IMG_1706681903465.png"
+    },
+    {
+        "span": "블루베리 드링킹 요거트",
+        "img": "https://www.ediya.com/files/menu/IMG_1706682104528.png"
+    },
+    {
+        "span": "(L) HOT 디카페인 아메리카노",
+        "img": "https://www.ediya.com/files/menu/IMG_1697070552345.png"
+    },
+    {
+        "span": "(EX) HOT 디카페인 아메리카노",
+        "img": "https://www.ediya.com/files/menu/IMG_1697070876514.png"
+    },
+    {
+        "span": "팥인절미 1인빙수",
+        "img": "https://www.ediya.com/files/menu/IMG_1683184025809.png"
+    },
+    {
+        "span": "애플망고 눈꽃빙수",
+        "img": "https://www.ediya.com/files/menu/IMG_1683184562783.png"
+    },
+    {
+        "span": "팥인절미 눈꽃빙수",
+        "img": "https://www.ediya.com/files/menu/IMG_1683184722523.png"
+    },
+    {
+        "span": "ICED 바닐라 오트 콜드브루",
+        "img": "https://www.ediya.com/files/menu/IMG_1678753103297.png"
+    },
+    {
+        "span": "ICED 디카페인 바닐라 오트 콜드브루",
+        "img": "https://www.ediya.com/files/menu/IMG_1678753482451.png"
+    },
+    {
+        "span": "(L) ICED 넛츠 크림 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1671587873712.png"
+    },
+    {
+        "span": "ICED 살얼음 식혜",
+        "img": "https://www.ediya.com/files/menu/IMG_1660608743501.png"
+    },
+    {
+        "span": "(EX) ICED 살얼음 식혜",
+        "img": "https://www.ediya.com/files/menu/IMG_1660608842680.png"
+    },
+    {
+        "span": "(R) HOT 그린 루이보스",
+        "img": "https://www.ediya.com/files/menu/IMG_1647324593188.png"
+    },
+    {
+        "span": "(R) ICED 그린 루이보스",
+        "img": "https://www.ediya.com/files/menu/IMG_1647324575877.png"
+    },
+    {
+        "span": "(EX) HOT 그린 루이보스",
+        "img": "https://www.ediya.com/files/menu/IMG_1671596542380.png"
+    },
+    {
+        "span": "(EX) ICED 그린 루이보스",
+        "img": "https://www.ediya.com/files/menu/IMG_1671596605212.png"
+    },
+    {
+        "span": "(R) HOT 샤인 히비스커스",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322695193.png"
+    },
+    {
+        "span": "(R) ICED 샤인 히비스커스",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322703601.png"
+    },
+    {
+        "span": "(EX) HOT 샤인 히비스커스",
+        "img": "https://www.ediya.com/files/menu/IMG_1671595438536.png"
+    },
+    {
+        "span": "(EX) ICED 샤인 히비스커스",
+        "img": "https://www.ediya.com/files/menu/IMG_1671595525825.png"
+    },
+    {
+        "span": "HOT 스프링 캐모마일",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322717592.png"
+    },
+    {
+        "span": "ICED 스프링 캐모마일",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322726556.png"
+    },
+    {
+        "span": "(EX) HOT 스프링 캐모마일",
+        "img": "https://www.ediya.com/files/menu/IMG_1671595271667.png"
+    },
+    {
+        "span": "(EX) ICED 스프링 캐모마일",
+        "img": "https://www.ediya.com/files/menu/IMG_1671595337284.png"
+    },
+    {
+        "span": "(R) HOT 퓨어 페퍼민트",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322800672.png"
+    },
+    {
+        "span": "(R) ICED 퓨어 페퍼민트",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322809136.png"
+    },
+    {
+        "span": "(EX) HOT 퓨어 페퍼민트",
+        "img": "https://www.ediya.com/files/menu/IMG_1671595635409.png"
+    },
+    {
+        "span": "(EX) ICED 퓨어 페퍼민트",
+        "img": "https://www.ediya.com/files/menu/IMG_1671595852837.png"
+    },
+    {
+        "span": "(R) HOT 피치 얼그레이",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322847327.png"
+    },
+    {
+        "span": "(R) ICED 피치 얼그레이",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322855201.png"
+    },
+    {
+        "span": "(EX) HOT 피치 얼그레이",
+        "img": "https://www.ediya.com/files/menu/IMG_1671596309362.png"
+    },
+    {
+        "span": "(EX) ICED 피치 얼그레이",
+        "img": "https://www.ediya.com/files/menu/IMG_1671596392889.png"
+    },
+    {
+        "span": "HOT 쌍화차",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322753151.png"
+    },
+    {
+        "span": "ICED 쌍화차",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322778699.png"
+    },
+    {
+        "span": "HOT 생강차",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322669524.png"
+    },
+    {
+        "span": "ICED 생강차",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322677153.png"
+    },
+    {
+        "span": "이디야 청포도&케일 주스",
+        "img": "https://www.ediya.com/files/menu/IMG_1631059844568.png"
+    },
+    {
+        "span": "이디야 감귤&한라봉 주스",
+        "img": "https://www.ediya.com/files/menu/IMG_1631059961896.png"
+    },
+    {
+        "span": "이디야 사과&당근 주스",
+        "img": "https://www.ediya.com/files/menu/IMG_1631060026295.png"
+    },
+    {
+        "span": "이디야 워터",
+        "img": "https://www.ediya.com/files/menu/IMG_1652751437621.png"
+    },
+    {
+        "span": "ICED 달고나 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321929656.png"
+    },
+    {
+        "span": "(EX) ICED 달고나 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321941152.png"
+    },
+    {
+        "span": "이디야 콤부차 복숭아망고",
+        "img": "https://www.ediya.com/files/menu/IMG_1564379279645.png"
+    },
+    {
+        "span": "이디야 콤부차 청포도레몬",
+        "img": "https://www.ediya.com/files/menu/IMG_1564379353475.png"
+    },
+    {
+        "span": "아포가토 오리지널",
+        "img": "https://www.ediya.com/files/menu/IMG_1691731083701.png"
+    },
+    {
+        "span": "이디야키즈 신비아파트 샤인머스캣",
+        "img": "https://www.ediya.com/files/menu/IMG_1709598676880.png"
+    },
+    {
+        "span": "디카페인 아포가토 오리지널",
+        "img": "https://www.ediya.com/files/menu/IMG_1691731409331.png"
+    },
+    {
+        "span": "이디야키즈 신비아파트 딸기",
+        "img": "https://www.ediya.com/files/menu/IMG_1709598852642.png"
+    },
+    {
+        "span": "이디야키즈 뽀로로 오렌지",
+        "img": "https://www.ediya.com/files/menu/IMG_1709599223774.png"
+    },
+    {
+        "span": "ICED 콜드브루 아메리카노",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320805422.png"
+    },
+    {
+        "span": "이디야키즈 뽀로로 사과매실",
+        "img": "https://www.ediya.com/files/menu/IMG_1709599391117.png"
+    },
+    {
+        "span": "(EX) ICED 콜드브루 아메리카노",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320820317.png"
+    },
+    {
+        "span": "이디야키즈 뽀로로 포도블루베리",
+        "img": "https://www.ediya.com/files/menu/IMG_1709599673354.png"
+    },
+    {
+        "span": "ICED 디카페인 콜드브루 아메리카노",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320328440.png"
+    },
+    {
+        "span": "(EX) ICED 디카페인 콜드브루 아메리카노",
+        "img": "https://www.ediya.com/files/menu/IMG_1648685292664.png"
+    },
+    {
+        "span": "ICED 디카페인 콜드브루 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320345410.png"
+    },
+    {
+        "span": "(EX) ICED 디카페인 콜드브루 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320357663.png"
+    },
+    {
+        "span": "ICED 콜드브루 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320848557.png"
+    },
+    {
+        "span": "(EX) ICED 콜드브루 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320836186.png"
+    },
+    {
+        "span": "ICED 콜드브루 니트로",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320870899.png"
+    },
+    {
+        "span": "ICED 디카페인 콜드브루 니트로",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320389669.png"
+    },
+    {
+        "span": "ICED 콜드브루 화이트 비엔나",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320860534.png"
+    },
+    {
+        "span": "ICED 디카페인 콜드브루 화이트 비엔나",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320378419.png"
+    },
+    {
+        "span": "ICED 디카페인 흑당 콜드브루",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320406434.png"
+    },
+    {
+        "span": "(EX) ICED 디카페인 흑당 콜드브루",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320424871.png"
+    },
+    {
+        "span": "ICED 디카페인 연유 콜드브루",
+        "img": "https://www.ediya.com/files/menu/IMG_1647387558230.png"
+    },
+    {
+        "span": "(EX) ICED 디카페인 연유 콜드브루",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320633102.png"
+    },
+    {
+        "span": "ICED 흑당 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322011235.png"
+    },
+    {
+        "span": "(EX) ICED 흑당 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322029671.png"
+    },
+    {
+        "span": "ICED 흑당 콜드브루",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320738273.png"
+    },
+    {
+        "span": "(EX) ICED 흑당 콜드브루",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320749119.png"
+    },
+    {
+        "span": "ICED 버블 흑당 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647324429590.png"
+    },
+    {
+        "span": "(EX) ICED 버블 흑당 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647324410367.png"
+    },
+    {
+        "span": "ICED 버블 크림 밀크티",
+        "img": "https://www.ediya.com/files/menu/IMG_1647324346811.png"
+    },
+    {
+        "span": "(L) HOT 연유 카페 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1671584792635.png"
+    },
+    {
+        "span": "(L) ICED 연유 카페 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1671585023298.png"
+    },
+    {
+        "span": "(EX) HOT 연유 카페 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647324689152.png"
+    },
+    {
+        "span": "(EX) ICED연유 카페 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647324719307.png"
+    },
+    {
+        "span": "ICED 연유 콜드브루",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320780643.png"
+    },
+    {
+        "span": "(EX) ICED 연유 콜드브루",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320793322.png"
+    },
+    {
+        "span": "자몽네이블오렌지",
+        "img": "https://www.ediya.com/files/menu/IMG_1529902147409.png"
+    },
+    {
+        "span": "(EX) ICED 자몽 네이블오렌지",
+        "img": "https://www.ediya.com/files/menu/IMG_1647323192384.png"
+    },
+    {
+        "span": "유자피나콜라다",
+        "img": "https://www.ediya.com/files/menu/IMG_1529895623589.png"
+    },
+    {
+        "span": "(EX) ICED 유자피나콜라다",
+        "img": "https://www.ediya.com/files/menu/IMG_1647323138803.png"
+    },
+    {
+        "span": "석류애플라임",
+        "img": "https://www.ediya.com/files/menu/IMG_1529902396529.png"
+    },
+    {
+        "span": "(EX) ICED 석류애플라임",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322977844.png"
+    },
+    {
+        "span": "이디야 사과주스",
+        "img": "https://www.ediya.com/files/menu/IMG_1565670650552.png"
+    },
+    {
+        "span": "HOT 석류 오리지널",
+        "img": "https://www.ediya.com/files/menu/IMG_1647323060484.png"
+    },
+    {
+        "span": "HOT 석류 애플라임",
+        "img": "https://www.ediya.com/files/menu/IMG_1647323050118.png"
+    },
+    {
+        "span": "HOT 자몽 네이블 오렌지",
+        "img": "https://www.ediya.com/files/menu/IMG_1647323209240.png"
+    },
+    {
+        "span": "HOT 유자 피나콜라다",
+        "img": "https://www.ediya.com/files/menu/IMG_1647323154740.png"
+    },
+    {
+        "span": "HOT 에스프레소",
+        "img": "https://www.ediya.com/files/menu/IMG_1647320254869.png"
+    },
+    {
+        "span": "HOT 에스프레소 마끼아또",
+        "img": "https://www.ediya.com/files/menu/IMG_1511503315349.png"
+    },
+    {
+        "span": "HOT 에스프레소 콘파냐",
+        "img": "https://www.ediya.com/files/menu/IMG_1511503304139.png"
+    },
+    {
+        "span": "(L) HOT 카페 아메리카노",
+        "img": "https://www.ediya.com/files/menu/IMG_1671581625569.png"
+    },
+    {
+        "span": "(L) ICED 카페 아메리카노",
+        "img": "https://www.ediya.com/files/menu/IMG_1671581786293.png"
+    },
+    {
+        "span": "(EX) HOT 카페 아메리카노",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321162101.png"
+    },
+    {
+        "span": "(EX) ICED 카페 아메리카노",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321147600.png"
+    },
+    {
+        "span": "(L) HOT 카페 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1671582054147.png"
+    },
+    {
+        "span": "(L) ICED 카페 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1671582134737.png"
+    },
+    {
+        "span": "(EX) HOT 카페 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1645073265123.png"
+    },
+    {
+        "span": "(EX) ICED 카페 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1645073339534.png"
+    },
+    {
+        "span": "(L) HOT 카푸치노",
+        "img": "https://www.ediya.com/files/menu/IMG_1671582405654.png"
+    },
+    {
+        "span": "(L) ICED 카푸치노",
+        "img": "https://www.ediya.com/files/menu/IMG_1671583172436.png"
+    },
+    {
+        "span": "(L) HOT 카페 모카",
+        "img": "https://www.ediya.com/files/menu/IMG_1671586052246.png"
+    },
+    {
+        "span": "(L) ICED 카페 모카",
+        "img": "https://www.ediya.com/files/menu/IMG_1671586141487.png"
+    },
+    {
+        "span": "(EX) HOT 카페 모카",
+        "img": "https://www.ediya.com/files/menu/IMG_1645073368848.png"
+    },
+    {
+        "span": "(EX) ICED 카페 모카",
+        "img": "https://www.ediya.com/files/menu/IMG_1645073377193.png"
+    },
+    {
+        "span": "(L) HOT 카라멜 마끼아또",
+        "img": "https://www.ediya.com/files/menu/IMG_1671585699141.png"
+    },
+    {
+        "span": "(L) ICED 카라멜 마끼아또",
+        "img": "https://www.ediya.com/files/menu/IMG_1671585861402.png"
+    },
+    {
+        "span": "(EX) HOT 카라멜 마끼아또",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321239141.png"
+    },
+    {
+        "span": "(EX) ICED 카라멜 마끼아또",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321212721.png"
+    },
+    {
+        "span": "(L) HOT 바닐라 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1671583442731.png"
+    },
+    {
+        "span": "(L) ICED 바닐라 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1671583414313.png"
+    },
+    {
+        "span": "(EX) HOT 바닐라 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321057747.png"
+    },
+    {
+        "span": "(EX) ICED 바닐라 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321034823.png"
+    },
+    {
+        "span": "(L) HOT 화이트 초콜릿 모카",
+        "img": "https://www.ediya.com/files/menu/IMG_1671587353689.png"
+    },
+    {
+        "span": "(L) ICED 화이트 초콜릿 모카",
+        "img": "https://www.ediya.com/files/menu/IMG_1671587593517.png"
+    },
+    {
+        "span": "(EX) HOT 화이트 초콜릿 모카",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321390212.png"
+    },
+    {
+        "span": "(L) HOT 민트 모카",
+        "img": "https://www.ediya.com/files/menu/IMG_1671588213206.png"
+    },
+    {
+        "span": "(EX) ICED 화이트 초콜릿 모카",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321347859.png"
+    },
+    {
+        "span": "(L) ICED 민트 모카",
+        "img": "https://www.ediya.com/files/menu/IMG_1671588274664.png"
+    },
+    {
+        "span": "HOT 초콜릿",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321825736.png"
+    },
+    {
+        "span": "ICED 초콜릿",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321814289.png"
+    },
+    {
+        "span": "(EX) HOT 초콜릿",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321860843.png"
+    },
+    {
+        "span": "(EX) ICED 초콜릿",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321840843.png"
+    },
+    {
+        "span": "HOT 녹차 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321755481.png"
+    },
+    {
+        "span": "ICED 녹차 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321741180.png"
+    },
+    {
+        "span": "(EX) HOT 녹차 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321791414.png"
+    },
+    {
+        "span": "(EX) ICED 녹차 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321773757.png"
+    },
+    {
+        "span": "HOT 민트 초콜릿",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321892161.png"
+    },
+    {
+        "span": "ICED 민트 초콜릿",
+        "img": "https://www.ediya.com/files/menu/IMG_1647321879153.png"
+    },
+    {
+        "span": "HOT 12곡 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322114515.png"
+    },
+    {
+        "span": "ICED 12곡 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322107601.png"
+    },
+    {
+        "span": "HOT 고구마 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322145592.png"
+    },
+    {
+        "span": "ICED 고구마 라떼",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322131838.png"
+    },
+    {
+        "span": "홍시주스",
+        "img": "https://www.ediya.com/files/menu/IMG_1647324236558.png"
+    },
+    {
+        "span": "골드키위주스",
+        "img": "https://www.ediya.com/files/menu/IMG_1647324243707.png"
+    },
+    {
+        "span": "딸기주스",
+        "img": "https://www.ediya.com/files/menu/IMG_1647324249886.png"
+    },
+    {
+        "span": "아이스티 복숭아",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322896670.png"
+    },
+    {
+        "span": "(EX) 아이스티 복숭아",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322914713.png"
+    },
+    {
+        "span": "아이스티 레몬",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322929626.png"
+    },
+    {
+        "span": "(EX) 아이스티 레몬",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322949688.png"
+    },
+    {
+        "span": "(R) HOT 밀크티",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322607583.png"
+    },
+    {
+        "span": "ICED 밀크티",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322590353.png"
+    },
+    {
+        "span": "HOT 유자차",
+        "img": "https://www.ediya.com/files/menu/IMG_1647323168645.png"
+    },
+    {
+        "span": "HOT 자몽차",
+        "img": "https://www.ediya.com/files/menu/IMG_1647323227736.png"
+    },
+    {
+        "span": "망고 플랫치노",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322193229.png"
+    },
+    {
+        "span": "꿀복숭아 플랫치노",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322170791.png"
+    },
+    {
+        "span": "초콜릿 칩 플랫치노",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322237789.png"
+    },
+    {
+        "span": "민트 초콜릿 칩 플랫치노",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322244409.png"
+    },
+    {
+        "span": "플레인 요거트 플랫치노",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322311675.png"
+    },
+    {
+        "span": "블루베리 요거트 플랫치노",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322319410.png"
+    },
+    {
+        "span": "딸기 요거트 플랫치노",
+        "img": "https://www.ediya.com/files/menu/IMG_1647319753205.png"
+    },
+    {
+        "span": "오리진 쉐이크",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322356739.png"
+    },
+    {
+        "span": "초코쿠키 쉐이크",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322366389.png"
+    },
+    {
+        "span": "딸기 쉐이크",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322376229.png"
+    },
+    {
+        "span": "레몬 에이드",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322413547.png"
+    },
+    {
+        "span": "(EX) 레몬 에이드",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322402501.png"
+    },
+    {
+        "span": "자몽 에이드",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322422524.png"
+    },
+    {
+        "span": "(EX) 자몽 에이드",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322437795.png"
+    },
+    {
+        "span": "청포도 에이드",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322445174.png"
+    },
+    {
+        "span": "(EX) 청포도 에이드",
+        "img": "https://www.ediya.com/files/menu/IMG_1647322455866.png"
+    }
+]
