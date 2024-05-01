@@ -84,5 +84,9 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 자기소개(5분) ---> 자기소개(10분) ---> 노래 ---> 춤 ---> 수업발표
 
 # 오늘의 숙제    
-gsap의 토굴 액션 블로그에 정리하기   
-파라 02번 9번째꺼 하기
+하트표시 정리
+
+# 괜찬은 폰트
+[Diphylleia](https://fonts.google.com/specimen/Diphylleia?subset=korean&noto.script=Kore&preview.text=code%20pin)   
+[Lato](https://fonts.google.com/specimen/Lato?noto.script=Kore)   
+[Poppins](https://fonts.google.com/specimen/Poppins?noto.script=Kore)   
