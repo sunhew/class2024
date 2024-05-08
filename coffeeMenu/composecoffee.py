@@ -1,42 +1,62 @@
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 from datetime import datetime
+from selenium.webdriver.chrome.options import Options as ChromeOptions
 import json
+import os
 
+# 현재 날짜 가져오기
 current_date = datetime.now().strftime("%Y-%m-%d")
-filename = f"composecoffee-menu_{current_date}.json"
+folder_path = "composecoffee"
+filename = f"{folder_path}/menucomposecoffee_{current_date}.json"
 
-browser = webdriver.Chrome()
+# 폴더 경로가 없다면 생성
+if not os.path.exists(folder_path):
+    os.makedirs(folder_path)
 
+# 웹드라이버 초기화 (Chrome 사용)
+options = ChromeOptions()
+options.add_argument("--headless")
+browser = webdriver.Chrome(service=webdriver.ChromeService(ChromeDriverManager().install()), options=options)
+
+# 방문할 URL 리스트
 urls = [
-    'https://composecoffee.com/menu/category/185?page=1',
-    'https://composecoffee.com/menu/category/185?page=2'
+    "https://composecoffee.com/menu/category/185?page=1",
+    "https://composecoffee.com/menu/category/185?page=2",
 ]
 
-composecoffee_data = []
+# 데이터 추출을 위한 빈 리스트 생성
+theventi_data = []
 
 for url in urls:
+    # 페이지 로드
     browser.get(url)
+    
+    # 페이지의 끝까지 스크롤 내리기
     browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    
+    # 잠시 대기 (로딩 완료를 위해)
+    browser.implicitly_wait(5)
+
+    # 업데이트된 페이지 소스를 변수에 저장
     html_source_updated = browser.page_source
     soup = BeautifulSoup(html_source_updated, 'html.parser')
 
-    # 데이터 추출을 위해 클래스 이름으로 변경
-    items = soup.select(".itemBox")  # 모든 항목을 선택
-    for item in items:
-        # 제목 추출
-        title = item.select_one(".title").text.strip()
-        # 이미지 URL 추출 및 수정
-        img_url = item.select_one(".rthumbnailimg").get('src')
-        if not img_url.startswith("http"):
-            img_url = "https://composecoffee.com" + img_url  # 상대 경로일 경우 절대 경로로 변환
+    # 데이터 추출
+    tracks = soup.select(".itemBox")
+    for track in tracks:
+        name = track.select_one(".title").text.strip()  
+        image_url = track.select_one("rthumbnailimg").get('src').replace('/files', 'https://composecoffee.com/files') 
 
-        composecoffee_data.append({
-            "title": title,
-            "img": img_url
+        theventi_data.append({
+            "title": name,
+            "img": image_url 
         })
 
+# 데이터를 JSON 파일로 저장
 with open(filename, 'w', encoding='utf-8') as f:
-    json.dump(composecoffee_data, f, ensure_ascii=False, indent=4)
+    json.dump(theventi_data, f, ensure_ascii=False, indent=4)
 
+# 브라우저 종료
 browser.quit()

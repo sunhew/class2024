@@ -19,7 +19,8 @@
         }
 
         body {
-            background-color: #111;
+            --bg-color: #edb1b1;
+            background-color: var(--bg-color);
         }
 
         .header__inner a {
@@ -161,7 +162,7 @@
     <div id="wrap">
         <header id="header">
             <div class="header__inner">
-                <h1><a href="index.html">Parallax Effect 06</a></h1>
+                <h1><a href="index.html">Parallax Effect 07</a></h1>
                 <p>GSAP scrollTrigger - 텍스트 효과</p>
 
                 <div class="link">
@@ -174,7 +175,7 @@
         <!-- //header -->
 
         <main id="parallax__cont">
-            <section id="section1" class="parallax__item">
+            <section id="section1" class="parallax__item" data-bgcolor="#111111">
                 <span class="parallax__item__num">01</span>
                 <h2 class="parallax__item__title">section1</h2>
                 <figure class="parallax__item__imgWrap">
@@ -184,7 +185,7 @@
             </section>
             <!-- //section1 -->
 
-            <section id="section2" class="parallax__item">
+            <section id="section2" class="parallax__item" data-bgcolor="#888888">
                 <span class="parallax__item__num">02</span>
                 <h2 class="parallax__item__title">section2</h2>
                 <figure class="parallax__item__imgWrap">
@@ -204,7 +205,7 @@
             </section>
             <!-- //section3 -->
 
-            <section id="section4" class="parallax__item">
+            <section id="section4" class="parallax__item" data-bgcolor="#d2d2d2">
                 <span class="parallax__item__num">04</span>
                 <h2 class="parallax__item__title">section4</h2>
                 <figure class="parallax__item__imgWrap">
@@ -214,7 +215,7 @@
             </section>
             <!-- //section4 -->
 
-            <section id="section5" class="parallax__item">
+            <section id="section5" class="parallax__item" data-bgcolor="#432142">
                 <span class="parallax__item__num">05</span>
                 <h2 class="parallax__item__title">section5</h2>
                 <figure class="parallax__item__imgWrap">
@@ -224,7 +225,7 @@
             </section>
             <!-- //section5 -->
 
-            <section id="section6" class="parallax__item">
+            <section id="section6" class="parallax__item" data-bgcolor="#333333">
                 <span class="parallax__item__num">06</span>
                 <h2 class="parallax__item__title">section6</h2>
                 <figure class="parallax__item__imgWrap">
@@ -234,7 +235,7 @@
             </section>
             <!-- //section6 -->
 
-            <section id="section7" class="parallax__item">
+            <section id="section7" class="parallax__item" data-bgcolor="#555555">
                 <span class="parallax__item__num">07</span>
                 <h2 class="parallax__item__title">section7</h2>
                 <figure class="parallax__item__imgWrap">
@@ -244,7 +245,7 @@
             </section>
             <!-- //section7 -->
 
-            <section id="section8" class="parallax__item">
+            <section id="section8" class="parallax__item" data-bgcolor="#666666">
                 <span class="parallax__item__num">08</span>
                 <h2 class="parallax__item__title">section8</h2>
                 <figure class="parallax__item__imgWrap">
@@ -254,7 +255,7 @@
             </section>
             <!-- //section8 -->
 
-            <section id="section9" class="parallax__item">
+            <section id="section9" class="parallax__item" data-bgcolor="#235321">
                 <span class="parallax__item__num">09</span>
                 <h2 class="parallax__item__title">section9</h2>
                 <figure class="parallax__item__imgWrap">
@@ -274,7 +275,9 @@
                         <li><a href="parallax03.html">03</a></li>
                         <li><a href="parallax04.html">04</a></li>
                         <li><a href="parallax05.html">05</a></li>
-                        <li class="active"><a href="parallax05.html">06</a></li>
+                        <li><a href="parallax06.html">06</a></li>
+                        <li class="active"><a href="parallax07.html">07</a></li>
+                        <li><a href="parallax08.html">08</a></li>
                     </ul>
                 </nav>
             </div>
@@ -287,85 +290,39 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <script>
-        // 단수
-        // let text = document.querySelector(".split");
-        // let splitText = text.innerText;
-        // let splitWrap = splitText.split("").join("</span > <span>");
-        // text.innerHTML = splitWrap = "<span>" + splitWrap + "</span >";
-
-        // 복수(forEach)
-        // document.querySelectorAll(".split").forEach(text => {
-        //     let splitText = text.innerText;
-        //     let splitWrap = splitText.split("").join("</span > <span aria-hiddin='true'>");
-        //     text.innerHTML = splitWrap = "<span>" + splitWrap + "</span >";
-        //     text.setAttribute("aria-label", splitText);
-        // })
-
-        //gsap
-        // gsap.from(".split span", {
-        //     yPercent: 100,
-        //     autoAlpha: 0,
-        //     duration: 2,
-        //     ease: "circ.out",
-        //     stagger: 0.1,
-
-        //     // scrollTrigger: {
-        //     //     trigger: ".split",
-        //     //     start: "top center",
-        //     //     end: "+=400",
-        //     //     markers: true,
-        //     //     scrub: 1
-        //     // }
-        // })
-
-        //다중
-        // gsap.utils.toArray(".split").forEach((text) => {
-        //     gsap.from(text.querySelectorAll("span"), {
-        //         yPercent: 100,
-        //         autoAlpha: 0,
-        //         duration: 2,
-        //         ease: "circ.out",
-        //         stagger: {
-        //             amount: 1,
-        //             from: "random"
-        //         },
-
+        //전체를 기준
+        //     let bg = gsap.timeline({
         //         scrollTrigger: {
-        //             trigger: text,
-        //             start: "top center",
-        //             end: "+=400",
-        //             markers: true
+        //             start: 0,
+        //             end: "max",
+        //             scrub: true
         //         }
         //     })
-        // })
-    </script>
-    <script src="https://unpkg.com/split-type">
-        const targets = gsap.utils.toArray(".split");
 
-        targets.forEach((target) => {
-            let SplitClient = new SplitType(target, { type: "lines, words, chars" });
-            let lines = SplitClient.lines;
-            let words = SplitClient.words;
-            let chars = SplitClient.chars;
+        //     bg.to("body", { "--bg-color": "red" })
+        //         .to("body", { "--bg-color": "green" })
+        //         .to("body", { "--bg-color": "blue" })
 
-            gsap.from(chars, {
-                yPercent: 100,
-                autoAlpha: 0,
-                duration: 1,
-                ease: "circ.out",
-                stagger: {
-                    amount: 1,
-                    from: "random"
-                },
+        gsap.utils.toArray(".parallax__item").forEach(item => {
+            let color = item.getAttribute("data-bgcolor") || "#111111";
 
-                scrollTrigger: {
-                    trigger: target,
-                    start: "top center",
-                    end: "+=400",
-                    markers: true
-                }
+            ScrollTrigger.create({
+                trigger: item,
+                start: "top 50%",
+                end: "bottom 5%",
+                markers: true,
+
+                onEnter: () => gsap.to("body", {
+                    backgroundColor: color,
+                    duration: 1.4
+                }),
+                onEnterBack: () => gsap.to("body", {
+                    backgroundColor: color,
+                    duration: 1.4
+                })
+
             })
-        })
+        });
     </script>
 </body>
 
