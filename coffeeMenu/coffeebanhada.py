@@ -1,6 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -15,7 +14,7 @@ import os
 # 현재 날짜 가져오기
 current_date = datetime.now().strftime("%Y-%m-%d")
 folder_path = "coffeebanhada"
-filename = f"{folder_path}/menucoffeebanhada_{current_date}.json"
+filename = f"{folder_path}/coffeebanhada-menu_{current_date}.json"
 
 # 폴더 생성
 if not os.path.exists(folder_path):
@@ -26,8 +25,9 @@ options = ChromeOptions()
 options.add_argument("--headless")
 browser = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
 
-# 페이지 로드
-browser.get('https://coffeebanhada.com/main/menu/list4.php?page_type=1')
+# 로드해야 하는 페이지
+url = 'https://coffeebanhada.com/main/menu/list4.php?page_type=1'
+browser.get(url)
 
 # '더보기' 버튼이 나타날 때까지 기다림 (최대 20초)
 while True:
@@ -52,13 +52,11 @@ coffeebanhada_data = []
 tracks = soup.select("#wrap > div.sub_content.menu_wrap > .menu_lst.m_menu_lst")
 for track in tracks:
     name = track.select_one("#wrap > div.sub_content.menu_wrap > div > div > p").text.strip()
-    image_url = track.select_one("#wrap > div.sub_content.menu_wrap > div > div > div > img").get('src')
-    if not image_url.startswith('http'):
-        image_url = 'https://coffeebanhada.com' + image_url
+    image_url = track.select_one("#wrap > div.sub_content.menu_wrap > div > div > div > img").get('src').replace('/data', 'https://coffeebanhada.com/data')
 
     coffeebanhada_data.append({
         "p": name,
-        "img": image_url
+        "img": image_url                                
     })
 
 # 데이터를 JSON 파일로 저장

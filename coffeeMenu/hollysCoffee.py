@@ -12,20 +12,19 @@ import json
 
 # 현재 날짜 가져오기
 current_date = datetime.now().strftime("%Y-%m-%d")
-filename = f"menu-hollys_{current_date}.json"
+folder_path = "hollys"
+filename = f"{folder_path}/menuhollys_{current_date}.json"
 
 # 웹드라이브 설치
 options = ChromeOptions()
-service = ChromeService(executable_path=ChromeDriverManager().install())
-browser = webdriver.Chrome(service=service, options=options)
+options.add_argument("--headless")
+browser = webdriver.Chrome(options=options)
 browser.get("https://www.hollys.co.kr/menu/espresso.do")
 
 # 페이지가 완전히 로드될 때까지 대기
 WebDriverWait(browser, 10).until(
     EC.presence_of_element_located((By.CLASS_NAME, "menu_list01.mar_t_40"))
 )
-
-print(EC)
 
 html_source_updated = browser.page_source
 soup = BeautifulSoup(html_source_updated, 'html.parser')
@@ -36,7 +35,7 @@ tracks = soup.select("#menuSmallList > li")
 
 for track in tracks:
     title = track.select_one("li > a").text.strip()    
-    image_url = track.select_one("li > a > img").get('src')
+    image_url = track.select_one("li > a > img").get('src').replace('/admin', 'https://coffeebanhada.com/admin')
     coffee_data.append({
         "title": title,
         "imageURL": image_url,
