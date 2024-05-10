@@ -84,8 +84,7 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 자기소개(5분) ---> 자기소개(10분) ---> 노래 ---> 춤 ---> 수업발표
 
 # 오늘의 숙제    
-parallax 11, 12, 13 블로그 정리   
-parallax 14번 모든것에 애니메이션 효과 넣기   
+메인 페이지 인덱스 변경하기.   
 
 # 괜찬은 폰트
 [Diphylleia](https://fonts.google.com/specimen/Diphylleia?subset=korean&noto.script=Kore&preview.text=code%20pin)   

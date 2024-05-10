@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUST쇼핑몰</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo">
+                <a href="#">JUST 쇼핑몰</a>
+            </h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">탑</a>
+                        <ul>
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">아우터</a>
+                        <ul>
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">코트</a></li>
+                            <li><a href="#">가디건</a></li>
+                            <li><a href="#">머플러</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">팬츠</a>
+                        <ul>
+                            <li><a href="#">청바지</a></li>
+                            <li><a href="#">짧은바지</a></li>
+                            <li><a href="#">긴바지</a></li>
+                            <li><a href="#">레깅스</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">악세서리</a>
+                        <ul>
+                            <li><a href="#">귀고리</a></li>
+                            <li><a href="#">목걸이</a></li>
+                            <li><a href="#">반지</a></li>
+                            <li><a href="#">팔찌</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header -->
+        <article id="slider">
+            <div class="slider_wrap">
+                <div class="slider s1">
+                    <a href="#"><img src="images/slider01.jpg" alt="슬라이더1"></a>
+                    <div class="text">
+                        <h2>새로운 디자인 출시</h2>
+                        <p>새로운 디자인의 악세서리 판매</p>
+                    </div>
+                </div>
+                <div class="slider s2">
+                    <a href="#"><img src="images/slider02.jpg" alt="슬라이더2"></a>
+                    <div class="text">
+                        <h2>새로운 디자인 출시</h2>
+                        <p>새로운 디자인의 티셔츠 판매</p>
+                    </div>
+                </div>
+                <div class="slider s3">
+                    <a href="#"><img src="images/slider03.jpg" alt="슬라이더3"></a>
+                    <div class="text">
+                        <h2>새로운 디자인 출시</h2>
+                        <p>새로운 디자인의 청바지 판매</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- slider -->
+        <main id="contents">
+            <article class="notice">
+                <h3>공지사항</h3>
+                <div>
+                    <ul>
+                        <li><a href="#">오프라인 매장 확정</a><span>2024.04.16</span></li>
+                        <li><a href="#">감사고객 1+1 이벤트 개최</a><span>2024.04.12</span></li>
+                        <li><a href="#">50% 할인 기간 안내</a><span>2024.04.11</span></li>
+                        <li><a href="#">인스타 계정 개설</a><span>2024.04.10</span></li>
+                    </ul>
+                </div>
+            </article>
+            <article class="banner">
+                <h3>신상 입고 완료</h3>
+                <a href="#">예약하기</a>
+            </article>
+            <article class="link">
+                <h3>이달의 랭킹</h3>
+                <a href="#">바로가기</a>
+            </article>
+        </main>
+        <!-- contents -->
+        <footer id="footer">
+            <div class="footer1">
+                <h1>
+                    <a href="#">JUST 쇼핑몰</a>
+                </h1>
+            </div>
+            <div class="footer2">
+                <div class="copy">
+                    <p>COPYRIGHT 2024, ALL Rights Reserve</p>
+                </div>
+            </div>
+            <div class="footer3">
+                <select>
+                    <option value="1">SNS</option>
+                    <option value="1">인스타</option>
+                    <option value="1">깃헙</option>
+                    <option value="1">트위터</option>
+                </select>
+            </div>
+        </footer>
+        <!-- footer -->
+        <div class="modal">
+            <h4>사이트 점검 안내</h4>
+            <p>안녕하세요. JUST 쇼핑몰입니다.
+                이번에 새롭게 사이트 단장을 위해 잠시 점검을 하게 되었습니다.
+                점검 동안에는 사이트 이용이 불가하며 넓은 이해 부탁드리겠습니다.
+            </p>
+            <a href="#" class="popup_clpse">닫기</a>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(".nav > ul > li").mouseover(function () {
+            $(".nav > ul > li > ul").stop().slideDown()
+        })
+        $(".nav > ul > li").mouseout(function () {
+            $(".nav > ul > li > ul").stop().slideUp()
+        })
+
+        $(".notice ul li:nth-child(3)").click(function () {
+            $(".modal").show();
+
+        })
+        $(".modal a").click(function () {
+            $(".modal").hide();
+        })
+
+        $(function () {
+            let currentIndex = 0;
+            $(".slider_wrap").append($(".slider").first().clone(true));
+
+            setInterval(() => {
+                currentIndex++;
+
+                $(".slider_wrap").animate({ marginTop: -322 * currentIndex + "px" }, 600);
+
+                if (currentIndex == 3) {
+                    setTimeout(() => {
+                        $(".slider_wrap").animate({ marginTop: 0 }, 0);
+                        currentIndex = 0;
+                    }, 700);
+                }
+            }, 3000)
+        })
+
+    </script>
+</body>
+
+</html>
