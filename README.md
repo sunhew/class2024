@@ -90,3 +90,12 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 [Diphylleia](https://fonts.google.com/specimen/Diphylleia?subset=korean&noto.script=Kore&preview.text=code%20pin)   
 [Lato](https://fonts.google.com/specimen/Lato?noto.script=Kore)   
 [Poppins](https://fonts.google.com/specimen/Poppins?noto.script=Kore)   
+
+# 프로젝트
+첫번쨰는 다음주까지 블로그, 등등 완성
+
+두번째 프로젝트는 리액트를 사용해서 서치 기능 만들기.
+
+세번째 프로젝트는 API 사용
+
+네번째는 node.js 등의 최신 소스를 사용해서 첫번째 프로젝트처럼 새로 만들기.

@@ -129,25 +129,31 @@ body {
     display: flex;
 }
 
-/* twingk1 */
-.twingk1 {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #5c6b6d9d;
-    top: 10px;
-    left: 50%;
-}
+/* oudtable */
 
 .postit {
     position: absolute;
-    width: 60px;
+    width: 80px;
     height: 60px;
     background-color: #e9fff5;
-    top: 10px;
+    top: 60px;
     left: 50%;
     z-index: 2;
+    border-radius: 2px 2px 2px 18px;
+    transform: translate(-50%, -50%);
+}
+
+.postit>div {
+    height: 10px;
+    border-bottom: 1px solid #363636b8;
+    z-index: 2;
+}
+
+.postit>div p {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "nanumSquareNeo";
+    text-align: center;
 }
 
 /* member */
@@ -157,6 +163,8 @@ body {
     bottom: 10px;
     text-align: center;
     width: 100%;
+    z-index: 2;
+    display: none;
 }
 
 .member ul {
@@ -873,7 +881,7 @@ body {
     background-color: #fff;
     border-radius: 50%;
     box-shadow:
-        0 0 0 8px #e9fcf6,
+        0 0 0 8px #f6fce9,
         0 0 0 20px #dcf7ee;
 
     animation: brilla-sun 3s alternate infinite;
