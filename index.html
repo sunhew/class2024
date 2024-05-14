@@ -877,7 +877,7 @@
             $(document).ready(function () {
                 // postit 요소를 클릭했을 때 member 요소를 표시
                 $(".oudtable .postit").click(function (event) {
-                    event.stopPropagation(); // 이벤트 버블링을 방지하여 document의 클릭 이벤트가 실행되지 않도록 합니다.
+                    event.stopPropagation();
                     $(".member").show();
                 });
 
@@ -886,7 +886,6 @@
                     $(".member").hide();
                 });
 
-                // member 요소를 클릭했을 때 이벤트 버블링을 방지하여 숨기지 않도록 합니다.
                 $(".member").click(function (event) {
                     event.stopPropagation();
                 });
