@@ -1,3 +1,6 @@
+# 로컬...
+![image](https://github.com/sunhew/class2024/assets/161446039/85880cf5-1447-453f-a01f-f0680cff9c16)
+
 # 오늘의 수업
 [메인 페이지](https://sunhew.github.io/class2024/)   
 
