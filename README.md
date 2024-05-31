@@ -1,6 +1,3 @@
-# 로컬...
-![image](https://github.com/sunhew/class2024/assets/161446039/85880cf5-1447-453f-a01f-f0680cff9c16)
-
 # 오늘의 수업
 [메인 페이지](https://sunhew.github.io/class2024/)   
 
@@ -95,7 +92,7 @@ ES7 : 자바스크립트 및 리액트 문법 정리
 [Poppins](https://fonts.google.com/specimen/Poppins?noto.script=Kore)   
 
 # 프로젝트
-첫번쨰는 다음주까지 블로그, 등등 완성
+1. 클래스 메인페이지 수정(안에 꽉 차 보이게)
 
 두번째 프로젝트는 리액트를 사용해서 서치 기능 만들기.
 

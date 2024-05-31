@@ -158,7 +158,10 @@ a {
 }
 
 /* layer__wrap */
-.layer__wrap {}
+.layer__wrap {
+    position: relative;
+    z-index: 1000;
+}
 
 .layer__inner .layer {
     width: 80vw;
