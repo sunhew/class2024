@@ -396,7 +396,10 @@ body {
 
 .wrapper {
     position: relative;
-    width: 100%;
+    width: 100vw;
+    /* 전체 화면 너비 */
+    height: 100vh;
+    /* 전체 화면 높이 */
     display: block;
     padding-top: 30px;
     padding-bottom: 30px;
